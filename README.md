@@ -9,7 +9,7 @@
 
 ### bms-2018.11.19.pdf
 
-資料說明: 經營管理講座 - Big Data Application
+資料說明: 育達科技大學 經營管理講座 - Big Data Application
 
 日期: 2018.11.19
 
