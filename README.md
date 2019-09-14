@@ -27,6 +27,6 @@
 
 ### 10m_pandas.ipynb
 
-資料說明: Python pandas 套件的10分鐘快速導覽
+資料說明: Python pandas 套件的10分鐘快速導覽 (實際練習時間應該會大於10分鐘)
 
 資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
