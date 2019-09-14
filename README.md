@@ -24,3 +24,9 @@
 欄位個數: 8
 
 欄位名稱: OrderDetailsID,	OrderID, ProductName, OrderDate, ProductID, CustomerID, UnitPrice, Quantity
+
+### 10m_pandas.ipynb
+
+資料說明: Python pandas 套件的10分鐘快速導覽
+
+資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
