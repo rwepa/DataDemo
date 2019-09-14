@@ -1,4 +1,4 @@
-# title    : gfc dataset visualization with R
+# title    : gfc 資料人集視覺化應用
 # date     : 2019.9.14
 # author   : Ming-Chang Lee
 # email    : alan9956@gmail.com
@@ -51,4 +51,5 @@ box()
 legend("topright", legend = c("日亞", "廣達", "科銳"), lty=1:3, col=c(1,2,4), cex=0.8)
 abline(h=mean(gfc.日亞$amount))
 abline(h=mean(gfc.廣達$amount), col="red")
+# 圖中有找到樣式 patterns?
 # end
