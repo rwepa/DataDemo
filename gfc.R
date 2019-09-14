@@ -1,4 +1,10 @@
-# import data
+# title    : import gfc dataset with R
+# date     : 2019.9.14
+# author   : Ming-Chang Lee
+# email    : alan9956@gmail.com
+# RWEPA    : http://rwepa.blogspot.tw/
+# Encoding : UTF-8
+
 # 使用記事本開啟 gfc.csv, 另存新檔 ANSI 編碼格式, 檔名改為 gfc-ansi.csv
 gfc <- read.table("gfc.csv", header=TRUE, sep=",") # Error in Windows OS
 gfc <- read.table("gfc-ansi.csv", header=TRUE, sep=",")
