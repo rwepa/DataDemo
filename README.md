@@ -119,7 +119,6 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 [參考資料](http://rwepa.blogspot.com/search?q=c%2B%2B)
 
-[參考資料]()
 ### roc_introduction.pdf
 
 資料說明: ROC Curve (Receiver Operating Characteristics) 簡介
