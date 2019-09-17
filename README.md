@@ -40,6 +40,15 @@
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
+### production.csv
+資料說明: 參考 R資料匯入與匯出
+
+資料筆數: 10
+
+欄位個數: 5
+
+欄位名稱: 工號, 生產日期, 機台, 生產量, 目標量
+
 # Part 2 教學 Tutorial
 
 ### 10m_pandas.ipynb
@@ -73,4 +82,3 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
       4. Applied Statisti
       
 日期: 2011.7.4
-
