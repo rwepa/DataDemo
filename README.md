@@ -86,6 +86,9 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 日期: 2018.11.19
 
+### installRMySQLtutorial.pdf
+資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
+
 ### prob.pdf
 資料說明: 常用累計機率表
 
@@ -101,6 +104,10 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 資料說明: R圖形化使用者介面 rattle 套件 執行 ROC curve 比較
 
 http://rwepa.blogspot.com/2013/08/data-mining-with-rattle-roc-curve-svm.html
+
+### RconnectMySQL.R
+
+資料說明: R連結 MySQL範例程式
 
 ### roc_introduction.pdf
 
