@@ -44,7 +44,7 @@
 ### production.csv
 資料說明: 參考 R資料匯入與匯出
 
-http://rwepa.blogspot.com/2018/04/readoutput.html
+[參考資料](http://rwepa.blogspot.com/2018/04/readoutput.html)
 
 資料筆數: 10
 
@@ -105,11 +105,13 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 資料說明: R圖形化使用者介面 rattle 套件 執行 ROC curve 比較
 
-http://rwepa.blogspot.com/2013/08/data-mining-with-rattle-roc-curve-svm.html
+[參考資料](http://rwepa.blogspot.com/2013/08/data-mining-with-rattle-roc-curve-svm.html)
 
 ### RconnectMySQL.R
 
 資料說明: R連結 MySQL範例程式
+
+[參考資料](http://rwepa.blogspot.com/2013/01/windows-rmysql.html)
 
 ### roc_introduction.pdf
 
