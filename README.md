@@ -1,28 +1,14 @@
 # 資料集與使用範例
 本項目提供資料集與範例分享, 資料集來自於 Open data或模擬資料.
 
-### 10m_pandas.ipynb
-
-資料說明: Python pandas 套件的10分鐘快速導覽 (實際練習時間應該會大於10分鐘)
-
-資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
-
-### bms-2018.11.19.pdf
-
-資料說明: 育達科技大學 經營管理講座 - Big Data Application
-
-日期: 2018.11.19
+# Part 1 資料 Data
 
 ### gfc.csv
 
 資料說明: 提供工廠訂單資料
-
 資料來源: 模擬資料
-
 資料筆數: 293
-
 欄位個數: 3
-
 欄位名稱: orderdate, supplier, amount
 
 ### nwind.csv
@@ -47,6 +33,14 @@
 
 欄位個數: 5
 
+# Part 2 教學 Tutorial
+
+### 10m_pandas.ipynb
+
+資料說明: Python pandas 套件的10分鐘快速導覽 (實際練習時間應該會大於10分鐘)
+
+資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
+
 ### AssociationRules.pdf
 arules package - 提供資料探勘中關聯規則apriori algorithm
 
@@ -58,6 +52,11 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 ### AssociationRules_northwind.R
 北風資料庫範例檔案 - R 程式檔
+### bms-2018.11.19.pdf
+
+資料說明: 育達科技大學 經營管理講座 - Big Data Application
+
+日期: 2018.11.19
 
 ### R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
 整合下列五大主題：
