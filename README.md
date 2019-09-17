@@ -31,7 +31,7 @@
 
 資料說明: 北風訂單資料, 提供於 arules package -北風資料庫操作篇之練習範例資料
 
-http://rwepa.blogspot.com/2013/01/arules-package.html
+[參考資料](http://rwepa.blogspot.com/2013/01/arules-package.html)
 
 資料來源: Microsoft Access 北風資料庫
 
@@ -90,12 +90,6 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
 
 [自行編譯 RMySQL 套件](http://rwepa.blogspot.com/2013/01/windows-rmysql.html)
-
-<a href="http://rwepa.blogspot.com/2013/01/windows-rmysql.html" target="_blank">自行編譯 RMySQL 套件</a>
-
-
-[自行編譯 RMySQL 套件](http://rwepa.blogspot.com/2013/01/windows-rmysql.html){:target="_blank"}
-
 
 ### prob.pdf
 資料說明: 常用累計機率表
