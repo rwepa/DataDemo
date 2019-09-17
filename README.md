@@ -60,6 +60,15 @@ http://rwepa.blogspot.com/2018/04/readoutput.html
 
 資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
 
+### aMarvelousR_Lee(pp238).pdf
+資料說明: R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
+
+整合下列五大主題：
+      1. Basic R
+      2. Preparing Data
+      3. Graphics
+      4. Applied Statistics
+
 ### AssociationRules.pdf
 arules package - 提供資料探勘中關聯規則apriori algorithm
 
@@ -81,15 +90,6 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 資料說明: 常用累計機率表
 
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
-
-### aMarvelousR_Lee(pp238).pdf
-資料說明: R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
-
-整合下列五大主題：
-      1. Basic R
-      2. Preparing Data
-      3. Graphics
-      4. Applied Statisti
 
 ### rattle-ROCcurve.pdf
 
