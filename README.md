@@ -36,3 +36,9 @@
 欄位個數: 8
 
 欄位名稱: OrderDetailsID,	OrderID, ProductName, OrderDate, ProductID, CustomerID, UnitPrice, Quantity
+
+# R06_AssociationRules.pdf
+# R06_AssociationRules.R
+# R07_AssociationRules_northwind.pdf
+# R07_AssociationRules_northwind.R
+
