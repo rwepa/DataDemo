@@ -89,6 +89,7 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 ### installRMySQLtutorial.pdf
 資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
 [自行編譯 RMySQL 套件](http://rwepa.blogspot.com/2013/01/windows-rmysql.html)
+<a href="http://rwepa.blogspot.com/2013/01/windows-rmysql.html" target="_blank">自行編譯 RMySQL 套件</a>
 
 ### prob.pdf
 資料說明: 常用累計機率表
