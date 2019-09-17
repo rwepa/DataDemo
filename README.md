@@ -41,7 +41,7 @@
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
 ### production.csv
-資料說明: 參考 R資料匯入與匯出
+資料說明: 參考 R資料匯入與匯出　(http://rwepa.blogspot.com/2018/04/readoutput.html)
 
 資料筆數: 10
 
