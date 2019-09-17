@@ -71,4 +71,6 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
       2. Preparing Data
       3. Graphics
       4. Applied Statisti
+      
+日期: 2011.7.4
 
