@@ -86,6 +86,23 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 日期: 2018.11.19
 
+### Foundation.pdf
+### Foundation.R
+
+R 基礎篇
+
+提供以下四大主題:
+
+1. Introduction 簡介
+
+2. Data Manipulation 資料處理
+
+3. Descriptive Statistics 敘述統計
+
+4. Graphics 繪圖
+
+[參考網址](http://rwepa.blogspot.com/2013/01/r_4.html)
+
 ### installRMySQLtutorial.pdf
 資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
 
