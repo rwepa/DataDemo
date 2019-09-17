@@ -82,11 +82,17 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
 
-### R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
+### aMarvelousR_Lee(pp238).pdf
+資料說明: R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
+
 整合下列五大主題：
       1. Basic R
       2. Preparing Data
       3. Graphics
       4. Applied Statisti
-      
-日期: 2011.7.4
+
+### rattle-ROCcurve.pdf
+
+資料說明: R圖形化使用者介面 rattle 套件 執行 ROC curve 比較
+
+http://rwepa.blogspot.com/2013/08/data-mining-with-rattle-roc-curve-svm.html
