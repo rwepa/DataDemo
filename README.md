@@ -30,7 +30,8 @@
 ### northwind_trans.csv
 
 資料說明: 北風訂單資料, 提供於 arules package -北風資料庫操作篇之練習範例資料
-參考: http://rwepa.blogspot.com/2013/01/arules-package.html
+
+http://rwepa.blogspot.com/2013/01/arules-package.html
 
 資料來源: Microsoft Access 北風資料庫
 
@@ -41,7 +42,9 @@
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
 ### production.csv
-資料說明: 參考 R資料匯入與匯出　(http://rwepa.blogspot.com/2018/04/readoutput.html)
+資料說明: 參考 R資料匯入與匯出
+
+http://rwepa.blogspot.com/2018/04/readoutput.html
 
 資料筆數: 10
 
