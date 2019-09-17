@@ -37,8 +37,22 @@
 
 欄位名稱: OrderDetailsID,	OrderID, ProductName, OrderDate, ProductID, CustomerID, UnitPrice, Quantity
 
-### R06_AssociationRules.pdf
-### R06_AssociationRules.R
-### R07_AssociationRules_northwind.pdf
-### R07_AssociationRules_northwind.R
+### AssociationRules.pdf
+arules package - 提供資料探勘中關聯規則apriori algorithm
+
+### AssociationRules.R
+關聯規則範例檔案 - R 程式檔
+
+### AssociationRules_northwind.pdf
+文章說明將資料轉換至 transactions 格式說明。
+
+### AssociationRules_northwind.R
+北風資料庫範例檔案 - R 程式檔
+
+### R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
+整合下列五大主題：
+      1. Basic R
+      2. Preparing Data
+      3. Graphics
+      4. Applied Statisti
 
