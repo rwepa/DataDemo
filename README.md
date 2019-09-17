@@ -6,9 +6,13 @@
 ### gfc.csv
 
 資料說明: 提供工廠訂單資料
+
 資料來源: 模擬資料
+
 資料筆數: 293
+
 欄位個數: 3
+
 欄位名稱: orderdate, supplier, amount
 
 ### nwind.csv
@@ -24,6 +28,7 @@
 欄位名稱: OrderDetailsID,	OrderID, ProductName, OrderDate, ProductID, CustomerID, UnitPrice, Quantity
 
 ### northwind_trans.csv
+
 資料說明: 北風訂單資料, 提供於 arules package -北風資料庫操作篇之練習範例資料
 參考: http://rwepa.blogspot.com/2013/01/arules-package.html
 
@@ -32,6 +37,8 @@
 資料筆數: 2153
 
 欄位個數: 5
+
+欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
 # Part 2 教學 Tutorial
 
@@ -52,8 +59,8 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 ### AssociationRules_northwind.R
 北風資料庫範例檔案 - R 程式檔
-### bms-2018.11.19.pdf
 
+### bms-2018.11.19.pdf
 資料說明: 育達科技大學 經營管理講座 - Big Data Application
 
 日期: 2018.11.19
