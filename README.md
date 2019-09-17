@@ -113,6 +113,13 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 [參考資料](http://rwepa.blogspot.com/2013/01/windows-rmysql.html)
 
+### Rcpp-Rtools-tutorial.pdf
+
+資料說明: Rcpp 套件與C++應用
+
+[參考資料](http://rwepa.blogspot.com/search?q=c%2B%2B)
+
+[參考資料]()
 ### roc_introduction.pdf
 
 資料說明: ROC Curve (Receiver Operating Characteristics) 簡介
