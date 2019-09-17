@@ -37,6 +37,16 @@
 
 欄位名稱: OrderDetailsID,	OrderID, ProductName, OrderDate, ProductID, CustomerID, UnitPrice, Quantity
 
+### northwind_trans.csv
+資料說明: 北風訂單資料, 提供於 arules package -北風資料庫操作篇之練習範例資料
+參考: http://rwepa.blogspot.com/2013/01/arules-package.html
+
+資料來源: Microsoft Access 北風資料庫
+
+資料筆數: 2153
+
+欄位個數: 5
+
 ### AssociationRules.pdf
 arules package - 提供資料探勘中關聯規則apriori algorithm
 
