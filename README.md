@@ -96,3 +96,11 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 資料說明: R圖形化使用者介面 rattle 套件 執行 ROC curve 比較
 
 http://rwepa.blogspot.com/2013/08/data-mining-with-rattle-roc-curve-svm.html
+
+### roc_introduction.pdf
+
+資料說明: ROC Curve (Receiver Operating Characteristics) 簡介
+
+### roc_r_example.pdf
+
+資料說明: ROCR套件執行ROC計算繪圖
