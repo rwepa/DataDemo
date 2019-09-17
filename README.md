@@ -91,6 +91,11 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
 
+### R3.0.0with_index_of_size 2^31.pdf
+資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
+
+資料來源: https://taichimd.us/mediawiki/index.php/R#Handling_length_2.5E31_and_more_in_R_3.0.0
+
 ### rattle-ROCcurve.pdf
 
 資料說明: R圖形化使用者介面 rattle 套件 執行 ROC curve 比較
