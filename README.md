@@ -52,6 +52,12 @@
 
 欄位名稱: 工號, 生產日期, 機台, 生產量, 目標量
 
+### termDocMatrix.RData
+
+資料說明: Term-Document Matrix of Twitter Posts
+
+資料筆數: Terms: 21列, Documents: 154行
+
 ### 北風.xlsx
 
 資料說明: 參考 Microsoft Access 北風資料庫
