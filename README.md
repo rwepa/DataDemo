@@ -41,6 +41,13 @@
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
+### population.taiwan.csv
+資料筆數: 21
+
+欄位個數: 6
+
+欄位名稱: City, Lat, Long, City_Chinese, Population, Area
+
 ### production.csv
 資料說明: 參考 R資料匯入與匯出
 
