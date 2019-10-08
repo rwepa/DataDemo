@@ -3,6 +3,16 @@
 
 # Part 1 資料 Data
 
+### credit.csv
+
+資料說明: Statlog (German Credit Data) Data Set
+
+資料來源: https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
+
+資料筆數: 1000
+
+欄位個數: 21
+
 ### gfc.csv
 
 資料說明: 提供工廠訂單資料
@@ -58,6 +68,16 @@
 欄位個數: 5
 
 欄位名稱: 工號, 生產日期, 機台, 生產量, 目標量
+
+### prostate.csv
+
+資料說明: Prostate Cancer
+
+資料來源: Ledolter, J., Data Mining and Business Analytics with R, John Wiley & Sons, 2013.
+
+資料筆數: 97
+
+欄位個數: 6
 
 ### termDocMatrix.RData
 
