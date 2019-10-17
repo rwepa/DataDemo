@@ -3,6 +3,14 @@
 
 # Part 1 資料 Data
 
+### chorddiag.zip
+
+資料說明: chorddiag Windows 版本套件壓縮檔
+
+版本資訊: 0.1.2
+
+資料來源: https://github.com/mattflor/chorddiag
+
 ### credit.csv
 
 資料說明: Statlog (German Credit Data) Data Set
