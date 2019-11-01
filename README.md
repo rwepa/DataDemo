@@ -33,6 +33,29 @@
 
 欄位名稱: orderdate, supplier, amount
 
+### hourly_44201_2018.zip
+
+資料說明: 美國國家環境保護局 (United States Environmental Protection Agency) 2018年每小時臭氣資料
+
+資料來源: https://aqs.epa.gov/aqsweb/airdata/download_files.html --> Tables of Hourly Data, Ozone (44201), 2018.
+
+下載檔案: 68.8MB
+
+解壓縮檔案: hourly_44201_2018.csv
+
+解壓縮檔案大小: 2.05GB
+
+資料筆數: 9,366,419 **(約936萬筆資料)**
+
+欄位個數: 24
+
+欄位名稱:
+"State Code", "County Code", "Site Num", "Parameter Code", "POC", 
+"Latitude", "Longitude", "Datum", "Parameter Name", "Date Local", 
+"Time Local", "Date GMT", "Time GMT", "Sample Measurement", "Units of Measure", 
+"MDL", "Uncertainty", "Qualifier", "Method Type", "Method Code", 
+"Method Name", "State Name", "County Name" ,"Date of Last Change"
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
