@@ -37,11 +37,7 @@
 
 資料說明: 美國國家環境保護局 (United States Environmental Protection Agency) 2018年每小時臭氣資料
 
-資料來源: https://aqs.epa.gov/aqsweb/airdata/download_files.html --> Tables of Hourly Data, Ozone (44201), 2018.
-
-資料下載: <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html" target="_blank">Tables of Hourly Data, Ozone (44201), 2018.</a>
-
-[link](https://aqs.epa.gov/aqsweb/airdata/download_files.html){:target="_blank"}
+資料下載: https://aqs.epa.gov/aqsweb/airdata/download_files.html --> Tables of Hourly Data, Ozone (44201), 2018.
 
 下載檔案: 68.8MB
 
