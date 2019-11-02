@@ -49,7 +49,7 @@
 
 欄位個數: 24
 
-欄位名稱:
+欄位名稱:  
 "State Code", "County Code", "Site Num", "Parameter Code", "POC",  
 "Latitude", "Longitude", "Datum", "Parameter Name", "Date Local",  
 "Time Local", "Date GMT", "Time GMT", "Sample Measurement", "Units of Measure",  
