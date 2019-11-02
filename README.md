@@ -56,6 +56,11 @@
 "MDL", "Uncertainty", "Qualifier", "Method Type", "Method Code",  
 "Method Name", "State Name", "County Name","Date of Last Change"
 
+library(readr)  
+system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtDtncnlccccccD")) # 37.78秒  
+#  user  system elapsed   
+# 36.14    2.30   37.78   
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
