@@ -43,7 +43,7 @@
 
 資料下載: https://aqs.epa.gov/aqsweb/airdata/download_files.html --> Tables of Hourly Data, Ozone (44201), 2018.
 
-檔案名稱: hourly_44201_2018.zip
+檔案名稱: hourly_44201_2018.zip (https://aqs.epa.gov/aqsweb/airdata/hourly_44201_2018.zip)
 
 檔案大小: 68.8MB
 
