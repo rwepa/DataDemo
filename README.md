@@ -67,6 +67,8 @@ system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtD
 ##### #  user  system elapsed   
 ##### # 36.14    2.30   37.78   
 
+參考網站: http://rwepa.blogspot.com/2019/11/r-makenames-base.html  
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
