@@ -35,7 +35,7 @@
 
 欄位名稱: orderdate, supplier, amount
 
-### hourly_44201_2018.zip (orone:orone)
+### hourly_44201_2018.csv
 
 更新日期: 2019/11/2
 
@@ -43,7 +43,9 @@
 
 資料下載: https://aqs.epa.gov/aqsweb/airdata/download_files.html --> Tables of Hourly Data, Ozone (44201), 2018.
 
-下載檔案大小: 68.8MB
+檔案名稱: hourly_44201_2018.zip
+
+檔案大小: 68.8MB
 
 解壓縮檔案: hourly_44201_2018.csv
 
