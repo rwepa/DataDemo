@@ -50,11 +50,11 @@
 欄位個數: 24
 
 欄位名稱:
-"State Code", "County Code", "Site Num", "Parameter Code", "POC", 
-"Latitude", "Longitude", "Datum", "Parameter Name", "Date Local", 
-"Time Local", "Date GMT", "Time GMT", "Sample Measurement", "Units of Measure", 
-"MDL", "Uncertainty", "Qualifier", "Method Type", "Method Code", 
-"Method Name", "State Name", "County Name" ,"Date of Last Change"
+"State Code", "County Code", "Site Num", "Parameter Code", "POC",  
+"Latitude", "Longitude", "Datum", "Parameter Name", "Date Local",  
+"Time Local", "Date GMT", "Time GMT", "Sample Measurement", "Units of Measure",  
+"MDL", "Uncertainty", "Qualifier", "Method Type", "Method Code",  
+"Method Name", "State Name", "County Name","Date of Last Change"
 
 ### nwind.csv
 
