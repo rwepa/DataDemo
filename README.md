@@ -1,6 +1,8 @@
 # 資料集與使用範例
 本項目提供資料集與範例分享, 資料集來自於 Open data或模擬資料.
 
+---
+
 # Part 1 資料 Data
 
 ### chorddiag.zip
@@ -32,8 +34,6 @@
 欄位個數: 3
 
 欄位名稱: orderdate, supplier, amount
-
----
 
 ### hourly_44201_2018.zip
 
@@ -153,6 +153,8 @@ Tableau 測試版本: 2018.3.11
 資料表個數: 6
 
 資料表名稱: 員工, 供應商, 產品, 訂單, 訂單詳細資料, 客戶
+
+---
 
 # Part 2 教學 Tutorial
 
