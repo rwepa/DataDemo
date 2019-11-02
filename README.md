@@ -58,8 +58,8 @@
 
 library(readr)  
 system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtDtncnlccccccD")) # 37.78秒  
- #  user  system elapsed   
- # 36.14    2.30   37.78   
+##### #  user  system elapsed   
+##### # 36.14    2.30   37.78   
 
 ### nwind.csv
 
