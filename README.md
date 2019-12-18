@@ -129,6 +129,22 @@ system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtD
 
 資料筆數: Terms: 21列, Documents: 154行
 
+### titanic.csv
+
+資料說明: 鐵達尼號資料集
+
+資料筆數: 1313
+
+欄位個數: 11
+
+欄位名稱: row.names, pclass, survived, name, age, embarked, home.dest, room, ticket, boat, sex
+
+### web_traffic.csv
+
+資料說明: 網頁流量資料
+
+資料筆數: 743
+
 ### 全國訂單明細.twbx
 
 資料來源: 全國訂單明細.xlsx (沈浩，王濤，韓朝陽，李健, 觸手可及的大數據分析工具：Tableau案例集, 電子工業出版社, 2015.)
@@ -157,12 +173,6 @@ Tableau 測試版本: 2018.3.11
 資料表個數: 6
 
 資料表名稱: 員工, 供應商, 產品, 訂單, 訂單詳細資料, 客戶
-
-### web_traffic.csv
-
-資料說明: 網頁流量資料
-
-資料筆數: 743
 
 ---
 
