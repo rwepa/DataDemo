@@ -95,6 +95,17 @@ system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtD
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
+### OnlineRetail.xlsx
+
+[資料來源](http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx)
+
+資料筆數: 541910
+
+欄位個數: 8
+
+欄位名稱: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
+
+
 ### population.taiwan.csv
 資料筆數: 21
 
