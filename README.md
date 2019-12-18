@@ -250,6 +250,10 @@ R 基礎篇
 
 [參考資料](http://rwepa.blogspot.com/search?q=c%2B%2B)
 
+### regression_01.pdf
+
+資料說明: 提供迴歸模型最小平方法的簡易數理證明
+
 ### roc_introduction.pdf
 
 資料說明: ROC Curve (Receiver Operating Characteristics) 簡介
