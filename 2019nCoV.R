@@ -46,6 +46,8 @@ ncovConfirmedAgg <- aggregate(`2020-2-10 19:30` ~ Country.Region,
   sum)
 
 # 使用 aggregate 計算各國家最近日期的合計
+# names(ncovConfirmed)[ncol(ncovConfirmed)] 取出最後一個欄位名稱,其結果為字串
+# get(names(ncovConfirmed)[ncol(ncovConfirmed)]) 將欄位名稱轉換為物件名稱
 ncovConfirmedAgg <- aggregate(get(names(ncovConfirmed)[ncol(ncovConfirmed)]) ~ Country.Region, 
   data=ncovConfirmed, 
   sum)
