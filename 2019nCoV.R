@@ -29,6 +29,7 @@ mydf <- as.data.frame(matrix(unlist(strsplit(names(ncovConfirmed)[-c(1:4)], "\\.
 myname <- c()
 
 # 將欄位名稱 "1.21.20.22.00" 轉換為 "2020-1-21 22:00", 即"年-月-日 時:分"格式
+# for (i in 1:...) { }, nrow(mydf) 表示列個數
 for (i in 1:nrow(mydf)) {
   myname <- c(myname, paste0(paste0("20", mydf[i, 3]), "-", mydf[i, 1], "-", mydf[i, 2], " ", mydf[i, 4], ":", mydf[i, 5]))
 }
