@@ -248,6 +248,65 @@ R 基礎篇
 
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
 
+### Python程式設計-李明昌.pdf
+資料說明: 提供 Python 程式設計
+
+目錄:
+
+第 1 章 Python 語言簡介
+1.1 Python 簡介
+1.2 Python 特性與應用
+1.3 Python 安裝
+1.4 Python 操作
+
+第 2 章 Anaconda 簡介與安裝
+2.1 Anaconda 特性
+2.2 Anaconda 下載與安裝
+2.3 Anaconda 套件管理
+2.4 Spyder 操作
+
+第 3 章 Python 語法與流程控制
+3.1 資料型別與運算子
+3.2 NumPy 模組的使用
+3.3 reshape 應用
+3.4 離群值處理
+3.5 if 與 for 處理
+
+第 4 章 資料型別與資料處理
+4.1 Tuple 序列
+4.2 List 串列
+4.3 Set 集合
+4.4 Dictionaries 字典
+
+第 5 章 檔案匯入與匯出
+5.1 認識 pandas 模組
+5.2 資料輸入/輸出
+
+第 6 章 視覺化應用
+6.1 視覺化簡介
+6.2 認識 matplotlib 模組
+6.3 matplotlib 繪圖應用
+6.4 seaborn 模組繪圖
+6.5 互動式繪圖
+
+第 7 章 迴歸分析
+7.1 迴歸模型 Regression Model
+7.2 迴歸分析 - 使用 scikit-learn 模組
+
+第 8 章 決策樹
+8.1 決策樹
+8.2 鐵達尼號資料集-決策樹應用
+
+第 9 章 關聯規則應用
+9.1 購物籃分析（market-basket analysis）
+9.2 mlxtend 模組
+
+第 10 章 推薦系統
+10.1 何謂推薦系統 Recommender System
+10.2 電影推薦系統
+
+參考文獻
+
 ### R3.0.0with_index_of_size 2^31.pdf
 資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
 
