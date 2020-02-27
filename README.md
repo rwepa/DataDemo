@@ -69,6 +69,38 @@ system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtD
 
 參考網站: http://rwepa.blogspot.com/2019/11/r-makenames-base.html  
 
+### human_resource.csv
+
+資料說明: 人力資源資料
+
+資料來源: https://github.com/Surya-Murali/Human-Resource-Analytics-in-R/tree/master/Dataset
+
+資料筆數: 14999
+
+欄位個數: 10
+
+欄位名稱:
+
+last_evaluation       : 最近考核分數 0~1分
+
+number_project        : 每年平均專案個數
+
+average_montly_hours  : 每月平均工作小時
+
+time_spend_company    : 在公司時間
+
+Work_accident         : 工安意外, 1:有, 0:沒有
+
+satisfaction_level    : 工作滿意度
+
+left                  : 是否離職, 1:離職, 0:沒有
+
+promotion_last_5years : 近5年是否有升遷, 1:有, 0:沒有
+
+role                  : 服務單位
+
+salary                : 薪資別: high, median, low
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
