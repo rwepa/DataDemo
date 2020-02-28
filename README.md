@@ -166,6 +166,15 @@ salary                : 薪資別: high, median, low
 
 欄位個數: 6
 
+### school.sav
+
+資料說明: SPSS 軟體 SAV 檔案
+
+資料筆數: 200
+
+欄位個數: 19
+
+# 
 ### termDocMatrix.RData
 
 資料說明: Term-Document Matrix of Twitter Posts
