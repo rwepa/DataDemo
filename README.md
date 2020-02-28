@@ -156,7 +156,8 @@ salary                : 薪資別: high, median, low
 欄位名稱: City, Lat, Long, City_Chinese, Population, Area
 
 ### production.csv
-資料說明: 參考 R資料匯入與匯出
+
+資料說明: 參考 R 資料匯入與匯出
 
 [參考資料](http://rwepa.blogspot.com/2018/04/readoutput.html)
 
@@ -300,6 +301,7 @@ R 基礎篇
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
 
 ### Python程式設計-李明昌.pdf
+
 資料說明: 提供 Python 程式設計
 
 目錄:
@@ -357,6 +359,18 @@ R 基礎篇
 10.2 電影推薦系統
 
 參考文獻
+
+### Python程式設計-李明昌.zip
+
+更新日期: 2020.2.28
+
+建壓縮後目錄 python.book.lee 包括以下:
+
+Python程式設計-李明昌.ipynb
+
+data 資料目錄
+
+img 原始圖檔
 
 ### R3.0.0with_index_of_size 2^31.pdf
 資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
