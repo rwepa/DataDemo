@@ -374,7 +374,7 @@ img 目錄 - 原始圖檔
 
 data 目錄 - 包括書籍資料檔案
 
-範例資料集:
+###### 範例資料集:
 
 - p.093 [322] 台灣電力公司_各縣市再生能源別購入情形 data/RenewableEnergy.csv
 
@@ -388,13 +388,11 @@ data 目錄 - 包括書籍資料檔案
 
 - p.174 [409] 鐵達尼號資料集 data/data/titanic.csv
 
-- p.185 [431] 線上購物資料集 data/OnlineRetail.xlsx
+- p.185 [431] 線上購物資料集 data/OnlineRetail.xlsx https://github.com/rwepa/DataDemo/blob/master/OnlineRetail.xlsx
 
 - p.199 [443] 電影資料集 data/tmdb-movie-metadata/tmdb_5000_credits.csv
 
 - p.200 [444] 電影推薦資料集 data/tmdb-movie-metadata/tmdb_5000_movies.csv
-
-
 
 ### R3.0.0with_index_of_size 2^31.pdf
 資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
