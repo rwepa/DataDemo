@@ -364,13 +364,37 @@ R 基礎篇
 
 更新日期: 2020.2.28
 
+資料說明: Python程式設計-李明昌.pdf 書籍的原始 ipynb 檔案
+
 建壓縮後目錄 python.book.lee 包括以下:
 
 Python程式設計-李明昌.ipynb
 
-data 資料目錄
+img 目錄 - 原始圖檔
 
-img 原始圖檔
+data 目錄 - 包括書籍資料檔案
+
+範例資料集:
+
+- p.093 [322] 台灣電力公司_各縣市再生能源別購入情形 data/RenewableEnergy.csv
+
+- p.097 [331] 台灣電力公司_煙道資料即時量測值 data/flue.xml
+
+- p.128 [361] 網頁流量資料集 data/web_traffic.csv
+
+- p.130 [366] 水雷資料集 https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data
+
+- p.159 [393] 波士頓房價資料 https://archive.ics.uci.edu/ml/machine-learning-databases/housing/housing.data
+
+- p.174 [409] 鐵達尼號資料集 data/data/titanic.csv
+
+- p.185 [431] 線上購物資料集 data/OnlineRetail.xlsx
+
+- p.199 [443] 電影資料集 data/tmdb-movie-metadata/tmdb_5000_credits.csv
+
+- p.200 [444] 電影推薦資料集 data/tmdb-movie-metadata/tmdb_5000_movies.csv
+
+
 
 ### R3.0.0with_index_of_size 2^31.pdf
 資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
