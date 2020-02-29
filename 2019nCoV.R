@@ -11,7 +11,7 @@ library(leaflet)
 library(htmltools) # tag
 
 # 確診 Confirmed
-ncovConfirmedUrl <- "https://raw.githubusercontent.com/CSSEGISandData/2019-nCoV/master/time_series/time_series_2019-ncov-Confirmed.csv"
+ncovConfirmedUrl <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
 
 # 匯入資料
 ncovConfirmed <- read.table(ncovConfirmedUrl, header=TRUE, sep=",")
@@ -43,15 +43,15 @@ head(ncovConfirmed)
 
 # 使用 aggregate 計算各國家 2020-2-10 19:30 的合計, 須使用 ‵  ‵ 字元
 ncovConfirmedAgg <- aggregate(`2020-2-10 19:30` ~ Country.Region, 
-  data=ncovConfirmed, 
-  sum)
+                              data=ncovConfirmed, 
+                              sum)
 
 # 使用 aggregate 計算各國家最近日期的合計
 # names(ncovConfirmed)[ncol(ncovConfirmed)] 取出最後一個欄位名稱,其結果為字串
 # get(names(ncovConfirmed)[ncol(ncovConfirmed)]) 將欄位名稱轉換為物件名稱
 ncovConfirmedAgg <- aggregate(get(names(ncovConfirmed)[ncol(ncovConfirmed)]) ~ Country.Region, 
-  data=ncovConfirmed, 
-  sum)
+                              data=ncovConfirmed, 
+                              sum)
 
 names(ncovConfirmedAgg) <- c("CountryRegion", "Confirmed")
 
@@ -60,7 +60,7 @@ ncovConfirmedAgg <- ncovConfirmedAgg[order(ncovConfirmedAgg$Confirmed, decreasin
 (ncovTotalConfirmed <- sum(ncovConfirmedAgg$Confirmed))
 
 # 死亡 Death
-ncovDeath <- "https://raw.githubusercontent.com/CSSEGISandData/2019-nCoV/master/time_series/time_series_2019-ncov-Deaths.csv"
+ncovDeath <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
 
 ncovDeath <- read.table(ncovDeath, header=TRUE, sep=",")
 
@@ -82,8 +82,8 @@ head(ncovDeath)
 ncovDeathAgg <- aggregate(`2020-2-10 19:30` ~ Country.Region, data=ncovDeath, sum)
 
 ncovDeathAgg <- aggregate(get(names(ncovDeath)[ncol(ncovDeath)]) ~ Country.Region, 
-  data=ncovDeath, 
-  sum)
+                          data=ncovDeath, 
+                          sum)
 
 names(ncovDeathAgg) <- c("CountryRegion", "Death")
 
@@ -93,7 +93,7 @@ ncovDeathAgg <- ncovDeathAgg[order(ncovDeathAgg$Death, decreasing=TRUE),]
 
 # 建立leaflet互動式地圖
 
-title <- tags$h2("2019新型冠狀病毒感染人數全球分佈圖")
+title <- tags$h2(paste0("2020新型冠狀病毒感染人數全球分佈圖, ", date()))
 
 datasource <- tags$div(
   HTML("Data: https://github.com/CSSEGISandData/2019-nCoV")
@@ -109,15 +109,14 @@ m <- leaflet() %>%
     lng=ncovConfirmed$Long,
     lat=ncovConfirmed$Lat,
     popup=paste0(ncovConfirmed$Province.State, 
-      ", ", 
-      ncovConfirmed$Country.Region, 
-      " ",
-      names(ncovConfirmed)[ncol(ncovConfirmed)], 
-      ";", ncovConfirmed[,ncol(ncovConfirmed)])) %>%
+                 ", ", 
+                 ncovConfirmed$Country.Region, 
+                 " ",
+                 names(ncovConfirmed)[ncol(ncovConfirmed)], 
+                 " 確診: ", ncovConfirmed[,ncol(ncovConfirmed)])) %>%
   addControl(title, position="topright") %>%
   addControl(datasource, position="bottomleft") %>%
   addControl(publish, position="bottomright")
-
 
 m  # Print the map
 # end
