@@ -300,9 +300,9 @@ R 基礎篇
 
 資料來源: 統計學：觀念、方法、應用(第4版), 賀力行、林淑萍、蔡明春, 前程文化, 2008.
 
-### Python程式設計-李明昌.pdf
+### Python_Programming_Lee.pdf
 
-資料說明: 提供 Python 程式設計
+資料說明: Python 程式設計 - 李明昌 (免費電子書)
 
 目錄:
 
@@ -360,7 +360,7 @@ R 基礎篇
 
 參考文獻
 
-### Python程式設計-李明昌.zip
+### Python_Programming_Lee_ipynb.zip
 
 更新日期: 2020.2.28
 
