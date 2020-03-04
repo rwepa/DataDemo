@@ -428,3 +428,7 @@ data 目錄 - 包括書籍資料檔案
 ### roc_r_example.pdf
 
 資料說明: ROCR套件執行ROC計算繪圖
+
+### windows_intall_R.pdf
+
+資料說明: Windows 環境安裝R的完整步驟
