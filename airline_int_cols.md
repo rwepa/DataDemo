@@ -4,11 +4,11 @@
 
 日期: 2020/3/6
 
-壓縮檔案: airline_int_cols.csv.bz2
+下載檔案: airline_int_cols.csv.bz2
 
 下載連結: https://reurl.cc/62gDNV
 
-航班資料: airline_int_cols.csv.bz2, 解壓縮後的檔名為 airline_int_cols.csv
+航班資料: airline_int_cols.csv.bz2 解壓縮後的檔名為 airline_int_cols.csv
 
 資料大小: 10.7GB
 
