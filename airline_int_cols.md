@@ -12,7 +12,7 @@
 
 資料大小: 10.7GB
 
-![image](![airline_int_cols_10 7GB](https://user-images.githubusercontent.com/36437869/76048218-277b0080-5fa0-11ea-839e-59f712fbaafb.png)
+![airline_int_cols_10 7GB](https://user-images.githubusercontent.com/36437869/76048218-277b0080-5fa0-11ea-839e-59f712fbaafb.png)
 
 測試環境: Intel Core i7-8550U CPU, RAM 8GB, Windows 10 64位元
 
