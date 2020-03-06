@@ -19,7 +19,7 @@
 
 下載檔案: AirlineDelays.tar.bz2 (1.54GB)
 
-參考連結: https://reurl.cc/xZDER5
+參考連結: https://github.com/rwepa/DataDemo/blob/master/airline_multiples.md
 
 解壓縮後包括22個檔案, 檔名為: 1987.csv, 1988.csv, ..., 2008.csv (檔案大小: 121MB ~ 670MB)
 
