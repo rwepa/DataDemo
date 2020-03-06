@@ -1,8 +1,9 @@
-主題: 單一大型航班資料匯入至R
-
-作者: Ming-Chang Lee
-
-日期: 2020/3/6
+---
+title: "單一大型航班資料匯入至R"
+author: "Ming-Chang Lee"
+date: "2020/3/6"
+output: html_document
+---
 
 下載檔案: airline_int_cols.csv.bz2
 
