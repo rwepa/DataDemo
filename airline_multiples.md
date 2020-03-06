@@ -11,3 +11,13 @@
 資料大小: 22個檔案合計11.2GB, 檔案大小(121MB ~ 670MB)
 
 使用一般 read.csv 即可直接讀取
+
+```{r  eval=FALSE}
+system.time(delay1987 <- read.csv("1987.csv"))
+            
+str(delay1987)
+```
+
+完成畫面
+
+![airline_multiples_R](https://user-images.githubusercontent.com/36437869/76058949-9b290780-5fb8-11ea-80f4-f115b5598a4b.png)
