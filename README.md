@@ -5,6 +5,26 @@
 
 # Part 1 資料 Data
 
+### airline_int_cols.md
+
+資料說明: 單一大型航班資料
+
+下載檔案: airline_int_cols.csv.bz2 (1.38GB)
+
+參考連結: https://github.com/rwepa/DataDemo/blob/master/airline_int_cols.md
+
+航班資料: airline_int_cols.csv.bz2 解壓縮後的檔名為 airline_int_cols.csv (10.7GB)
+
+### airline_multiples.md
+
+下載檔案: AirlineDelays.tar.bz2 (1.54GB)
+
+參考連結: https://reurl.cc/xZDER5
+
+解壓縮後包括22個檔案, 檔名為: 1987.csv, 1988.csv, ..., 2008.csv (檔案大小: 121MB ~ 670MB)
+
+資料大小: 22個檔案, 合計11.2GB
+
 ### chorddiag.zip
 
 資料說明: chorddiag Windows 版本套件壓縮檔
