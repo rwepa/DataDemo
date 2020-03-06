@@ -1,9 +1,8 @@
----
-title: "單一大型航班資料匯入至R"
-author: "Ming-Chang Lee"
-date: "2020/3/6"
-output: html_document
----
+title: 單一大型航班資料匯入至R
+
+author: Ming-Chang Lee
+
+date: 2020/3/6
 
 壓縮檔案: airline_int_cols.csv.bz2
 
@@ -35,5 +34,9 @@ system.time(airline <- read.big.matrix("airline_int_cols.csv",
 
 dim(airline)
 ```
+
+完成畫面
+
+![airline_int_cols_R](https://user-images.githubusercontent.com/36437869/76055387-729c1000-5fae-11ea-83f1-ffa72f559742.png)
 
          
