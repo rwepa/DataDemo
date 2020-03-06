@@ -6,7 +6,7 @@
 
 下載連結: https://reurl.cc/xZDER5
 
-航班資料: AirlineDelays.tar.bz2, 解壓縮後包括22個檔案, 檔名為: 1987.csv, 1988.csv, ..., 2008.csv
+航班資料: AirlineDelays.tar.bz2(1.54GB), 解壓縮後包括22個檔案, 檔名為: 1987.csv, 1988.csv, ..., 2008.csv
 
 資料大小: 22個檔案合計11.2GB, 檔案大小(121MB ~ 670MB)
 
