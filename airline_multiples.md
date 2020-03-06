@@ -10,6 +10,8 @@
 
 資料大小: 22個檔案合計11.2GB, 檔案大小(121MB ~ 670MB)
 
+![airline_multiples_22files](https://user-images.githubusercontent.com/36437869/76059899-f6f49000-5fba-11ea-87ef-deaf08a57dbf.png)
+
 使用一般 read.csv 即可直接讀取
 
 ```{r  eval=FALSE}
