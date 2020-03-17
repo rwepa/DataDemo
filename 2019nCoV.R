@@ -1,10 +1,13 @@
 # title: 2019新型冠狀病毒視覺化
 # date: 2020.2.13
-# updated: 2020.3.2
+# updated: 2020.3.17
 # author: Ming-Chang Lee
 # email: alan9956@gmail.com
 # RWEPA: http://rwepa.blogspot.tw/
 # GitHub: https://github.com/rwepa
+
+# updated note:
+# 1. 修改 read.table 為 read.csv
 
 # data: https://github.com/CSSEGISandData/2019-nCoV
 
@@ -15,7 +18,7 @@ library(htmltools) # tag
 ncovConfirmedUrl <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
 
 # 匯入資料
-ncovConfirmed <- read.table(ncovConfirmedUrl, header=TRUE, sep=",")
+ncovConfirmed <- read.csv(ncovConfirmedUrl)
 
 # 將 X 取代為空白
 names(ncovConfirmed) <- gsub("X", "", names(ncovConfirmed))
@@ -44,8 +47,8 @@ names(ncovConfirmed)[-c(1:4)] <- myname
 
 head(ncovConfirmed)
 
-# 使用 aggregate 計算各國家 2020-2-10 19:30 的合計, 須使用 ‵  ‵ 字元
-ncovConfirmedAgg <- aggregate(`2020-3-1` ~ Country.Region, 
+# 使用 aggregate 計算各國家 2020-3-16 的合計, 須使用 ‵  ‵ 字元
+ncovConfirmedAgg <- aggregate(`2020-3-16` ~ Country.Region, 
                               data=ncovConfirmed, 
                               sum)
 
@@ -66,7 +69,7 @@ ncovConfirmedAgg <- ncovConfirmedAgg[order(ncovConfirmedAgg$Confirmed, decreasin
 # 死亡 Death
 ncovDeath <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
 
-ncovDeath <- read.table(ncovDeath, header=TRUE, sep=",")
+ncovDeath <- read.csv(ncovDeath)
 
 names(ncovDeath) <- gsub("X", "", names(ncovDeath))
 
@@ -84,7 +87,7 @@ names(ncovDeath)[-c(1:4)] <- myname
 
 head(ncovDeath)
 
-ncovDeathAgg <- aggregate(`2020-3-1` ~ Country.Region, data=ncovDeath, sum)
+ncovDeathAgg <- aggregate(`2020-3-16` ~ Country.Region, data=ncovDeath, sum)
 
 ncovDeathAgg <- aggregate(get(names(ncovDeath)[ncol(ncovDeath)]) ~ Country.Region, 
                           data=ncovDeath, 
