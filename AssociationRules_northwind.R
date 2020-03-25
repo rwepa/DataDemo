@@ -1,7 +1,6 @@
 # Topic  : Data mining - association rules and apriori algorithm
 # Author : Ming-Chang Lee
 # Date   : 2009.03.30
-# Note   : 資料來源, 參考 northwind.mdb 北風資料庫
 
 ## step 1. load arules package
 library(arules)
