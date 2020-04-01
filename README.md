@@ -295,7 +295,16 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 
 日期: 2018.11.19
 
+### 2019nCoV.R
+
+資料說明: 2020新型冠狀病毒視覺化
+
+使用套件: leaflet, htmltools
+
+日期: 2020.2.13
+
 ### Foundation.pdf
+
 ### Foundation.R
 
 R 基礎篇
