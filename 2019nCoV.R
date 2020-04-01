@@ -15,8 +15,7 @@ library(leaflet)
 library(htmltools) # tag
 
 # 確診 Confirmed
-ncovConfirmedUrl <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv"
-
+ncovConfirmedUrl <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
 # 匯入資料
 ncovConfirmed <- read.csv(ncovConfirmedUrl)
 
@@ -67,7 +66,7 @@ ncovConfirmedAgg <- ncovConfirmedAgg[order(ncovConfirmedAgg$Confirmed, decreasin
 (ncovTotalConfirmed <- sum(ncovConfirmedAgg$Confirmed))
 
 # 死亡 Death
-ncovDeath <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv"
+ncovDeath <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
 
 ncovDeath <- read.csv(ncovDeath)
 
