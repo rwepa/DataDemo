@@ -269,6 +269,14 @@ Tableau 測試版本: 2018.3.11
 
 資料來源: https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
 
+### 2019nCoV.R
+
+資料說明: 2020新型冠狀病毒視覺化
+
+使用套件: leaflet, htmltools
+
+日期: 2020.2.13
+
 ### aMarvelousR_Lee(pp238).pdf
 資料說明: R 基礎篇 - 國立台北商業技術學院上課教材(238頁, 2011.7.4)
 
@@ -294,14 +302,6 @@ arules package - 提供資料探勘中關聯規則apriori algorithm
 資料說明: 育達科技大學 經營管理講座 - Big Data Application
 
 日期: 2018.11.19
-
-### 2019nCoV.R
-
-資料說明: 2020新型冠狀病毒視覺化
-
-使用套件: leaflet, htmltools
-
-日期: 2020.2.13
 
 ### Foundation.pdf
 
