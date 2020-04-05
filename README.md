@@ -169,6 +169,8 @@ salary                : 薪資別: high, median, low
 
 欄位名稱: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
 
+說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
+
 
 ### population.taiwan.csv
 資料筆數: 21
