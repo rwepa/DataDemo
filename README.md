@@ -133,6 +133,25 @@ role                  : 服務單位
 
 salary                : 薪資別: high, median, low
 
+### marketing.csv
+
+資料說明: 行銷廣告資料
+
+資料來源: R語言 - marketing {datarium}
+
+資料筆數: 200
+
+欄位個數: 4
+
+欄位名稱: youtube, facebook, newspaper, sales
+
+資料隕覽:
+
+#   youtube facebook newspaper sales
+# 1  276.12    45.36     83.04 26.52
+# 2   53.40    47.16     54.12 12.48
+# 3   20.64    55.08     83.16 11.16
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
