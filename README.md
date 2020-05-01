@@ -147,6 +147,8 @@ salary                : 薪資別: high, median, low
 
 資料預覽:
 
+https://github.com/rwepa/DataDemo/blob/master/imgs/marketing.png?raw=true
+
 youtube facebook newspaper sales
 
 276.12 45.36     83.04 26.52
