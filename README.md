@@ -181,9 +181,7 @@ salary                : 薪資別: high, median, low
 
 ### production.csv
 
-資料說明: 參考 R 資料匯入與匯出
-
-[參考資料](http://rwepa.blogspot.com/2018/04/readoutput.html)
+資料說明: 參考 R 資料匯入與匯出 [參考資料](http://rwepa.blogspot.com/2018/04/readoutput.html)
 
 資料筆數: 10
 
