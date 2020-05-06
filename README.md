@@ -231,7 +231,9 @@ salary                : 薪資別: high, median, low
 
 欄位個數: 21
 
-自變數: customerID, gender, ... ,TotalCharges 等20個
+自變數:
+
+customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges 等20個
 
 依變數: Churn
 
