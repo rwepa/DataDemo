@@ -223,7 +223,18 @@ salary                : 薪資別: high, median, low
 
 欄位個數: 19
 
-# 
+### TelcoChurn.csv
+
+資料來源: https://www.kaggle.com/blastchar/telco-customer-churn
+
+資料筆數: 7043
+
+欄位個數: 21
+
+自變數: customerID, gender, ... ,TotalCharges 等20個
+
+依變數: Churn
+
 ### termDocMatrix.RData
 
 資料說明: Term-Document Matrix of Twitter Posts
