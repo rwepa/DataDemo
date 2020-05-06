@@ -225,6 +225,8 @@ salary                : 薪資別: high, median, low
 
 ### TelcoChurn.csv
 
+資料說明: 電信公司客戶流失資料集
+
 資料來源: https://www.kaggle.com/blastchar/telco-customer-churn
 
 資料筆數: 7043
@@ -235,7 +237,7 @@ salary                : 薪資別: high, median, low
 
 customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges 等20個
 
-依變數: Churn
+依變數: Churn {Yes, No}
 
 ### termDocMatrix.RData
 
