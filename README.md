@@ -125,7 +125,7 @@ Work_accident         : 工安意外, 1:有, 0:沒有
 
 satisfaction_level    : 工作滿意度
 
-left                  : 是否離職, 1:離職, 0:沒有
+left                  : 是否離職, 1:離職, 0:沒有 --> 反應變數
 
 promotion_last_5years : 近5年是否有升遷, 1:有, 0:沒有
 
