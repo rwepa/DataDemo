@@ -133,6 +133,43 @@ role                  : 服務單位
 
 salary                : 薪資別: high, median, low
 
+### german_credit.csv
+
+資料說明: 德國銀行貸款風險資料
+
+資料來源: https://www.kaggle.com/kabure/german-credit-data-with-risk, https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
+
+資料筆數: 1000
+
+欄位個數: 10
+
+欄位名稱:
+
+Age 年齡
+
+Sex 性別(text: male, female)
+
+Job 技術需求 {0,1,2,3}
+
+    0 - unskilled and non-resident 非技術人員和非居民
+    1 - unskilled and resident 非技術人員和居民
+    2 - skilled 技術人員
+    3 - highly skilled 高度技術人員
+
+Housing 住宅 {own, rent, free}
+
+Saving accounts 儲蓄賬戶 {little, moderate, quite rich, rich}
+
+Checking account 存款金額 (numeric, 德國馬克)
+
+Credit amount 貸款金額
+
+Duration 貸款期間(月)
+
+Purpose 貸款用途 {car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others}
+
+Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好.
+
 ### marketing.csv
 
 資料說明: 行銷廣告資料
