@@ -147,9 +147,9 @@ salary                : 薪資別: high, median, low
 
 Age 年齡
 
-Sex 性別(text: male, female)
+Sex 性別 {male, female}
 
-Job 技術需求 {0,1,2,3}
+Job 工作 {0,1,2,3}
 
     0 - unskilled and non-resident 非技術人員和非居民
     
@@ -161,17 +161,17 @@ Job 技術需求 {0,1,2,3}
 
 Housing 住宅 {own, rent, free}
 
-Saving accounts 儲蓄賬戶 {little, moderate, quite rich, rich}
+Saving.accounts 儲蓄賬戶 {little, moderate, rich, quite rich}
 
-Checking account 存款金額 (numeric, 德國馬克)
+Checking.account 存款金額 {little, moderate, rich}
 
-Credit amount 貸款金額
+Credit.amount 貸款金額 (德國馬克)
 
 Duration 貸款期間(月)
 
 Purpose 貸款用途 {car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others}
 
-Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好
+Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 --> 反應變數
 
 ![image](https://github.com/rwepa/DataDemo/blob/master/imgs/credit.png)
 
