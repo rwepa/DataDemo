@@ -152,8 +152,11 @@ Sex 性別(text: male, female)
 Job 技術需求 {0,1,2,3}
 
     0 - unskilled and non-resident 非技術人員和非居民
+    
     1 - unskilled and resident 非技術人員和居民
+    
     2 - skilled 技術人員
+    
     3 - highly skilled 高度技術人員
 
 Housing 住宅 {own, rent, free}
@@ -168,7 +171,9 @@ Duration 貸款期間(月)
 
 Purpose 貸款用途 {car, furniture/equipment, radio/TV, domestic appliances, repairs, education, business, vacation/others}
 
-Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好.
+Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好
+
+![image](https://github.com/rwepa/DataDemo/blob/master/imgs/credit.png)
 
 ### marketing.csv
 
