@@ -543,6 +543,14 @@ data 目錄 - 包括書籍資料檔案
 
 資料說明: ROC Curve (Receiver Operating Characteristics) 簡介
 
+### svm_example-R.pdf
+
+資料說明: R 的 SVM 使用說明, 範例包括：214筆資料，輸入變數維度為9個.
+
+### svm_introduction.pdf
+
+資料說明: 支持向量機(Support Vector Machines, SVM) 概念介紹.
+
 ### roc_r_example.pdf
 
 資料說明: ROCR套件執行ROC計算繪圖
