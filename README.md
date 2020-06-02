@@ -229,7 +229,6 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
 
-
 ### population.taiwan.csv
 資料筆數: 21
 
@@ -296,6 +295,16 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 欄位個數: 11
 
 欄位名稱: row.names, pclass, survived, name, age, embarked, home.dest, room, ticket, boat, sex
+
+### tw2000.csv
+
+資料說明: 2000年1月1日~2019年12月31日台灣加權股價指數
+
+資料筆數: 5017
+
+欄位個數: 7
+
+位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
 
 ### web_traffic.csv
 
