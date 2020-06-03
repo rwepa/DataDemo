@@ -45,6 +45,16 @@
 
 欄位個數: 21
 
+### drink.csv
+
+資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
+
+資料筆數: 20
+
+欄位個數: 1
+
+欄位名稱: sales
+
 ### gfc.csv
 
 資料說明: 提供工廠訂單資料
@@ -256,6 +266,16 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 欄位個數: 6
 
+### R03_Orders.txt
+
+資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
+
+資料筆數: 10萬
+
+欄位個數: 5
+
+欄位名稱: OrderID, OrderDate, BookID, Quantity, Price
+
 ### school.sav
 
 資料說明: SPSS 軟體 SAV 檔案
@@ -263,6 +283,16 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 資料筆數: 200
 
 欄位個數: 19
+
+### score.csv
+
+資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
+
+資料筆數: 7
+
+欄位個數: 3
+
+欄位名稱: s.id, quiz1, quiz2
 
 ### TelcoChurn.csv
 
@@ -304,7 +334,7 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位個數: 7
 
-位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
+欄位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
 
 ### web_traffic.csv
 
