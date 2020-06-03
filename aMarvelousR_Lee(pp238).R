@@ -890,7 +890,6 @@ testset <- Glass[testindex, ]
 # 將其他資料設定訓練資料 trainset,共143 個筆資料
 trainset <- Glass[-testindex, ]
 
-
 # 利用svm 執行並將結果存入變數svm.model
 svm.model <- svm(Type ~ ., data = trainset, cost = 100, gamma = 1)
 
