@@ -143,6 +143,16 @@ role                  : 服務單位
 
 salary                : 薪資別: high, median, low
 
+### hw1.csv
+
+資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
+
+資料筆數: 25
+
+欄位個數: 4
+
+欄位名稱: No, x1, x2, x3
+
 ### german_credit.csv
 
 資料說明: 德國銀行貸款風險資料
