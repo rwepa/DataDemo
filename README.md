@@ -561,6 +561,9 @@ data 目錄 - 包括書籍資料檔案
 
 - p.200 [444] 電影推薦資料集 data/tmdb-movie-metadata/tmdb_5000_movies.csv
 
+### R-4.0.1-Rcmdr-correct.pdf
+資料說明: 使用R-4.0.1語言, 開啟Rcmdr套件自動關閉異常現象, 改用 R-4.0.0 已經正常開啟 Rcmdr 視窗.
+
 ### R3.0.0with_index_of_size 2^31.pdf
 資料說明: R-3.0.0 已經支援數值索引值(numeric index values)達到 2^31 以上
 
