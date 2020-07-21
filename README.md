@@ -27,6 +27,18 @@
 
 資料大小: 22個檔案, 合計11.2GB
 
+### aqx_p_434_20200720134939.csv
+
+資料說明: 日空氣品質指標(AQI)
+
+資料來源: https://data.gov.tw/dataset/40507
+
+資料筆數: 1000
+
+欄位個數: 11
+
+欄位名稱: SiteId, SiteName, MonitorDate, AQI, SO2SubIndex, COSubIndex, O3SubIndex, PM10SubIndex, NO2SubIndex, O38SubIndex, PM25SubIndex
+
 ### chorddiag.zip
 
 資料說明: chorddiag Windows 版本套件壓縮檔
