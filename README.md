@@ -316,6 +316,18 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 欄位名稱: s.id, quiz1, quiz2
 
+### sp500.RData
+
+資料說明: 採用 sp500 {gt}, 記錄 1950/1/3 - 2015/12/31, 原資料集為依日期遞減排序, 已更新為依日期遞增排序.
+
+資料筆數: 16607
+
+欄位個數: 7
+
+欄位名稱: date, open, high, low, close, volume, adj_close
+
+參考資料: sp500.R
+
 ### TelcoChurn.csv
 
 資料說明: 電信公司客戶流失資料集
