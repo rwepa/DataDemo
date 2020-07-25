@@ -326,7 +326,7 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 欄位名稱: date, open, high, low, close, volume, adj_close
 
-參考資料: sp500.R
+參考資料: sp500.R [https://github.com/rwepa/DataDemo/blob/master/sp500.R]
 
 ### TelcoChurn.csv
 
