@@ -47,6 +47,18 @@
 
 資料來源: https://github.com/mattflor/chorddiag
 
+### credit.arff
+
+資料說明: Statlog (German Credit Data) Data Set
+
+資料來源: https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)
+
+資料筆數: 1000
+
+欄位個數: 21
+
+檔案說明: 採用 ARFF(Attribute-Relation File Format), 即屬性-關係檔案格式, 為 WEKA 軟體資料格式檔案.
+
 ### credit.csv
 
 資料說明: Statlog (German Credit Data) Data Set
