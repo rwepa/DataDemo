@@ -310,6 +310,16 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 欄位名稱: OrderID, OrderDate, BookID, Quantity, Price
 
+### r_in_nutshell_data_bb.zip
+
+資料說明: 
+
+1. Adler, Joseph, R In a Nutshell, O'Reilly Media, 2012. 範例資料集
+
+2. 資料來源 https://resources.oreilly.com/examples/9780596801717/tree/master/nutshell/data
+
+3. 解壓縮後為 bb.db 檔案, 可使用 RSQLite 套件載入
+
 ### r_in_nutshell_data_Rdata.zip
 
 資料說明: 
@@ -319,28 +329,46 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 2. 資料來源 https://resources.oreilly.com/examples/9780596801717/tree/master/nutshell/data
 
 3. 20筆 rda 資料集
+
 GSE2034
+
 SPECint2006
+
 audioscrobbler
+
 batting.2008
+
 births2006.smpl: births2006.idx
+
 consumption
+
 doctorates
+
 dow30
+
 field.goals
+
 ham.price.ts
+
 mort06.smpl
+
 sanfrancisco.home.sales: sanfranscisco.home.sales.testing.indices sanfrancisco.home.sales.training.indices
+
 schiller.index: schiller.other.data
+
 spambase
+
 team.batting.00to08
-tires.sus
+
+tires.sus (輪胎耐磨性測試資料)
+
 top.bacon.searching.cities
+
 toxins.and.cancer
+
 turkey.price.ts
+
 yosemite
-
-
 
 ### school.sav
 
