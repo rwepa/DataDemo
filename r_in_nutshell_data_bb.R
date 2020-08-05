@@ -9,10 +9,10 @@ library(RSQLite)
 # 載入資料庫驅動程式
 drv <- dbDriver("SQLite")
 
+class(drv)
+
 # 建立資料庫連結
 con <- dbConnect(drv, dbname = "bb.db")
-
-class(drv)
 
 # 資料庫元資料
 dbGetInfo(con)
