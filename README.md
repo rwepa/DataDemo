@@ -310,6 +310,15 @@ Risk 風險指標 {good, bad}, good:表示通過貸款或信用評估為良好 -
 
 欄位名稱: OrderID, OrderDate, BookID, Quantity, Price
 
+### r_in_nutshell_data_Rdata.zip
+
+資料說明: 
+
+#### Adler, Joseph, R In a Nutshell, O'Reilly Media, 2012. 範例資料集
+
+1. 20筆 rda 資料集
+
+
 ### school.sav
 
 資料說明: SPSS 軟體 SAV 檔案
