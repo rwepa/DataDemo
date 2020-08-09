@@ -408,7 +408,7 @@ yosemite
 
 欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
 
-使用方法: load(url("https://github.com/rwepa/DataDemo/blob/master/sse.RData?raw=true"))
+使用方法: load(url("https://github.com/rwepa/DataDemo/blob/master/sse.RData?raw=true"), verbose = TRUE)
 
 ### TelcoChurn.csv
 
