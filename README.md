@@ -400,6 +400,16 @@ yosemite
 
 參考資料: sp500.R [https://github.com/rwepa/DataDemo/blob/master/sp500.R]
 
+### sse.RData
+
+資料說明: 2009年起上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
+
+資料筆數: 18164列, 8行
+
+欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
+
+使用方法: load(url("https://github.com/rwepa/DataDemo/blob/master/sse.RData?raw=true"))
+
 ### TelcoChurn.csv
 
 資料說明: 電信公司客戶流失資料集
@@ -415,14 +425,6 @@ yosemite
 customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges 等20個
 
 依變數: Churn {Yes, No}
-
-### sse.RData
-
-資料說明: 2009年起上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
-
-資料筆數: 18164列, 8行
-
-欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
 
 ### termDocMatrix.RData
 
