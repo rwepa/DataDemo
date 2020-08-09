@@ -404,6 +404,8 @@ yosemite
 
 資料說明: 2009-2013年上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
 
+資料來源: 量化投資：以R語言為工具, 蔡立耑, 電子工業出版社.
+
 資料筆數: 18164列, 8行
 
 欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
