@@ -402,7 +402,7 @@ yosemite
 
 ### sse.RData
 
-資料說明: 2009年起上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
+資料說明: 2009-2013年上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
 
 資料筆數: 18164列, 8行
 
