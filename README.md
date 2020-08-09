@@ -416,6 +416,14 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 依變數: Churn {Yes, No}
 
+### sse.RData
+
+資料說明: 2009年起上證指數相關資料(上海證券交易所綜合股價指數, SSE Composite Index), SSE: Shanghai Stock Exchange.
+
+資料筆數: 18164列, 8行
+
+欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
+
 ### termDocMatrix.RData
 
 資料說明: Term-Document Matrix of Twitter Posts
