@@ -565,6 +565,10 @@ R 基礎篇
 
 [參考網址](http://rwepa.blogspot.com/2013/01/r_4.html)
 
+### greek.pdf
+
+資料說明: 希臘字母讀音表
+
 ### installRMySQLtutorial.pdf
 資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
 
