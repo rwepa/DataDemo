@@ -49,7 +49,7 @@ seasonplot(a10)
 
 sale <- c(a10)
 
-date <- seq(from = as.Date('1991-7-1'), to = as.Date('2008-6-1'), length.out = length(sale))
+date <- seq(from = as.Date('1991-7-1'), to = as.Date('2008-6-1'), by = 'month')
 
 antidiabeticdrug <- data.frame(date, sale)
 
