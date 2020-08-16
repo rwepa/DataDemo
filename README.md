@@ -27,6 +27,28 @@
 
 資料大小: 22個檔案, 合計11.2GB
 
+### antidiabeticdrug.csv
+
+資料說明: 從1992年到2008年，澳大利亞每月的抗糖尿病藥物銷售量。
+
+資料來源: R語言 a10 {fpp}
+
+資料筆數: 204
+
+欄位個數: 2
+
+欄位名稱: date, sale
+
+資料匯出:
+
+library(fpp)
+a10
+seasonplot(a10)
+sale <- c(a10)
+date <- seq(from = as.Date('1991-7-1'), to = as.Date('2008-6-1'), length.out=204)
+antidiabeticdrug <- data.frame(date, sale)
+write.csv(antidiabeticdrug, file = 'antidiabeticdrug.csv', row.names = FALSE)
+
 ### aqx_p_434_20200720134939.csv
 
 資料說明: 日空氣品質指標(AQI)
