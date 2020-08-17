@@ -472,6 +472,26 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位名稱: row.names, pclass, survived, name, age, embarked, home.dest, room, ticket, boat, sex
 
+### tmdb-movie-metadata.zip
+
+資料說明: 電影資料 TMDB 5000 Movie Dataset, 
+
+資料來源: https://www.kaggle.com/tmdb/tmdb-movie-metadata
+
+使用𦑦明: 解壓縮zip後為2個檔案 (tmdb_5000_credits.csv, tmdb_5000_movies.csv)
+
+檔名: tmdb_5000_credits.csv (38.1MB)
+
+資料筆數: 4803
+
+欄位個數: 4
+
+檔名: tmdb_5000_movies.csv (5.43MB)
+
+資料筆數: 4803
+
+欄位個數: 20
+
 ### tw2000.csv
 
 資料說明: 2000年1月1日~2019年12月31日台灣加權股價指數
