@@ -510,6 +510,16 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
 
+### tx_1min_high_cluster.RData
+
+資料說明: 台指期1分鐘歷史資料的高峰資料集
+
+資料筆數: 83506
+
+欄位個數: 17
+
+資料範圍: 2013/12/10 ~ 2015/01/23
+
 ### web_traffic.csv
 
 資料說明: 網頁流量資料
