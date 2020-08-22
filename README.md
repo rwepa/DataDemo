@@ -247,6 +247,32 @@ salary                : 薪資別: high, median, low
 
 欄位名稱: No, x1, x2, x3
 
+### insurance.csv
+
+資料說明: 醫療費用預測資料集
+
+資料來源: Machine Learning with R, Second Edition, 2015.
+
+資料筆數: 1338
+
+欄位個數: 7
+
+欄位名稱:
+
+age: 受益人的年齡
+
+sex: 性別
+
+bmi: 理想 BMI 18.5 to 24.9
+
+children: 保險計劃所涵蓋的子女/家屬人數
+
+smoker: 是否有抽煙
+
+region: 美國四大區 {northeast, southeast, southwest, or northwest}
+
+expenses: 醫療費用
+
 ### marketing.csv
 
 資料說明: 行銷廣告資料
