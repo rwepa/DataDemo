@@ -67,6 +67,14 @@ write.csv(antidiabeticdrug, file = 'antidiabeticdrug.csv', row.names = FALSE)
 
 欄位名稱: SiteId, SiteName, MonitorDate, AQI, SO2SubIndex, COSubIndex, O3SubIndex, PM10SubIndex, NO2SubIndex, O38SubIndex, PM25SubIndex
 
+### bank_deposit.csv
+
+資料說明: 銀行定期存款商品銷售
+
+資料筆數: 2000
+
+欄位個數: 17
+
 ### chorddiag.zip
 
 資料說明: chorddiag Windows 版本套件壓縮檔
