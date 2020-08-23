@@ -492,6 +492,18 @@ yosemite
 
 欄位名稱: s.id, quiz1, quiz2
 
+### server_logs.csv
+
+資料說明: 主機日誌檔
+
+資料來源: https://www.kaggle.com/kartikjaspal/server-logs-suspicious
+
+資料筆數: 172838
+
+欄位個數: 16
+
+欄位說明: class欄位包括以下三種情形 {normal, suspicious, unknown}
+
 ### snsdata.csv
 
 資料說明: FB社群找出青少年目標族群
