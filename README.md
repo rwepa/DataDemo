@@ -105,7 +105,7 @@ day       : 最近連絡日
 
 month     : 最近連絡月
 
-duration  : 最近連絡通話時間秒數,duration小,subscribed為no
+duration  : 最近連絡通話時間秒數. duration愈小時, subscribed 較可能為no.
 
 campaign  : 連絡次數
 
