@@ -71,9 +71,49 @@ write.csv(antidiabeticdrug, file = 'antidiabeticdrug.csv', row.names = FALSE)
 
 資料說明: 銀行定期存款商品銷售
 
+資料來源:
+
+https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
+
+Data Science and Big Data Analytics: Discovering, Analyzing, Visualizing and Presenting Data, EMC Education Services (Editor), 2015.
+
 資料筆數: 2000
 
 欄位個數: 17
+
+age       : 年齡
+
+job       : 工作
+
+marital   : 婚姻 {divorced, married, single}
+
+education : 教育程度
+
+default   : 是否有個人違約記錄
+
+balance   : 賬戶餘額
+
+housing   : 是否有房屋
+
+loan      : 是否有個人貸款
+
+contact   : 連絡方式
+
+day       : 最近連絡日
+
+month     : 最近連絡月
+
+duration  : 最近連絡通話時間秒數,duration小,subscribed為no
+
+campaign  : 連絡次數
+
+pdays     : 最近與客戶聯繫之後經過的天數, -1表示以前未與客戶聯繫
+
+previous  : 連絡次數 
+
+poutcome  : 最近行銷結果 {failure, other, success, unknown}
+
+ubscribed : {yes 有購買定期存款商品} --> 反應變數
 
 ### chorddiag.zip
 
