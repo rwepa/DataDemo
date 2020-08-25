@@ -117,6 +117,18 @@ poutcome  : 最近行銷結果 {failure, other, success, unknown}
 
 ubscribed : {yes 有購買定期存款商品} --> 反應變數
 
+### ChemicalManufacturingProcess.csv
+
+資料說明: 醫藥產品製程分析資料集
+
+資料來源: R語言 - ChemicalManufacturingProcess {AppliedPredictiveModeling}
+
+資料筆數: 176
+
+欄位個數: 58
+
+欄位說明: 全部資料型態皆為數值, Yield 為反應變數
+
 ### chorddiag.zip
 
 資料說明: chorddiag Windows 版本套件壓縮檔
@@ -473,19 +485,6 @@ toxins.and.cancer
 turkey.price.ts
 
 yosemite
-
-### ChemicalManufacturingProcess.csv
-
-資料說明: 醫藥產品製程分析資料集
-
-資料來源: R語言 - ChemicalManufacturingProcess {AppliedPredictiveModeling}
-
-資料筆數: 176
-
-欄位個數: 58
-
-欄位說明: 全部資料型態皆為數值, Yield 為反應變數
-
 
 ### school.sav
 
