@@ -377,6 +377,44 @@ expenses: 醫療費用
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
+### IOT-temp.csv
+
+資料說明: 物聯網溫度資料
+
+資料來源: https://www.kaggle.com/atulanandjha/temperature-readings-iot-devices
+
+資料筆數: 97606
+
+欄位個數: 5
+
+欄位說明: id, room_id/id, noted_date, temp, out/in
+
+id : 編號 unique IDs for each reading
+
+room_id/id : 房間代碼 room id in which device was installed (inside and/or outside) -> currently 'admin room' only for example purpose.
+
+noted_date : 日期 date and time of reading
+
+temp : 溫度 temperature readings
+
+out/in : 房間內/外 whether reading was taken from device installed inside or outside of room?
+
+任務:
+
+1. 最高和最低溫度是多少？
+
+2. 室外溫度與內部溫度有何關係？ 兩者之間有什麼關係？
+
+3. 室內和室外室溫的溫度變化如何？
+
+4. 資料趨勢如何？
+
+5. 您可以使用時間序列法來預測未來情況嗎？
+
+6. 哪個月最熱/最冷？
+
+7. 有找到來自氣候災難的警告信號(離群值)?
+
 ### OnlineRetail.xlsx
 
 資料來源: http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
