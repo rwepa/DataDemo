@@ -769,6 +769,12 @@ R 基礎篇
 
 [參考網址](http://rwepa.blogspot.com/2013/01/r_4.html)
 
+### ggplot2-hcl.R
+
+資料說明: 使用 ggplot2套件與 hcl 客製化繪圖顏色之R程式碼
+
+參考網頁: http://rwepa.blogspot.com/2020/09/ggplot2-hcl-customized-color.html
+
 ### greek.pdf
 
 資料說明: 希臘字母讀音表
