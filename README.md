@@ -780,9 +780,30 @@ R 基礎篇
 資料說明: 希臘字母讀音表
 
 ### installRMySQLtutorial.pdf
+
 資料說明: Windows 環境中, 使用 RMySQL原始欄案, 自行編譯 RMySQL 套件
 
 [自行編譯 RMySQL 套件](http://rwepa.blogspot.com/2013/01/windows-rmysql.html)
+
+### iot_bigdata.pdf
+
+### 主題: 物聯網與⼤數據的整合應⽤
+
+### 內容:
+
+1. 資料分析/視覺化成果
+
+2. 大數據簡介
+
+3. 大數據分析工具與架構
+
+4. R簡介、下載與安裝
+
+5. RStudio 簡介、下載與安裝
+
+6. R使用環境
+
+7. 溫度感測案例分析
 
 ### prob.pdf
 資料說明: 常用累計機率表
