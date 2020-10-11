@@ -1,4 +1,4 @@
-# title    : gfc 資料人集視覺化應用
+# title    : gfc 資料集視覺化應用
 # date     : 2019.9.14
 # author   : Ming-Chang Lee
 # email    : alan9956@gmail.com
