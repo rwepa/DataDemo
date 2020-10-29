@@ -159,6 +159,16 @@ ubscribed : {yes 有購買定期存款商品} --> 反應變數
 
 欄位個數: 21
 
+### diabetes.csv
+
+資料說明: Pima Indian Diabets (糖尿病) Dataset
+
+資料來源: https://www.kaggle.com/uciml/pima-indians-diabetes-database
+
+資料筆數: 768
+
+欄位個數: 9
+
 ### drink.csv
 
 資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
