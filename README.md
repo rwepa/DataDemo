@@ -169,6 +169,26 @@ ubscribed : {yes 有購買定期存款商品} --> 反應變數
 
 欄位個數: 9
 
+欄位名稱:
+
+Pregnancies              懷孕次數
+
+Glucose                  血漿葡萄糖濃度
+
+BloodPressure            舒張壓
+
+SkinThickness            三頭肌皮脂厚度
+
+Insulin                  胰島素濃度
+
+BMI                      身體質量指數
+
+DiabetesPedigreeFunction 糖尿病函數,依家族糖尿病史而計算個人患有糖尿病的風險值
+
+Age                      年齡
+
+Outcome                  {1:有糖尿病, 0:無糖尿病} --> 反應變數
+
 ### drink.csv
 
 資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
