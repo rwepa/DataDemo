@@ -137,6 +137,14 @@ ubscribed : {yes 有購買定期存款商品} --> 反應變數
 
 資料來源: https://github.com/mattflor/chorddiag
 
+### claim.cls
+
+資料說明: 保險理賠(簡體版本)
+
+資料筆數: 20479
+
+欄位個數: 15
+
 ### credit.arff
 
 資料說明: Statlog (German Credit Data) Data Set
