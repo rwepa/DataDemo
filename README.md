@@ -75,9 +75,7 @@ write.csv(antidiabeticdrug, file = 'antidiabeticdrug.csv', row.names = FALSE)
 
 https://archive.ics.uci.edu/ml/datasets/Bank+Marketing
 
-Data Science and Big Data Analytics: Discovering, Analyzing, Visualizing and Presenting Data, EMC Education Services (Editor), 2015.
-
-資料筆數: 2000
+資料筆數: 45211
 
 欄位個數: 17
 
