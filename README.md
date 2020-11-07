@@ -93,7 +93,7 @@ education : 教育程度
 
 default   : 是否有個人違約記錄
 
-balance   : 賬戶餘額
+balance   : 帳戶餘額
 
 housing   : 是否有房屋
 
