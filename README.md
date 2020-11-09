@@ -113,7 +113,7 @@ previous  : 連絡次數
 
 poutcome  : 最近行銷結果 {failure, other, success, unknown}
 
-ubscribed : {yes 有購買定期存款商品} --> 反應變數
+y         : {yes 有購買定期存款商品, no 沒有購買定期存款商品} --> 反應變數
 
 ### ChemicalManufacturingProcess.csv
 
