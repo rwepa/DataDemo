@@ -622,6 +622,12 @@ yosemite
 
 使用方法: load(url("https://github.com/rwepa/DataDemo/blob/master/sse.RData?raw=true"), verbose = TRUE)
 
+### Tableau_Financial_Products_Case_Study.pdf
+
+### Tableau_Financial_Products_Case_Study.twbx
+
+資料說明: 國立臺北科技大學資訊與財金管理系(所) - Tableau金融商品案例分析
+
 ### TelcoChurn.csv
 
 資料說明: 電信公司客戶流失資料集
