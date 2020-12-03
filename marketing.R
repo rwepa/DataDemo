@@ -14,7 +14,7 @@ library(car)
 # 匯入 marketing 資料
 urls <- "https://github.com/rwepa/DataDemo/blob/master/marketing.csv" # ERROR
 urls <- "https://raw.githubusercontent.com/rwepa/DataDemo/master/marketing.csv" # OK
-marketing <- read.csv(urls, header=TRUE, sep =",")
+marketing <- read.csv(urls, header=TRUE, sep=",")
 marketing
 
 # 資料結構
@@ -27,7 +27,7 @@ summary(marketing)
 hist(marketing$facebook)
 
 # 計算 facebook 的中位數
-marketingFacebookMedian <- median(marketing$facebook, na.rm = TRUE)
+marketingFacebookMedian <- median(marketing$facebook, na.rm=TRUE)
 
 # 以中位數填補 facebook 遺漏值 (missing values)
 marketing$facebook[is.na(marketing$facebook)] <- marketingFacebookMedian
@@ -39,13 +39,13 @@ summary(marketing)
 pairs(marketing, pch=16, cex=0.5)
 
 # 建立線性模型
-marketing_lm <- lm(sales ~ ., data = marketing)
+marketing_lm <- lm(sales ~ ., data=marketing)
 
 # newspaper: p值沒有小於0.5,考慮刪除此變數
 summary(marketing_lm)
 
 # 建立修正後線性模型
-marketing_lm_revised <- lm(sales ~ youtube + facebook, data = marketing)
+marketing_lm_revised <- lm(sales ~ youtube + facebook, data=marketing)
 
 summary(marketing_lm_revised)
 
