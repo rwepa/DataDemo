@@ -25,7 +25,7 @@ head(BasinObs)
 # "DatesR": 年-月-日, POSIXct物件
 # "P"  : average precipitation [mm/time step] 每日平均降雨量
 # "T"  : catchment average air temperature [℃]  平均氣溫
-# "E"  : catchment average potential evapotranspiration [mm/day] 潛勢能蒸發量
+# "E"  : catchment average potential evapotranspiration [mm/day] 平均潛在蒸發量
 # "Qls": outlet discharge [l/s] 出水口排出量
 # "Qmm": outlet discharge [mm/day] 出水口排出量
 
