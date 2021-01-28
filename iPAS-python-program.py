@@ -1,9 +1,10 @@
 """
-title : iPAS-python-program
-author: Ming-Chang Lee
-email : alan9956@gmail.com
-RWEPA : http://rwepa.blogspot.tw/
-Date  : 2020.11.18
+title   : iPAS-python-program
+author  : Ming-Chang Lee
+email   : alan9956@gmail.com
+RWEPA   : http://rwepa.blogspot.tw/
+Date    : 2020.11.18
+Updated : 2021.1.28 (新增Python連結MySQL)
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -20,7 +21,9 @@ Date  : 2020.11.18
 # 05.流程控制與物件導向觀念
 # 06.資料載入及匯出
 # 07.資料變形、排序與清理
-# 08.探索式資料分析
+# 08.探索式資料分析(含繪圖中文字型)
+# 09.MySQL常用語法
+# 10.Python連結MySQL
 
 # anaconda
 # https://www.anaconda.com/
@@ -1412,3 +1415,92 @@ sns.pairplot(df, hue="species")
 # conda install numpy
 # conda install seaborn
 # 加油!!!
+
+##############################
+# 09.MySQL常用語法
+##############################
+
+# MySQL 下載
+# https://dev.mysql.com/downloads/
+# 選取 [MySQL Installer for Windows]
+# 選取 [MySQL Installer 8.0.23] --> Windows (x86, 32-bit), MSI Installer [mysql-installer-community-8.0.23.0.msi] 422.4MB
+# mysql-installer-community-8.0.23.0.msi
+# 安裝完成會啟動 (1).MySQL Shell (2).MySQL Workbench
+
+# 開啟 MySQL Workbench, 練習以下 MySQL語法
+
+-- 顯示版本，日期
+SELECT VERSION(), CURRENT_DATE;
+
+-- 現在時間
+SELECT NOW();
+
+-- 顯示資料庫
+SHOW databases;
+
+-- 使用內建範例資料庫
+USE sakila;
+
+-- 目前使用資料庫
+SELECT DATABASE();
+
+-- 顯示資料表
+SHOW TABLES;
+
+-- 資料表綱要
+DESCRIBE rental;
+
+-- 查詢資料
+SELECT * FROM rental;
+
+-- 筆數總計 16044
+SELECt count(*) FROM rental;
+
+-- GROUP BY
+SELECT customer_id, count(customer_id) AS rental_count
+FROM rental
+GROUP BY customer_id;
+
+SELECT date(rental_date) FROM rental;
+
+##############################
+# 10.Python連結MySQL
+##############################
+
+# example 1 - 資料庫連結
+import mysql.connector
+
+# https://dev.mysql.com/doc/sakila/en/
+cnx = mysql.connector.connect(user='rwepa', 
+                              password='123456',
+                              host='127.0.0.1',
+                              database='sakila')
+cnx.close()
+
+# example 2 - SELECT 範例
+import mysql.connector
+
+cnx = mysql.connector.connect(user='rwepa', password='123456', database='sakila')
+cursor = cnx.cursor()
+
+query = "SELECT rental_id, rental_date, customer_id FROM rental"
+cursor.execute(query)
+
+# 取出第1筆, tuple
+result1 = cursor.fetchone()
+print(result1)
+
+# 取出前6筆, list
+result2 = cursor.fetchmany(6)
+print(result2)
+
+# 取得所有資料, list
+result3 = cursor.fetchall()
+print(result3)
+
+# 關閉游標 True
+cursor.close()
+
+# 關閉資料庫連結
+cnx.close()
+# end
