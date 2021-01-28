@@ -1461,6 +1461,7 @@ SELECT customer_id, count(customer_id) AS rental_count
 FROM rental
 GROUP BY customer_id;
 
+-- date 函數
 SELECT date(rental_date) FROM rental;
 
 ##############################
