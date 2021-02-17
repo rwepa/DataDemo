@@ -4,7 +4,8 @@ author  : Ming-Chang Lee
 email   : alan9956@gmail.com
 RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
-Updated : 2021.1.28 (新增Python連結MySQL)
+Updated : 2021.1.28 -新增 10.Python連結MySQL
+Updated : 2021.2.17 -新增 11.Python物件導向
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -24,6 +25,7 @@ Updated : 2021.1.28 (新增Python連結MySQL)
 # 08.探索式資料分析(含繪圖中文字型)
 # 09.MySQL常用語法
 # 10.Python連結MySQL
+# 11.Python物件導向
 
 # anaconda
 # https://www.anaconda.com/
@@ -1504,4 +1506,71 @@ cursor.close()
 
 # 關閉資料庫連結
 cnx.close()
+
+##############################
+# 11.Python物件導向
+##############################
+
+# 範例1
+# 建立類別 class
+class MyClass:
+  x = 5
+
+# 使用 ClassName() 實作實例
+p1 = MyClass()
+print(p1.x)
+
+# 範例2
+# __init__() 函數表示類別初使化時,該函數會自動執行, 左右為二個底線
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+p1 = Person("Alan", 20)
+
+p1
+
+print(p1.name)
+print(p1.age)  
+
+# 範例3
+# Inheritance 繼承
+# 父類別(Parent class)是給其他繼承的類別, 稱為基本類別.
+# 子類別(Child class )是從另一個父類別繼承的, 也稱為衍生類別(derived class).
+# https://www.w3schools.com/python/python_inheritance.asp
+
+# 父類別
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+x = Person("ALAN", "LEE")
+x.printname()
+
+# class 子類別(父類別)
+class Student(Person):
+  pass
+
+x = Student("Mike", "Olsen")
+x.printname()
+
+# 新增 __init__ 函數
+# 子類別的__init __()函數將覆蓋父類別的__init __()函數
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+# super - 表示使用父類別的方法
+class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+
+x = Student("Big", "Data")
+
+x.printname()
 # end
