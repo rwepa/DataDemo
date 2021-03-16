@@ -35,6 +35,6 @@ bscols(widths = c(5, 7),
             colnames = c("地區","110年2月台灣粗出生率%", "經度", "緯度"),
             options = list(pageLength = 10,
                            searching = FALSE),
-            height=600)
+            height=700)
 )
 # end
