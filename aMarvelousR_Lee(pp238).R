@@ -1,11 +1,12 @@
 # program : A Marvelous R -  Foundation
-# Date: July 4, 2011
-# Updated: June 3, 2020
 # author  : Ming-Chang Lee
 # email   : alan9956@gmail.com
 # RWEPA   : http://rwepa.blogspot.tw/
 # GitHub  : https://github.com/rwepa
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
+# Date: 2011.7.4
+# Updated: 2020.6.3
+# Updated: 2021.4.11 新增 iPAS-R-program (最後章節)
 
 # Chapter 1. Basic R -----
 
@@ -901,3 +902,115 @@ print(svm.pred)
 # 將結果輸出成CSV 檔案
 write.table(svm.pred, file = "svm.test.csv", sep = ",")
 # end
+
+# Chapter 6.iPAS - 科目科目二：資料處理與分析概論 -----
+
+setwd("C:/rdata")
+
+# 1-1資料組織與清理 -----
+
+# KNN demo
+library(animation)
+
+# 設定動畫參數
+ani.options(interval = 1, nmax = 10)
+
+# 建立訓練集,測試集
+set.seed(168)
+df <- iris[iris$Species != "setosa",]
+df$Species <- factor(df$Species)
+ind <- sample(2, nrow(df), replace = TRUE, prob = c(0.8, 0.2))
+traindata <- df[ind == 1, 3:4]
+testdata <- df[ind == 2, 3:4]
+
+# KNN示範
+knn.ani(train = traindata, test = testdata, cl = df$Species[ind == 1], k = 20)
+
+# 資料標準化 -----
+data(Cars93, package = "MASS")
+
+# 直方圖
+hist(Cars93$Price)
+summary(Cars93$Price) # 原始資料 [7.4, 61.9]
+
+# (0,1)標準化 -----
+
+PriceMin <- min(Cars93$Price)
+PriceMax <- max(Cars93$Price)
+
+Cars93$PriceZeroOne <- (Cars93$Price - PriceMin)/(PriceMax - PriceMin)
+head(Cars93$PriceZeroOne)
+summary(Cars93$PriceZeroOne) # (0,1)標準化 [0, 1]
+
+# min-max 標準化 -----
+
+PriceMinNew <- 1
+PriceMaxNew <- 10
+
+Cars93$PriceMinMax <- PriceMinNew + 
+  ((Cars93$Price - PriceMin)/(PriceMax - PriceMin))*(PriceMaxNew - PriceMinNew)
+
+summary(Cars93$PriceMinMax)
+
+# 標籤編碼 (Label encoding) -----
+
+# 範例1 german_credit
+# 參考 <<<R商業預測與應用>>>第3章 監督式學習商業預測
+# https://courses.mastertalks.tw/courses/R-2-teacher
+
+# https://github.com/rwepa/DataDemo/blob/master/german_credit.csv
+credit <- read.csv("german_credit.csv") # 1000*10
+
+str(credit)
+
+head(credit)
+
+# label encoding -----
+credit$RiskEncoding <- ifelse(credit$Risk == "good", 1, 0)
+
+head(credit$RiskEncoding)
+
+table(credit$RiskEncoding)
+
+# One-hot encoding -----
+
+# Job 工作 {0,1,2,3}
+# 0 - unskilled and non-resident 非技術人員和非居民
+# 1 - unskilled and resident 非技術人員和居民
+# 2 - skilled 技術人員
+# 3 - highly skilled 高度技術人員
+
+# 轉換為 factor
+credit$JobOneHot <- factor(credit$Job, label = c("unskilled and non-resident", 
+                                                 "unskilled and resident", 
+                                                 "skilled", 
+                                                 "highly skilled"))
+
+str(credit$JobOneHot)
+
+levels(credit$JobOneHot)
+
+# method 1-使用 model.matrix {stats}
+myonehot <- model.matrix(object = ~ JobOneHot - 1, data = credit) # matrix
+head(myonehot)
+
+# method 2-使用 dummyVars {caret}
+library(caret)
+
+dummy <- dummyVars(" ~ JobOneHot", data = credit)
+dummy
+
+# 範例2 鐵達尼號 : 使用 dummyVars 直接進行預測
+library(earth)
+
+data(etitanic, package = "earth")
+
+head(etitanic)
+
+head(model.matrix(survived ~ ., data = etitanic))
+
+dummies <- dummyVars(survived ~ ., data = etitanic)
+
+etitanic$PedictSurvived <- predict(dummies, newdata = etitanic)
+
+head(etitanic)
