@@ -6,7 +6,6 @@ RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
 Updated : 2021.1.28 -新增 10.Python連結MySQL
 Updated : 2021.2.17 -新增 11.Python物件導向
-Updated : 2021.2.17 -新增 11.Python物件導向
 Updated : 2021.4.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處理與分析概論)
 """
 
