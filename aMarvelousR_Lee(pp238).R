@@ -6,7 +6,7 @@
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
 # Date: 2011.7.4
 # Updated: 2020.6.3
-# Updated: 2021.4.11 新增 iPAS-R-program (最後章節)
+# Updated: 2021.4.11 新增 iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 
 # Chapter 1. Basic R -----
 
@@ -903,7 +903,7 @@ print(svm.pred)
 write.table(svm.pred, file = "svm.test.csv", sep = ",")
 # end
 
-# Chapter 6.iPAS - 科目科目二：資料處理與分析概論 -----
+# Chapter 6.iPAS - 科目二：資料處理與分析概論 -----
 
 setwd("C:/rdata")
 
