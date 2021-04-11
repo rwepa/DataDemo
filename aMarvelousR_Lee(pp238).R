@@ -4,9 +4,9 @@
 # RWEPA   : http://rwepa.blogspot.tw/
 # GitHub  : https://github.com/rwepa
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
-# Date: 2011.7.4
-# Updated: 2020.6.3
-# Updated: 2021.4.11 新增 iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
+# Date    : 2011.7.4
+# Updated : 2020.6.3
+# Updated : 2021.4.11 新增 iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 
 # Chapter 1. Basic R -----
 
