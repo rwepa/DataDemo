@@ -6,6 +6,8 @@ RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
 Updated : 2021.1.28 -新增 10.Python連結MySQL
 Updated : 2021.2.17 -新增 11.Python物件導向
+Updated : 2021.2.17 -新增 11.Python物件導向
+Updated : 2021.4.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處理與分析概論)
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -26,6 +28,7 @@ Updated : 2021.2.17 -新增 11.Python物件導向
 # 09.MySQL常用語法
 # 10.Python連結MySQL
 # 11.Python物件導向
+# 12.iPAS - 科目二：資料處理與分析概論
 
 # anaconda
 # https://www.anaconda.com/
@@ -1574,3 +1577,44 @@ x = Student("Big", "Data")
 
 x.printname()
 # end
+
+# 12.iPAS - 科目二：資料處理與分析概論
+
+# 1-1資料組織與清理
+
+# Label encoding
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+
+# 匯入資料
+# https://github.com/rwepa/DataDemo/blob/master/german_credit.csv
+df = pd.read_csv("C:/rdata/german_credit.csv")
+df
+df['Purpose'].describe()
+
+# Purpose 進行 label encoding
+labelencoder = LabelEncoder()
+df['PurposeEncoding'] = labelencoder.fit_transform(df['Purpose'])
+
+df['Purpose'].head()
+df['PurposeEncoding'].head()
+
+# One-hot encoding
+
+# 匯入模組
+import numpy as np
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+  
+# 匯入資料
+df = pd.read_csv("C:/rdata/german_credit.csv")
+
+df['Purpose'].describe()
+
+# one-hot encoding   
+columnTransformer = ColumnTransformer([('encoder', OneHotEncoder(), ['Purpose'])],
+                                      remainder='passthrough')
+  
+df1 = np.array(columnTransformer.fit_transform(df), dtype = np.str)
+df1
