@@ -39,9 +39,9 @@ getwd()
 # https://cran.r-project.org/web/packages/qcc/index.html
 
 library(qcc) -----
-
-# qcc - xbar chart
-data(pistonrings)
+  
+  # qcc - xbar chart
+  data(pistonrings)
 diameter <- with(pistonrings, qcc.groups(diameter, sample))
 head(diameter)
 qcc(diameter[1:25,], type="xbar", newdata=diameter[26:40,])
@@ -161,6 +161,15 @@ refA
 library("affy")
 
 # 計算 RNA degradation
+
+# Austin Bowles, RNA Degradation and NUSE Plots, 2011
+# https://math.usu.edu/~jrstevens/stat5570/Bowles.pdf
+# RNA達到使用壽命後（即已參與蛋白質合成），就會被細胞酶“降解”。
+# 某些陣列可能是使用具有“壞” RNA的樣品製備的，已降解的RNA已無法提供有用的信息。
+
+# Chapter 3, Bioinformatics and Computational Biology Solutions Using R and Bioconductor, 2005.
+
+https://math.usu.edu/~jrstevens/stat5570/Bowles.pdf
 deg <- AffyRNAdeg(refA)
 deg
 
@@ -219,7 +228,9 @@ qcReport(maqcm,
 
 # Sorin Drăghici (2012), Statistics and Data Analysis for Microarrays: Using R and Bioconductor, Second Edition, CRC Press, 2012.
 
-# Gatto L (2020), qcmetrics: A Framework for Quality Control. R package version 1.28.0, https://github.com/lgatto/qcmetrics. 
+# Gatto L (2020), qcmetrics: A Framework for Quality Control. R package version 1.28.0, https://github.com/lgatto/qcmetrics.
+
+# Robert Gentleman, Vince Carey, Wolfgang Huber, Rafael Irizarry, Sandrine Dudoit, Bioinformatics and Computational Biology Solutions Using R and Bioconductor, Springer, 2005.
 
 # R教學-基礎篇(免費)
 # http://rwepa.blogspot.tw/2013/01/r-201174.html
@@ -229,4 +240,3 @@ qcReport(maqcm,
 
 # R商業預測與應用(付費)
 # https://courses.mastertalks.tw/courses/R-2-teacher
-
