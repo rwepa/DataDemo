@@ -98,6 +98,44 @@ browseVignettes("rnaseqGene")
 
 # 3.品質控制技術 -----
 
+# BiocManager::install("ALLMLL")
+
+library("affy")
+library("ALLMLL")
+
+data(MLL.B)
+MLL.B
+?AffyBatch 
+
+# 全部20arrays,取出8個arrays
+Data <- MLL.B[, c(2, 1, 3:5, 14, 6, 13)]
+sampleNames(Data) <- letters[1:8]
+Data
+
+# plot of the log intensities
+palette.gray <- c(rep(gray(0:10/10), times = seq(1, 41, by = 4)))
+
+image(Data[, 1], transfo = function(x) x, col = palette.gray)
+image(Data[, 1], col = palette.gray)
+
+# Multi-array approaches
+
+library("RColorBrewer")
+cols <- brewer.pal(8, "Set1")
+
+# 盒鬚圖 -----
+# array f 明顯與其他不相同
+boxplot(Data, col = cols, main = "MLL.B 8個群組盒鬚圖")
+
+# 直方圖 -----
+# array a 有2個高峰, 即雙峰分配 (bimodal distribution)
+hist(Data, col = cols, 
+     lty = c(2, rep(1,7)),
+     lwd=3,
+     xlab = "Log (base 2) intensities",
+     main = "MLL.B 8個群組直方圖")
+legend("topright", letters[1:8], col = cols, lwd=3, lty = c(2, rep(1,7)))
+
 # qcmetrics套件 -----
 # https://www.bioconductor.org/packages/release/bioc/html/qcmetrics.html
 
