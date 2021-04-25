@@ -7,6 +7,8 @@
 # RWEPA    : http://rwepa.blogspot.tw/
 # GitHub   : https://github.com/rwepa
 # Encoding : UTF-8
+# PDF      : https://github.com/rwepa/DataDemo/blob/master/Quality_Control_Bioinformatics.pdf
+# Code     : https://github.com/rwepa/DataDemo/blob/master/Quality_Control_Bioinformatics.R
 
 # 大綱 -----
 # 1.R語言與RStudio軟體簡介
