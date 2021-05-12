@@ -451,6 +451,12 @@ expenses: 醫療費用
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
+### OnlineRetail.csv.zip
+
+資料來源: https://www.kaggle.com/vijayuv/onlineretail
+
+說明: 本資料與 OnlineRetail.xlsx 相同, 解壓縮後格式為 csv
+
 ### OnlineRetail.xlsx
 
 資料來源: http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
