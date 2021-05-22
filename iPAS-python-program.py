@@ -1577,9 +1577,13 @@ x = Student("Big", "Data")
 x.printname()
 # end
 
+##############################
 # 12.iPAS - 科目二：資料處理與分析概論
+##############################
 
+##############################
 # 1-1資料組織與清理
+##############################
 
 # Label encoding
 import pandas as pd
@@ -1617,3 +1621,339 @@ columnTransformer = ColumnTransformer([('encoder', OneHotEncoder(), ['Purpose'])
   
 df1 = np.array(columnTransformer.fit_transform(df), dtype = np.str)
 df1
+
+##############################
+# 1-2.資料摘要與彙總
+##############################
+
+# 盒鬚圖 boxplot - matplotlib 套件
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 參考R匯出 Cars93.csv
+df = pd.read_csv('C:/rdata/Cars93.csv')
+
+fig1, ax1 = plt.subplots()
+ax1.set_title('Python - boxplot')
+ax1.boxplot(df['Price'])
+ax1.set_xlabel('Cars93 dataset')
+ax1.set_ylabel('Price')
+
+# 群組盒鬚圖 - matplotlib 套件
+data = [df[df.Origin == 'USA']['Price'], 
+        df[df.Origin == 'non-USA']['Price']]
+
+fig2, ax2 = plt.subplots()
+ax2.set_title('Python - boxplot with group')
+ax2.boxplot(data)
+ax2.set_xticklabels(['USA', 'non-USA'])
+ax2.set_xlabel('Origin')
+ax2.set_ylabel('Price')
+
+# 盒鬚圖 boxplot - pandas 套件
+df.boxplot(column =['Price'], grid = False)
+
+# 群組盒鬚圖 - pandas 套件
+df.boxplot(by ='Origin', column =['Price'], grid = False)
+
+# 盒鬚圖 boxplot - seaborn 套件
+import seaborn as sns
+
+ax = sns.boxplot(x = df["Price"])
+
+ax = sns.boxplot(y = df["Price"])
+
+# 群組盒鬚圖 - seaborn 套件
+ax = sns.boxplot(x = "Origin", y = "Price", data=df)
+
+# pandas排序
+import pandas as pd
+import numpy as np
+
+np.random.seed(168)
+df = pd.DataFrame(np.random.randn(3,3), columns=list(['x1', 'x2', 'x3']))
+df
+
+# 遞增
+df.sort_values(by='x1')
+
+# 遞減
+df.sort_values(by='x1', ascending = False)
+
+# 群組
+import pandas as pd
+df = pd.read_csv('C:/rdata/Cars93.csv')
+
+df = df[['Manufacturer', 'Price', 'AirBags', 'Horsepower', 'Origin']]
+
+df.head()
+
+df_AirBags = df.groupby('AirBags')
+type(df_AirBags)
+
+print(df_AirBags.groups)
+
+# 群組 - 2個維度
+df_AirBagsOrigin = df.groupby(['AirBags', 'Origin'])
+
+# 群組大小
+df_AirBagsOrigin.size()
+
+# 篩選群組
+df_AirBags.get_group('Driver & Passenger')
+
+# 群組總和
+df_AirBags.sum()
+
+# 群組平均
+df_AirBags.mean()
+
+# agg - 每行計算min
+df_AirBags.agg('min')
+
+# agg - 每行計算max
+df_AirBags.agg('max')
+
+# 摘要
+import pandas as pd
+df = pd.read_csv('C:/rdata/Cars93.csv')
+df.describe()
+
+# 1-3.屬性轉換與萃取
+
+# 奇異值分解 (Singular Value Decomposition, SVD)
+# 參考 Jason Brownlee, Basics of Linear Algebra for Machine Learning: Discover the Mathematical Language of Data in Python, 2018.
+
+from numpy import array
+from scipy.linalg import svd
+
+# 定義矩陣 A:3*2
+A = array([[1, 2], [3, 4], [5, 6]])
+print(A)
+
+# SVD計算
+U, s, V = svd(A)
+print(U)
+print(s)
+print(V)
+
+##############################
+# 2-1.統計分析基礎
+##############################
+
+# Python - 平均數 𝜇 之區間估計
+from scipy.stats import norm
+import math
+alpha = 0.05
+sampleSD = 5
+sampleSize = 16
+sampleMean = 60
+zscore = norm.ppf(alpha/2)*(-1)
+zscore
+
+lowerBounr = sampleMean - zscore*sampleSD/math.sqrt(sampleSize)
+upperBound = sampleMean + zscore*sampleSD/math.sqrt(sampleSize)
+print([lowerBounr, upperBound])
+
+# Python - t檢定
+from scipy import stats
+x = stats.norm.rvs(5, size=20)
+x
+
+# 回傳二個數值, 統計量與p值
+stats.ttest_1samp(x, 5) # p-value 很大
+stats.ttest_1samp(x, 1) # p-value 很小
+
+print('t-statistic = %7.5f, pvalue = %7.5f' % stats.ttest_1samp(x, 5))
+
+'''
+%%	在字串中顯示%
+%s  字串顯示
+%d	以10 進位整數方式輸出
+%f	將浮點 數以10進位方式輸出
+%e  科學記號, 用小寫e表示
+%E  科學記號, 用大寫E表示
+'''
+
+# .4f 表示數小數點後以四捨五入方式顯示4位小數值
+print('22/7 = %.4f' % (22/7)) 
+
+# 卡方檢定
+from scipy.stats import chisquare
+chisquare([230,220,450])
+
+##############################
+# 2-2.探索式資料分析與非監督式學習
+##############################
+
+# 階層式集群熱繪圖 Hierarchically Clustered Heatmap
+import statsmodels.api as sm
+import seaborn as sns
+
+df = sm.datasets.get_rdataset("mtcars", "datasets", cache=True).data
+g = sns.clustermap(df, z_score=1)
+
+##############################
+# 2-3.線性模型與監督式學習
+##############################
+
+# 啟動函數 (Activation function)
+
+# Sigmoid 函數
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sigmoid(x):
+    return 1/(1+(np.e**(-x)))
+
+x = np.arange(-6, 6, 0.1)
+
+plt.plot(x, sigmoid(x))
+plt.title("Sigmoid function (0~1)")
+plt.show()
+
+# ReLU 函數
+import numpy as np
+import matplotlib.pyplot as plt
+
+def relu(x):
+    return np.maximum(0, x)
+
+x = np.arange(-6, 6, 0.1)
+
+plt.plot(x, relu(x))
+plt.title("ReLU function, f(x)=max(0,x)")
+plt.show()
+
+# Tanh 函數
+import numpy as np
+import matplotlib.pyplot as plt
+
+def tanh(x):
+    return np.tanh(x)
+
+x = np.arange(-6, 6, 0.1)
+
+plt.plot(x, tanh(x))
+plt.title("Tanh function (-1 ~ 1)")
+plt.show()
+
+# Softmax 函數
+import numpy as np
+
+def softmax(x):
+    return np.exp(x)/sum(np.exp(x))
+
+x = np.array([1,2,3,4,1,2,3])
+
+y = softmax(x)
+print(y)
+
+# 多層感知器 (MLP) –  iris範例
+
+# conda install -c conda-forge tensorflow
+# conda install -c conda-forge keras
+
+# 步驟1 載入套件
+import numpy as np
+import pandas as pd
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.utils import to_categorical
+
+# 步驟2 資料預處理
+np.random.seed(7)  # 指定亂數種子
+
+# 載入資料集
+# https://github.com/rwepa/DataDemo/blob/master/iris.csv
+df = pd.read_csv("iris.csv")
+
+# one-hot 編碼
+target_mapping = {"setosa": 0,
+                  "versicolor": 1,
+                  "virginica": 2}
+
+df["Species"] = df["Species"].map(target_mapping)
+
+dataset = df.values # 取出資料框的值
+np.random.shuffle(dataset)  # 使用亂數打亂資料的列順序
+
+# 分割成特徵資料(X)和標籤資料(Y)
+X = dataset[:,0:4].astype(float)
+Y = to_categorical(dataset[:,4])
+
+# 特徵標準化
+X -= X.mean(axis=0)
+X /= X.std(axis=0)
+
+# 分割成訓練和測試資料集
+X_train, Y_train = X[:120], Y[:120]     # 訓練資料前120筆
+X_test, Y_test = X[120:], Y[120:]       # 測試資料後30筆
+
+# 步驟3 定義模型
+# 建立Keras的Sequential模型
+# input(4)-->hiden1(6)-->hiden2(6)-->output(3)
+# 輸入層 4個特徵
+# 第1隱藏層 6個神經元
+# 第2隱藏層 6個神經元
+# 輸出層 3個神經元
+
+model = Sequential() # 建立 Sequential 物件
+model.add(Dense(6, input_shape=(4,), activation="relu"))
+model.add(Dense(6, activation="relu"))
+model.add(Dense(3, activation="softmax"))
+model.summary()   # 顯示模型摘要
+
+# dense (Dense)   : 4*6 + 6 = 30
+# dense_1 (Dense) : 6*6 + 6 = 42
+# dense_2 (Dense) : 6*3 + 3 = 21
+# 合計 = 30 + 42 + 21 = 93
+
+# 步驟4 編譯模型
+
+# 編譯模型
+# loss 損失函數, optimizer 優化器即梯度下降法, metrics 評估標準
+# https://www.tensorflow.org/api_docs/python/tf/keras/optimizers
+
+model.compile(loss="categorical_crossentropy", 
+              optimizer="adam",
+              metrics=["accuracy"])
+
+# 步驟5 訓練模型
+
+# 訓練模型
+# epochs 訓練週期,  batch_size 批次樣本大小
+
+print("Training ...")
+model.fit(X_train, Y_train, epochs=100, batch_size=5)
+
+# 步驟6 評估與儲存模型
+
+# 評估模型
+print("\nTesting ...")
+loss, accuracy = model.evaluate(X_test, Y_test)
+print("準確度 = {:.2f}".format(accuracy))
+
+# 儲存 Keras 模型
+print("Saving Model: iris.h5 ...")
+model.save("iris.h5")
+
+# 使用儲存模型進行預測
+from tensorflow import keras
+
+model = Sequential()
+model = keras.models.load_model("iris.h5")
+model.compile(loss="categorical_crossentropy",
+              optimizer="adam",
+              metrics=["accuracy"])
+
+loss, accuracy = model.evaluate(X_test, Y_test)
+print("測試資料集的準確度 = {:.2f}".format(accuracy))
+
+Y_pred = model.predict_classes(X_test)
+print(Y_pred)
+
+Y_target = dataset[:,4][120:].astype(int)
+print(Y_target)
+# end
