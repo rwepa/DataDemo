@@ -909,7 +909,7 @@ setwd("C:/rdata")
 
 # 1-1資料組織與清理 -----
 
-# KNN demo
+# KNN demo -----
 library(animation)
 
 # 設定動畫參數
@@ -1014,3 +1014,214 @@ dummies <- dummyVars(survived ~ ., data = etitanic)
 etitanic$PedictSurvived <- predict(dummies, newdata = etitanic)
 
 head(etitanic)
+
+# 1-2.資料摘要與彙總 -----
+
+# 盒鬚圖 boxplot -----
+data(Cars93, package = "MASS")
+
+boxplot(Cars93$Price)
+
+# 盒鬚圖的5個指標
+# Lower bound, 25% quantile, Median, 75% quantile, Upper bound
+# 下邊界, 25百分位數, 中位數, 75百分位數, 上邊界
+Cars93_Price <- boxplot(Cars93$Price)
+Cars93_Price
+
+# 群組盒鬚圖 - 基礎繪圖
+boxplot(Price ~ Origin, data = Cars93)
+
+# 盒鬚圖 - ggplot2 -----
+
+library(ggplot2)
+p <- ggplot(Cars93, aes(y = Price)) + 
+  geom_boxplot()
+p
+
+# 群組盒鬚圖 - ggplot2
+p1 <- ggplot(Cars93, aes(x = Origin,y = Price)) + 
+  geom_boxplot()
+p1
+
+# 匯出資料
+write.table(Cars93, file = "C:/rdata/Cars93.csv", sep =",", row.names = FALSE)
+
+# R - 排序 sort, order -----
+
+x <- c(9,2,6,3,1)
+
+sort(x)
+
+order(x)
+
+x[order(x)]
+
+sort(x, decreasing = TRUE)
+
+# 資料框排序 -----
+
+df <- head(iris, n = 5)
+
+# 遞增排序
+df[order(df$Sepal.Length),]
+
+# 遞減排序
+df[order(df$Sepal.Length, decreasing = TRUE),]
+
+# 群組個數 table -----
+data(Cars93, package = "MASS")
+
+table(Cars93$AirBags)
+
+# 群組個數 table-2個維度
+
+table(Cars93$AirBags, Cars93$Origin)
+
+# 群組邊界計算 addmargins-預設值為總和
+addmargins(table(Cars93$AirBags, Cars93$Origin))
+
+# 群組邊界計算 addmargins-mean
+addmargins(table(Cars93$AirBags, Cars93$Origin), FUN = mean)
+
+# 群組百分比計算 prop.table
+prop.table(table(Cars93$AirBags, Cars93$Origin))
+
+# table 多維度: 安全氣囊, 進口別, 傳動系統
+table(Cars93$AirBags, Cars93$Origin, Cars93$DriveTrain)
+
+# 類別平均值計算
+aggregate(formula = Price ~ AirBags, data = Cars93, FUN = mean)
+
+aggregate(formula = Price ~ AirBags + Origin, data = Cars93, FUN = mean)
+
+# 摘要 -----
+summary(Cars93)
+
+# 1-3.屬性轉換與萃取 -----
+
+# 奇異值分解 (Singular Value Decomposition, SVD) -----
+x <- matrix(1:6, byrow = TRUE, ncol = 2)
+x
+(s <- svd(x))
+class(s) # list
+
+# Mean normalization -----
+# (x - mu)/(max - min)
+
+x <- c(1, 2, 2, 4, 5)
+(xmean <- mean(x))
+(xmax <- max(x))
+(xmin <- min(x))
+(x - xmean)/(xmax - xmin)
+
+# 裝箱 (Binning) -----
+
+?cut
+
+data(Cars93, package = "MASS")
+
+quantile(Cars93$Price)
+
+Cars93$Price
+
+cut(x = Cars93$Price, breaks = c(0, 13, 23, Inf), labels = c("低", "中", "高"))
+
+# scale
+x <- head(Cars93[c('Price', 'Horsepower')])
+x
+
+apply(x, 2, mean)
+apply(x, 2, sd)
+scale(x)
+
+op <- par(mfrow=c(1,2))
+hist(Cars93$Price)
+hist(scale(Cars93$Price))
+par(op)
+
+# 2-1.統計分析基礎 -----
+
+# 百分位數 -----
+# 預設值 0% 25% 50% 75% 100%
+quantile(iris$Sepal.Length)
+
+# 平均數𝜇之區間估計 - 母體變異數已知 -----
+# 95%之信賴區間
+alpha <- 0.05
+sampleSD <- 5
+sampleSize <- 16
+sampleMean <- 60
+zScore <- qnorm(p = alpha/2,  lower.tail = FALSE)
+zScore
+
+lowerBound <- sampleMean - zScore*sampleSD/sqrt(sampleSize)
+upperBound <- sampleMean + zScore*sampleSD/sqrt(sampleSize)
+print(c(lowerBound, upperBound))
+# [1] 57.55005 62.44995
+
+# 99%之信賴區間
+alpha <- 0.01
+zScore <- qnorm(p = alpha/2,  lower.tail = FALSE)
+zScore
+
+lowerBound <- sampleMean - zScore*sampleSD/sqrt(sampleSize)
+upperBound <- sampleMean + zScore*sampleSD/sqrt(sampleSize)
+print(c(lowerBound, upperBound))
+# [1] 56.78021 63.21979
+
+# t-檢定 -----
+set.seed(168)
+x <- rnorm(n = 10, mean = 5)
+x           
+t.test(x, mu = 5)
+
+# 卡方檢定 -----
+chisq.test(c(230,220,450))
+
+mytest <- chisq.test(c(230,220,450))
+names(mytest)
+mytest$p.value
+
+# 2-2.探索式資料分析與非監督式學習 -----
+
+# 使用 dbscan {fpc} -----
+
+library(fpc)
+# https://cran.r-project.org/web/packages/fpc/index.html
+
+df <- iris[,-5]
+
+df.dbscan <- dbscan(df, eps=0.42, MinPts=5)
+
+df.dbscan
+# 資料分成3群(編碼1,2,3)
+# 編碼0(第1行)表示離群值/噪音值
+
+# border 邊界點
+# seed   密度點
+# DBSCN  計算集群的平均值(中心點)與K-means意義相同嗎?
+
+# 2-3.線性模型與監督式學習 -----
+
+# 線性模型 – R: lm {stats}
+# 參考 https://github.com/rwepa/DataDemo/blob/master/marketing.R
+
+# 下載資料
+# https://github.com/rwepa/DataDemo/blob/master/marketing.csv
+
+# 建立 y = β0 + β1 * x1 + β2 * x2 + β3 * x3
+
+# x1: 自變數 youtube, x2: 自變數 facebook, x3: 自變數 newspaper
+# y: 依變數 sales
+
+sales_lm_all <- lm(sales ~ youtube + facebook + newspaper, data = marketing)
+
+# 檢視模型結果
+summary(sales_lm_all)
+
+# 結果包括4大項目
+# 1.Call: lm() 線性
+# 2.Residuals: 線性迴歸模型的殘差
+# 3.Coefficients: 迴歸係數, newspaper 的p值 大於 0.05, 考慮刪除此自變數.
+# 4.統計值: 殘差標準差, R平方, 調整後R平方, F統計值, 自由度(DF), p-value
+# end
