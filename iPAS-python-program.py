@@ -32,6 +32,45 @@ Updated : 2021.4.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處
 # anaconda
 # https://www.anaconda.com/
 
+##############################
+# conda 操作
+##############################
+
+# conda 資訊
+# conda info
+
+# 已經安裝模組清單
+# conda list
+
+# 顯示已安裝套件
+# conda list
+
+# 安裝模組
+# conda install 模組名稱
+
+# 更新模組
+# conda update 模組名稱
+
+# 範例: 更新 anaconda 模組
+# conda update anaconda
+
+# 範例: 更新 Spyder 模組
+# conda update spyder
+
+
+##############################
+# 虛擬環境
+##############################
+
+# 建立虛擬環境
+# conda create --name mypython3 python=3
+
+# 啟用虛擬環境
+# conda activate mypython3
+
+# 關閉虛擬環境
+# conda deactivate
+
 # 切換工作目錄
 import os # 載入 os 套件
 os.getcwd() # 讀取工作目錄
