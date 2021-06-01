@@ -6,7 +6,17 @@
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
 # Date    : 2011.7.4
 # Updated : 2020.6.3
-# Updated : 2021.4.11 新增 iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
+# Updated : 2021.4.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
+# Updated : 2021.4.11 新增 Chapter 7. ggplot2 套件
+
+# 大綱 -----
+# Chapter 1. Basic R
+# Chapter 2. Preparing Data
+# Chapter 3. Graphics
+# Chapter 4. Applied Statistics
+# Chapter 5. Application
+# Chapter 6. iPAS - 科目二：資料處理與分析概論
+# Chapter 7. ggplot2 套件
 
 # Chapter 1. Basic R -----
 
@@ -1224,4 +1234,75 @@ summary(sales_lm_all)
 # 2.Residuals: 線性迴歸模型的殘差
 # 3.Coefficients: 迴歸係數, newspaper 的p值 大於 0.05, 考慮刪除此自變數.
 # 4.統計值: 殘差標準差, R平方, 調整後R平方, F統計值, 自由度(DF), p-value
+
+# Chapter 7. ggplot2 套件 -----
+
+# https://cran.r-project.org/web/packages/ggplot2/index.html
+# ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics
+# 參考資料 https://ggplot2-book.org/
+
+# ggplot2概念
+# 1.以圖層(layers)為基礎的繪圖套件,它實現了Wilkinson (2005)的繪圖文法(Grammar of Graphics)概念.
+# 2.一個圖形是由數個圖層所組成,其中一層包含了資料(data)層.
+# 3.Wilkinson認為圖形繪製須結合數據與繪製規範,規範並非是圖形視覺效果的名稱(例如:長條圖,散佈圖,直方圖等).
+# 4.規範應是一組共同決定圖形如何建立的規則 – a grammar of graphics.
+
+library(ggplot2)
+
+?diamonds
+
+str(diamonds) # 53940*10
+
+set.seed(168)
+
+dsmall <- diamonds[sample(nrow(diamonds), 500),]
+
+# ggplot: 散佈圖
+p <- ggplot(data=dsmall, mapping=aes(carat, price, color=color)) + 
+  geom_point(size=4)
+p
+
+# ggplot: 散點圖+線性迴歸
+p <- ggplot(dsmall, aes(carat, price)) + 
+  geom_point() +
+  geom_smooth(method="lm", se=FALSE)
+p
+
+p <- ggplot(dsmall, aes(carat, price)) + 
+  geom_point() +
+  geom_smooth(method="lm", se=TRUE)
+p
+
+# ggplot: 散點圖+群組線性迴歸
+ggplot(dsmall, aes(carat, price, group=color)) + 
+  geom_point(aes(color=color), size=2) + 
+  geom_smooth(aes(color=color), method="lm", se=FALSE)
+
+# ggplot: 線圖
+p <- ggplot(iris, aes(Petal.Length, Petal.Width, group=Species, color=Species)) +
+  geom_line()
+p
+
+# ggplot: 線圖+分面 facet_wrap()
+p <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) + 
+  geom_line(aes(color=Species), size=1) + 
+  facet_wrap(~Species, ncol=1)
+p
+
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  facet_wrap(~class)
+
+# ggplot2: 線圖+散佈圖
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point() +
+  geom_line()
+
+# ggplot2: 散佈圖+線圖+群組
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point(aes(color=factor(cyl))) +
+  geom_line()
+
+# R軟體開放資料應用-高速公路篇 使用ggplot2
+# http://rwepa.blogspot.com/2019/05/highway.html
 # end
