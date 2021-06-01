@@ -4,10 +4,10 @@
 # RWEPA   : http://rwepa.blogspot.tw/
 # GitHub  : https://github.com/rwepa
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
-# Date    : 2011.7.4
-# Updated : 2020.6.3
-# Updated : 2021.4.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
-# Updated : 2021.4.11 新增 Chapter 7. ggplot2 套件
+# Date    : 2011.07.04
+# Updated : 2020.06.03
+# Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
+# Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
 
 # 大綱 -----
 # Chapter 1. Basic R
