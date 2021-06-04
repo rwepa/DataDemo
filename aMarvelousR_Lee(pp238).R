@@ -801,10 +801,10 @@ x
 # p.193
 # Probability function 
 dnorm(1.96, 0, 1)
-pnorm(1.96, 0, 1)
-qnorm(0.975, 0, 1)
+pnorm(1.96, 0, 1)  # z --> p, 0.975
+qnorm(0.975, 0, 1) # p --> z, 1.96
 rnorm(5, 0, 1)
-# end
+# T分配: pt, F分配: pf, chi-squared分配: pchisq, 指數分配: pexp, gamma分配: pgamma, Weibull分配: pweibull
 
 dnorm(1.645)
 pnorm(1.645)
