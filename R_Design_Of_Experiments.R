@@ -109,11 +109,11 @@ summary(plasmaEtchANOVA)
 
 # 步驟1. 將資料輸入Excel
 # 路徑 C:/rdata/R-rcbd.xlsx
+# https://github.com/rwepa/DataDemo/blob/master/R-rcbd.xlsx
 
 # 步驟2. 使用 readxl 套件匯入Excel
 library(readxl) # read_excel
 library(dplyr) # v.1.0.6 mutate
-
 
 artificialVein <- read_excel("C:/rdata/R-rcbd.xlsx")
 artificialVein
@@ -135,6 +135,7 @@ summary(artificialVeinRCBD)
 
 # 步驟1. 將資料輸入Excel
 # 路徑 C:/rdata/R-fd.xlsx
+# https://github.com/rwepa/DataDemo/blob/master/R-fd.xlsx
 
 # 步驟2. 使用 readxl 套件匯入Excel
 library(readxl) # read_excel
