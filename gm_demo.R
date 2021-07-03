@@ -4,7 +4,7 @@
 # RWEPA   : http://rwepa.blogspot.tw/
 # GitHub  : https://github.com/rwepa
 
-# 感謝 Alpha Lee 音樂簡譜提供:
+# 感謝 Alpha Lee 提供音樂簡譜:
 # Youtube : https://youtu.be/Jx2YmiNm-6o
 # Piano   : Moonlight Sonata Op.27 No.2 (Beethoven)
 
