@@ -1,11 +1,10 @@
-# title   : gm package
+# title   : gm-音樂創作
 # author  : Ming-Chang Lee
 # email   : alan9956@gmail.com
 # RWEPA   : http://rwepa.blogspot.tw/
 # GitHub  : https://github.com/rwepa
 
-# 感謝音樂簡譜提供:
-# Name    : Alpha Lee
+# 感謝 Alpha Lee 音樂簡譜提供:
 # Youtube : https://youtu.be/Jx2YmiNm-6o
 # Piano   : Moonlight Sonata Op.27 No.2 (Beethoven)
 
