@@ -17,17 +17,13 @@ library(gm)
 # 建立 Music 對象
 
 m <-
-
   # 初始化 Music 對象
-
   Music() +
 
   # 加上 4/4 拍號
-
   Meter(4, 4) +
 
   # 加上一條包含四個音的聲部
-
   Line(list("C5", "D5", "E5", "F5"), list(1, 1, 1, 1))
 
 # 轉化成樂譜和音訊
@@ -47,5 +43,4 @@ m1 <- Music() + Tempo(48)+ Meter(4, 4) + z1 + z2 + Key(4)
 m1 <- m1 + Clef("G", to = "a") + Clef("F", to = "b") 
 
 show(m1, c("score", "audio"))
-
 # end
