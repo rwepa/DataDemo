@@ -103,3 +103,8 @@ knn.ani(train = traindata, test = testdata, cl = df$Species[ind == 1], k = 20)
 library(GGally)
 ggpairs(iris[-5], aes(colour = iris$Species, alpha = 0.4))
 cor(iris[-5])
+
+# GFC案例
+# https://github.com/rwepa/DataDemo/blob/master/gfc.csv
+# https://github.com/rwepa/DataDemo/blob/master/gfc_1_importdata.R
+# https://github.com/rwepa/DataDemo/blob/master/gfc_2_vis.R
