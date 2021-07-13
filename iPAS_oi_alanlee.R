@@ -1,4 +1,5 @@
 # title    : iPAS營運智慧分析師
+# date     : 2021.7.14
 # author   : Ming-Chang Lee
 # email    : alan9956@gmail.com
 # RWEPA    : http://rwepa.blogspot.tw/
@@ -102,7 +103,7 @@ knn.ani(train = traindata, test = testdata, cl = df$Species[ind == 1], k = 20)
 # ggplot2-散佈圖矩陣
 library(GGally)
 ggpairs(iris[-5], aes(colour = iris$Species, alpha = 0.4))
-cor(iris[-5])
+cor(iris[-5]) # 相關係數
 
 # GFC案例
 # https://github.com/rwepa/DataDemo/blob/master/gfc.csv
