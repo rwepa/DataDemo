@@ -102,3 +102,4 @@ knn.ani(train = traindata, test = testdata, cl = df$Species[ind == 1], k = 20)
 # ggplot2-散佈圖矩陣
 library(GGally)
 ggpairs(iris[-5], aes(colour = iris$Species, alpha = 0.4))
+cor(iris[-5])
