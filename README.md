@@ -998,6 +998,20 @@ data 目錄 - 包括書籍資料檔案
 
 資料說明: ROCR套件執行ROC計算繪圖
 
+### weblog.csv
+
+資料說明: 網頁日誌資料檔
+
+資料來源: https://www.kaggle.com/shawon10/web-log-dataset
+
+檔案名稱: weblog.csv
+
+欄位個數: 4
+
+欄位名稱: IP, Time, URL, Staus
+
+資料筆數: 16007
+
 ### windows_intall_R.pdf
 
 資料說明: Windows 環境安裝R的完整步驟
