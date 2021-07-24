@@ -125,7 +125,7 @@ subscribe : {yes 有購買定期存款商品, no 沒有購買定期存款商品}
 
 data(Cars93, package = "MASS")
 
-write.csv(Cars93, file = "C:/mydata/Cars93.csv", row.names=FALSE)
+write.csv(Cars93, file = "Cars93.csv", row.names=FALSE)
 
 ### ChemicalManufacturingProcess.csv
 
