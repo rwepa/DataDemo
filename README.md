@@ -115,6 +115,18 @@ poutcome  : 最近行銷結果 {failure, other, success, unknown}
 
 subscribe : {yes 有購買定期存款商品, no 沒有購買定期存款商品} --> 反應變數
 
+### Cars93.csv
+
+資料來源: R語言 - Cars93 {MASS}
+
+資料筆數: 93
+
+欄位個數: 27
+
+data(Cars93, package = "MASS")
+
+write.csv(Cars93, file = "C:/mydata/Cars93.csv", row.names=FALSE)
+
 ### ChemicalManufacturingProcess.csv
 
 資料說明: 醫藥產品製程分析資料集
