@@ -1514,7 +1514,7 @@ SELECT date(rental_date) FROM rental;
 import mysql.connector
 
 # https://dev.mysql.com/doc/sakila/en/
-cnx = mysql.connector.connect(user='rwepa', 
+cnx = mysql.connector.connect(user='root', 
                               password='123456',
                               host='127.0.0.1',
                               database='sakila')
@@ -1523,10 +1523,12 @@ cnx.close()
 # example 2 - SELECT 範例
 import mysql.connector
 
-cnx = mysql.connector.connect(user='rwepa', password='123456', database='sakila')
+cnx = mysql.connector.connect(user='root', password='123456', database='sakila')
+
 cursor = cnx.cursor()
 
 query = "SELECT rental_id, rental_date, customer_id FROM rental"
+
 cursor.execute(query)
 
 # 取出第1筆, tuple
