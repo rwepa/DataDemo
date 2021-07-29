@@ -6,7 +6,7 @@
 # GitHub   : https://github.com/rwepa
 # Encoding : UTF-8
 
-# Python:
+# Python: https://github.com/rwepa/DataDemo/blob/master/ai_using_python_and_r/ai_using_python_and_r-2021.08.10.py
 # R: https://github.com/rwepa/DataDemo/blob/master/ai_using_python_and_r/ai_using_python_and_r-2021.08.10.R
 
 # 大綱 -----
