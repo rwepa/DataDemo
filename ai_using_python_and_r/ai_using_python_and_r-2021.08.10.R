@@ -7,7 +7,7 @@
 # Encoding : UTF-8
 
 # Python:
-# R:
+# R: https://github.com/rwepa/DataDemo/blob/master/ai_using_python_and_r/ai_using_python_and_r-2021.08.10.R
 
 # 大綱 -----
 # 8/30(一) 06.R與RStudio簡介,資料匯入與匯出
