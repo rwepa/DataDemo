@@ -3399,5 +3399,19 @@ plot_layout = go.Layout(
     )
 fig = go.Figure(data=plot_data, layout=plot_layout)
 fig.show()
+
+# 參考資料 -----
+
+# RWEPA
+# http://rwepa.blogspot.com/
+
+# Python 程式設計-李明昌 <免費電子書>
+# http://rwepa.blogspot.com/2020/02/pythonprogramminglee.html
+
+# R入門資料分析與視覺化應用教學(付費)
+# https://mastertalks.tw/products/r?ref=MCLEE
+
+# R商業預測與應用(付費)
+# https://mastertalks.tw/products/r-2?ref=MCLEE
 # end
 # 辛苦啦,Python程式之旅完成 ~~
