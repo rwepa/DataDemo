@@ -450,6 +450,7 @@ np.sin(a*np.pi/180)
 
 # 陣列的屬性
 
+# reshape 應用1
 a = np.array([0,1,2,3,4,5])
 a
 a.ndim   # 1
@@ -463,7 +464,7 @@ b.shape  # (3,2)
 
 b[1][0] = 168
 b
-a # a物件已經更改, array([  0,   1, 168,   3,   4,   5])
+a # a物件已經更改, array([0, 1, 168, 3, 4, 5])
 
 c = a.reshape((3,2)).copy()
 c
@@ -471,7 +472,21 @@ c[0][0] = -999
 c
 a # a物件沒有更改
 
-# reshape 應用
+# reshape 應用2
+a = np.array([[1, 2, 3], [4, 5, 6]])
+a
+
+b= a.reshape((3, 2))
+b
+
+b[1, 0] = 999
+b
+a
+
+c = b.reshape(-1, 3)
+c
+
+# reshape 應用3
 z = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
 z
 z.reshape(-1) # -1: unknown dimension
