@@ -4,9 +4,10 @@ author  : Ming-Chang Lee
 email   : alan9956@gmail.com
 RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
-Updated : 2021.1.28 -新增 10.Python連結MySQL
-Updated : 2021.2.17 -新增 11.Python物件導向
-Updated : 2021.4.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處理與分析概論)
+Updated : 2021.01.28 -新增 10.Python連結MySQL
+Updated : 2021.02.17 -新增 11.Python物件導向
+Updated : 2021.04.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處理與分析概論)
+Updated : 2021.08.09 -新增 決策樹繪圖4種方法
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -2011,4 +2012,77 @@ print(Y_pred)
 
 Y_target = dataset[:,4][120:].astype(int)
 print(Y_target)
+
+##############################
+# Updated : 2021.08.09 -新增 決策樹繪圖4種方法
+# python 繪製決策樹
+# 執行環境: windows 10 (64-bit) anaconda with spyder 4.2.5
+# 參考資料 https://scikit-learn.org/stable/modules/tree.html#tree
+##############################
+
+from sklearn.datasets import load_iris
+from sklearn import tree
+
+iris = load_iris()
+X, y = iris.data, iris.target
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, y)
+
+##############################
+# 繪圖方法1
+# 繪圖於 Spyder \ Plots 視窗
+##############################
+
+tree.plot_tree(clf)
+
+##############################
+# 繪圖方法3
+# 繪圖於 IPython 視窗
+##############################
+
+# 步驟1 安裝 pydotplus
+# Anaconda 環境
+# conda install pydotplus
+
+# 步驟2 繪製決策樹
+import io
+import pydotplus
+dot_data = io.StringIO()
+tree.export_graphviz(clf, out_file=dot_data, feature_names=['SepalLength', 'SepalWidth', 'PetalLength', 'PetalWidth'])
+graph = pydotplus.graph_from_dot_data(dot_data.getvalue())
+
+# 步驟3 匯出決策樹圖檔
+graph.write_png('titanic-RWEPA.png')
+
+# 步驟4 匯入決策樹
+from IPython.core.display import Image
+Image(filename='titanic-RWEPA.png')
+
+##############################
+# 繪圖方法3 graphviz 套件
+# 輸出為 PDF檔案
+##############################
+
+# conda install python-graphviz
+
+import graphviz
+dot_data = tree.export_graphviz(clf, out_file=None)
+graph = graphviz.Source(dot_data) 
+graph.render("iris") # 輸出為 iris.pdf
+
+##############################
+# 繪圖方法4 graphviz 套件
+# 繪圖於 IPython 視窗, 填上顏色
+##############################
+dot_data = tree.export_graphviz(clf, 
+                                out_file=None,
+                                feature_names=iris.feature_names,
+                                class_names=iris.target_names,
+                                filled=True,
+                                rounded=True,
+                                special_characters=True)
+
+graph = graphviz.Source(dot_data)
+graph
 # end
+
