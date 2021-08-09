@@ -4,10 +4,11 @@ author  : Ming-Chang Lee
 email   : alan9956@gmail.com
 RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
+Updated : 2021.01.28 -新增 09.MySQL常用語法
 Updated : 2021.01.28 -新增 10.Python連結MySQL
 Updated : 2021.02.17 -新增 11.Python物件導向
-Updated : 2021.04.11 -新增 iPAS-Python-program (12.iPAS - 科目二：資料處理與分析概論)
-Updated : 2021.08.09 -新增 決策樹繪圖4種方法
+Updated : 2021.04.11 -新增 12.iPAS 科目二：資料處理與分析概論)
+Updated : 2021.08.09 -新增 13.決策樹繪圖4種方法
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -29,6 +30,7 @@ Updated : 2021.08.09 -新增 決策樹繪圖4種方法
 # 10.Python連結MySQL
 # 11.Python物件導向
 # 12.iPAS - 科目二：資料處理與分析概論
+# 13.決策樹繪圖4種方法
 
 # anaconda
 # https://www.anaconda.com/
@@ -2014,11 +2016,11 @@ Y_target = dataset[:,4][120:].astype(int)
 print(Y_target)
 
 ##############################
-# Updated : 2021.08.09 -新增 決策樹繪圖4種方法
-# python 繪製決策樹
+# 13.決策樹繪圖4種方法
+##############################
+
 # 執行環境: windows 10 (64-bit) anaconda with spyder 4.2.5
 # 參考資料 https://scikit-learn.org/stable/modules/tree.html#tree
-##############################
 
 from sklearn.datasets import load_iris
 from sklearn import tree
@@ -2036,7 +2038,7 @@ clf = clf.fit(X, y)
 tree.plot_tree(clf)
 
 ##############################
-# 繪圖方法3
+# 繪圖方法2
 # 繪圖於 IPython 視窗
 ##############################
 
@@ -2074,6 +2076,7 @@ graph.render("iris") # 輸出為 iris.pdf
 # 繪圖方法4 graphviz 套件
 # 繪圖於 IPython 視窗, 填上顏色
 ##############################
+
 dot_data = tree.export_graphviz(clf, 
                                 out_file=None,
                                 feature_names=iris.feature_names,
@@ -2085,4 +2088,3 @@ dot_data = tree.export_graphviz(clf,
 graph = graphviz.Source(dot_data)
 graph
 # end
-
