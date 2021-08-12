@@ -1764,14 +1764,44 @@ print(datetime)
 
 mystr = '作者 - 李明昌 老師'
 
-author = re.search('編輯 - (.*) ', mystr).group(1)
+author = re.search('作者 - (.*) ', mystr).group(1)
 print(author)
 
-author = re.search('編輯 - (.*?) ', mystr).group(1)
+author = re.search('作者 - (.*?) ', mystr).group(1)
 print(author)
 
-author = re.search('編輯 - (\w+)', mystr).group(1)
+author = re.search('作者 - (\w+)', mystr).group(1)
 print(author)
+
+# re 練習
+# 新增 C:\mydata\retest 資料夾:
+# 新增3個資料夾 retest1 retest2 retest3
+# 每個資料夾包括3個檔案:
+# 20210812.txt 20210813.txt 20210814.txt
+# 全部有3個資料夾, 9個檔案
+# 使用 os, re 模組, 練習找出3個 20210812.txt 之完整路徑
+# ['C://mydata//retest//retest1/20210812.txt',
+#  'C://mydata//retest//retest2/20210812.txt',
+#  'C://mydata//retest//retest3/20210812.txt']
+
+import os
+os.chdir("C:/mydata/retest") # 變更工作目錄
+os.getcwd() # 取得現行目錄
+os.listdir(os.getcwd()) # 顯示檔案清單
+
+path = 'c:/mydata'
+
+files = []
+
+# r=root, d=directories, f = files
+for r, d, f in os.walk(path):
+    for file in f:
+        if '.txt' in file:
+            files.append(os.path.join(r, file))
+files
+
+for f in files:
+    print(f)
 
 ##############################
 # 判斷式 if elif else
