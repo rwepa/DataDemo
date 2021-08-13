@@ -3037,7 +3037,7 @@ result
 # 輸入第2個點的座標值為 (c, d)
 # analysis:
 def distance(x1, y1, x2, y2):
-    dist = ((c-a)**2 + (d-b)**2)**0.5
+    dist = ((x2-x1)**2 + (y2-y1)**2)**0.5
     return dist
 
 a, b, c, d = eval(input())
