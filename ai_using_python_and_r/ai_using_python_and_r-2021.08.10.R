@@ -81,7 +81,9 @@ search()
 
 # https://cloud.r-project.org/web/packages/index.html 
 
-# 41類別 - 中文說明
+# 41類別 - 
+
+說明
 # http://rwepa.blogspot.tw/2013/10/packages-list-32.html
 
 # R對話資訊 -----
@@ -2118,6 +2120,25 @@ ind <- which(twn@data$COUNTYNAME %in% countryselect)
 twn.ttk <- twn[ind,]
 
 plot(twn.ttk, main="北北基地圖", col=c("aquamarine4", "palegreen", "deepskyblue2"))
+
+# shiny 範例 01_hello -----
+runExample("01_hello")
+
+# shiny 繪圖中文字型錯誤 -----
+
+# 方法1 使用 family 參數
+# 範例:使用 Windows 微軟正黑體字型
+# plot(..., family = "Microsoft JhengHei UI")
+
+# 方法2 使用 showtext 套件
+library(shiny)
+library(showtext)
+
+## Loading Google fonts (https://fonts.google.com/)
+font_add_google(name = "Noto Sans TC", family = "twn")
+showtext_auto()
+
+# hist(..., family = "twn")
 
 # 參考資料 -----
 
