@@ -2125,6 +2125,7 @@ plot(twn.ttk, main="北北基地圖", col=c("aquamarine4", "palegreen", "deepsky
 runExample("01_hello")
 
 # shiny 繪圖中文字型錯誤 -----
+# updated: 2021.8.26
 
 # 方法1 使用 family 參數
 # 範例:使用 Windows 微軟正黑體字型
