@@ -8,6 +8,7 @@
 # Updated : 2020.06.03
 # Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 # Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
+# Updated : 2021.08.27 新增 Chapter 8. 繪圖中文字型
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -1305,4 +1306,23 @@ ggplot(mpg, aes(displ, hwy)) +
 
 # R軟體開放資料應用-高速公路篇 使用ggplot2
 # http://rwepa.blogspot.com/2019/05/highway.html
+
+# Chapter 8. 繪圖中文字型 -----
+
+# shiny 繪圖 plot 中文字型錯誤 -----
+
+# 方法1 使用 family 參數
+# 範例:使用 Windows 微軟正黑體字型
+# plot(..., family = "Microsoft JhengHei UI")
+
+# 方法2 使用 showtext 套件
+
+library(shiny)
+library(showtext)
+
+## Loading Google fonts (https://fonts.google.com/)
+font_add_google(name = "Noto Sans TC", family = "twn")
+showtext_auto()
+
+hist(..., family = "twn")
 # end
