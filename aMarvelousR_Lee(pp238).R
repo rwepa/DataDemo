@@ -1312,17 +1312,36 @@ ggplot(mpg, aes(displ, hwy)) +
 # shiny 繪圖 plot 中文字型錯誤 -----
 
 # 方法1 使用 family 參數
-# 範例:使用 Windows 微軟正黑體字型
+# Example 1. 使用 Windows 微軟正黑體字型
 # plot(..., family = "Microsoft JhengHei UI")
 
 # 方法2 使用 showtext 套件
-
+# Example 2. shiny app
 library(shiny)
 library(showtext)
 
 ## Loading Google fonts (https://fonts.google.com/)
 font_add_google(name = "Noto Sans TC", family = "twn")
 showtext_auto()
-
 hist(..., family = "twn")
+
+# Example 3. shiny app
+library(shiny)
+library(showtext)
+showtext_auto()
+ui <- fluidPage(
+  titlePanel("iris散佈圖矩陣-2021.8.27"),
+  mainPanel(
+    plotOutput("distPlot")
+  )
+)
+server <- function(input, output) {
+  output$distPlot <- renderPlot({
+    pairs(iris[-5], pch=16, col=iris$Species, 
+          main = "iris散佈圖矩陣",
+          cex.main=2)
+  })
+}
+shinyApp(ui = ui, server = server)
+
 # end
