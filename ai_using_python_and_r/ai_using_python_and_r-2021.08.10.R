@@ -1468,11 +1468,11 @@ model %>% compile(
 
 # 要一點點時間
 history <- model %>% fit(
-  partial_x_train,
-  partial_y_train,
+  x_train,
+  y_train,
   epochs = 20,
   batch_size = 512,
-  validation_data = list(x_val, y_val)
+  validation_data = list(x_test, y_test)
 )
 
 str(history)
@@ -1495,7 +1495,7 @@ mydata[,3] <- sample(c(1:5), datasize, replace = TRUE)
 mydata[,4] <- sample(c(1999:2014), datasize, replace = TRUE)
 mydata[,5] <- sample(c(1:12), datasize, replace = TRUE)
 colnames(mydata) <- c("movie", "customer","rating","year", "month")
-write.table(mydata, file="bigdata.txt", sep=" ", row.names=FALSE, col.names=TRUE)
+write.table(mydata, file="bigdata.txt", sep=",", row.names=FALSE, col.names=TRUE)
 # 2300萬*5, 491MB
 
 # Ctrl + Shift + F10: 重新啟動R
