@@ -17,7 +17,7 @@
 # T900            {I1,I2,I3}
 
 # step 1.
-# laod "arules" package
+# load "arules" package
 library(arules)
 
 # step 2.
