@@ -18,6 +18,7 @@
 # Chapter 5. Application
 # Chapter 6. iPAS - 科目二：資料處理與分析概論
 # Chapter 7. ggplot2 套件
+# Chapter 8. 繪圖中文字型
 
 # Chapter 1. Basic R -----
 
