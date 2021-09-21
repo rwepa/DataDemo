@@ -2718,7 +2718,8 @@ marketing.isnull().sum()
 marketing['facebook']
 
 # 將 facebook 變數的 NaN資料, 以中位數填滿
-marketing['facebook'].fillna(marketing['facebook'].median, inplace = True)
+# median 須加上()
+marketing['facebook'].fillna(marketing['facebook'].median(), inplace = True)
 
 # 沒有NaN
 marketing.isnull().sum()
