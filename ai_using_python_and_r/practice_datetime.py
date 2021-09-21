@@ -1,4 +1,4 @@
-# 實作練習14
+# practice_datetime.py
 # 檔案日期時間處理
 
 # 下載 https://github.com/rwepa/DataDemo/blob/master/weblog.csv
