@@ -7,7 +7,7 @@ Date    : 2020.11.18
 Updated : 2021.01.28 -新增 09.MySQL常用語法
 Updated : 2021.01.28 -新增 10.Python連結MySQL
 Updated : 2021.02.17 -新增 11.Python物件導向
-Updated : 2021.04.11 -新增 12.iPAS 科目二：資料處理與分析概論)
+Updated : 2021.04.11 -新增 12.iPAS 科目二：資料處理與分析概論
 Updated : 2021.08.09 -新增 13.決策樹繪圖4種方法
 Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
 """
