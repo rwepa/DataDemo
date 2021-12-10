@@ -2754,6 +2754,10 @@ sales = pd.read_excel(io = 'C:/mydata/全國訂單明細.xlsx', sheet_name = '�
 sales # 8568*19
 sales.head()
 
+sales['產品包箱']
+sales['產品包箱'].value_counts()
+sales['產品包箱'].value_counts(dropna=False) # show NaN
+
 ##############################
 # 匯入 SAS 檔案
 ##############################
