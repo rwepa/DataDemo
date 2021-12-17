@@ -9,6 +9,7 @@
 # Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 # Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
 # Updated : 2021.08.27 新增 Chapter 8. 繪圖中文字型
+# Updated : 2021.12.17 新增 Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -1345,4 +1346,74 @@ server <- function(input, output) {
 }
 shinyApp(ui = ui, server = server)
 
+# Chapter 9. 長寬資料轉換(tidyr, reshape2套件) -----
+
+# 長寬資料轉換 long and wide data -----
+olddata_wide <- read.table(header=TRUE, text="
+                           subject sex control cond1 cond2
+                           1   M     7.9  12.3  10.7
+                           2   F     6.3  10.6  11.1
+                           3   F     9.5  13.1  13.8
+                           4   M    11.5  13.4  12.9
+                           ")
+# subject 欄位轉換為 factor
+olddata_wide$subject <- factor(olddata_wide$subject)
+str(olddata_wide)
+olddata_wide
+
+olddata_long <- read.table(header=TRUE, text='
+                           subject sex condition measurement
+                           1   M   control         7.9
+                           1   M     cond1        12.3
+                           1   M     cond2        10.7
+                           2   F   control         6.3
+                           2   F     cond1        10.6
+                           2   F     cond2        11.1
+                           3   F   control         9.5
+                           3   F     cond1        13.1
+                           3   F     cond2        13.8
+                           4   M   control        11.5
+                           4   M     cond1        13.4
+                           4   M     cond2        12.9
+                           ')
+# subject 欄位轉換為 factor
+olddata_long$subject <- factor(olddata_long$subject)
+str(olddata_long)
+olddata_long
+
+# tidyr 套件
+library(tidyr)
+
+# gather: From wide to long
+data_long <- gather(olddata_wide, condition, measurement, control:cond2)
+data_long
+
+# spread: From long to wide
+data_wide <- spread(olddata_long, condition, measurement)
+data_wide
+
+# reshape2 套件
+library(reshape2)
+
+# melt: From wide to long
+
+# Specify id.vars: the variables to keep but not split apart on
+# method 1
+melt(olddata_wide, id.vars=c("subject", "sex"))
+
+# method 2
+data_long <- melt(olddata_wide,
+                  # ID variables - all the variables to keep but not split apart on
+                  id.vars=c("subject", "sex"),
+                  # The source columns
+                  measure.vars=c("control", "cond1", "cond2" ),
+                  # Name of the destination column that will identify the original
+                  # column that the measurement came from
+                  variable.name="condition",
+                  value.name="measurement")
+data_long
+
+# dcast: From long to wide
+data_wide <- dcast(olddata_long, subject + sex ~ condition, value.var="measurement")
+data_wide
 # end
