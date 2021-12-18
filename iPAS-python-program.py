@@ -559,6 +559,9 @@ print("Hello World")   # python 3
 # 04.Pandas資料結構
 ##############################
 
+# pandas 設定顯示所有欄位
+pd.set_option('display.expand_frame_repr', False)
+
 # 載入2大套件 pandas, numpy
 # https://pandas.pydata.org/docs/user_guide/10min.html
 
