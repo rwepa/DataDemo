@@ -1,4 +1,4 @@
-# Topic:  Using R ¡VFoundation
+# Topic:  Using R - Foundation
 # Author: MING-CHANG LEE, Department of Information Management, Yu Da University
 # Date:   September 18, 2010
 # Email:  alan9956@ydu.edu.tw
@@ -80,7 +80,7 @@ gl(3, 5)
 gl(3, 5, length=30)
 gl(2, 6, label=c("Male", "Female"))
 # TRY !
-x <- gl(3, 3, label=c("Àu¨}", "´¶³q", "¥[ªo"), length=27)
+x <- gl(3, 3, label=c("Ã€uÂ¨}", "Â´Â¶Â³q", "Â¥[Âªo"), length=27)
 x
 class(x)
 
@@ -173,7 +173,7 @@ data(cars)
 help(cars)
 class(cars)
 
-# TRY ! How to add row names (e.g., Row1, Row2,¡K) 
+# TRY ! How to add row names (e.g., Row1, Row2,Â¡K) 
 # Answer: x <- data.frame(cars, row.names=factor(c(1:nrow(cars)), label="Row"))
 
 # p.37
@@ -232,14 +232,14 @@ plot(cars, type="b",pch=5,col="red",xlab="Speed(mph)", ylab="Stop distance(
 main="Speed and Stopping Distances of Cars",sub= "Figure 1: Plotting demonstration")
 
 # p.51
-# Bar charts ¡Vbarplot()
+# Bar charts Â¡Vbarplot()
 CarArrived <- table(NumberOfCar <- rpois(100, lambda=5))
 CarArrived
 barplot(CarArrived)
 barplot(CarArrived, col=rainbow(14))
 
 # p.52
-# Pie charts ¡Vpie()
+# Pie charts Â¡Vpie()
 pie.sales <- c(0.14, 0.30, 0.26, 0.15, 0.10, 0.05) # Sales ratio
 names(pie.sales) <- c("Taipei1", "Taipei2", "Taipei3", "Taichung", 
 "Kao", "Other") # Sales area
@@ -248,12 +248,12 @@ pie(pie.sales, col = c("purple", "violetred1", "green3", "cornsilk", 	"cyan", "w
 pie(pie.sales, density = 10, clockwise=TRUE) # The density of shading lines
 
 # p.53
-# Box-and-whisker Plot ¡Vboxplot()
+# Box-and-whisker Plot Â¡Vboxplot()
 mat <- cbind(Uni05 = (1:100)/21, Norm = rnorm(100), T5 = rt(100, df 	= 5), Gam2 = rgamma(100, shape = 2))
 boxplot(data.frame(mat), main = "boxplot")
 
 # p.54
-# Stem-and-Leaf Plot ¡Vstem()
+# Stem-and-Leaf Plot Â¡Vstem()
 mat = scan()
 # 2 3 16 23 14 12 4 13 2 0 0 0 6 28 31 14 4 8 2 5
 stem(mat)
