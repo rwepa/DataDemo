@@ -10,6 +10,7 @@
 # Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
 # Updated : 2021.08.27 新增 Chapter 8. 繪圖中文字型
 # Updated : 2021.12.17 新增 Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
+# Updated : 2021.12.25 新增 Chapter 10.安裝專案套件
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -1416,4 +1417,19 @@ data_long
 # dcast: From long to wide
 data_wide <- dcast(olddata_long, subject + sex ~ condition, value.var="measurement")
 data_wide
+
+# Chapter 10.安裝專案套件 -----
+
+# 考慮某專案須使用 ggplot2, tidyr, reshape2 套件,使用客製化函數 verifyPackage,執行套件之檢視,如果系統沒有安裝套件,則自動安裝該套件.
+
+needPackage <- c("ggplot2", "tidyr", "reshape2")
+
+verifyPackage <- function(needPackage) {
+  for (x in needPackage) {
+    if (!x %in% installed.packages()[,"Package"])
+      install.packages(x)
+  }
+}
+
+verifyPackage(needPackage)
 # end
