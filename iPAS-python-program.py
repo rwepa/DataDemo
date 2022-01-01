@@ -1260,6 +1260,21 @@ import numpy as np
 # Windows 中文字型
 ##############################
 
+# 方法1
+
+(1).關閉Spyder
+
+(2).將微軟正黑體 C:\Windows\fonts\msjh.ttc 複製到以下目錄
+【C:\Users\user\anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf】
+
+(3).將現有 DejaVuSans.ttf 更名為 DejaVuSans-old.ttf
+
+(4).將 msjh.ttc 更名為 DejaVuSans.ttf
+
+(5).重新啟動Spyder即可使用中文字型
+
+# 方法2
+
 from matplotlib.font_manager import FontProperties
 font = FontProperties(fname=r"c:\windows\fonts\mingliu.ttc", size=12)
 
