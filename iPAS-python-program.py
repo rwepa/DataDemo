@@ -292,8 +292,14 @@ c = { "uid": 168,
 	   "name" : 'Alan Lee'
 	 }
 
-u = c["uid"] 		        # Get an element
-c["shell"] = "/bin/sh" 	    # Add an element
+# Get all keys
+c.keys()
+
+# Get an element
+u = c["uid"]
+
+# Add an element
+c["shell"] = "/bin/sh"
 
 if c.has_key("directory"): 	# 'dict' object has no attribute 'has_key'
 	d = c["directory"]
