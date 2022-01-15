@@ -22,7 +22,7 @@ Encoding : UTF-8
 # https://mastertalks.tw/products/r-2?ref=MCLEE
 
 ##############################
-# 資料分析架構APC方法
+# 資料分析架構 - APC方法
 ##############################
 # 1.群組
 # 2.時間
