@@ -11,6 +11,7 @@ Updated : 2021.02.17 -新增 11.Python物件導向
 Updated : 2021.04.11 -新增 12.iPAS 科目二：資料處理與分析概論
 Updated : 2021.08.09 -新增 13.決策樹繪圖4種方法
 Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
+Updated : 2022.01.16 -新增 15.Dash視覺化簡介
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -34,6 +35,7 @@ Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
 # 12.iPAS - 科目二：資料處理與分析概論
 # 13.決策樹繪圖4種方法
 # 14.深度學習CNN - MNIST範例
+# 15.Dash視覺化簡介
 
 # anaconda
 # https://www.anaconda.com/
@@ -2211,4 +2213,160 @@ plt.xlabel("Epochs")
 plt.ylabel("Accuracy")
 plt.legend()
 plt.show()
+
+##############################
+# 15.Dash視覺化簡介
+##############################
+# 參考資料: https://dash.plotly.com/
+
+# Dash 組成二大元件: layout, callback
+
+# 執行 dash 三大方法
+# (1).命令提示列 python app.py
+# (2).Spyder 逐行執行
+# (3).Jupyter notebook 逐行執行
+
+# Part 1.安裝 plotly, dash等套件. 使用 Jupyter notebook時,須安裝 jupyter-dash 模組.
+# conda install -c conda-forge plotly
+# conda install -c conda-forge dash
+# conda install -c conda-forge jupyter-dash
+# conda install -c conda-forge dash-html-components
+# conda install -c conda-forge dash-core-components
+# conda install -c conda-forge dash-bootstrap-components
+
+"""
+# import dash_html_components as html (不再使用)
+# import dash_core_components as dcc (不再使用)
+from dash import html
+from dash import dcc
+import dash_bootstrap_components as dbc
+
+# Spyder : http://127.0.0.1:8050/
+# Jupyter : http://127.0.0.1:8051/
+"""
+
+# plotly 長條圖
+import plotly.graph_objects as go
+import plotly.io as pio
+#pio.renderers.default = 'svg'
+pio.renderers.default = 'browser'
+
+product = ['Product A', 'Product B', 'Product C']
+sale = [20, 14, 23]
+fig = go.Figure(data=[go.Bar(x=product, y=sale, text=sale, textposition='auto')])
+fig.show()
+
+# Part 2.Dash Layout
+
+# 範例1 長條圖
+
+# 載入套件
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+import plotly.express as px
+import pandas as pd
+
+# 建立 app
+app = dash.Dash(__name__)
+
+# 使用字典物件建立資料框資料集 6列*3行
+df = pd.DataFrame({
+    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
+    "Amount": [4, 1, 2, 2, 4, 5],
+    "City": ["Taipei", "Taipei", "Taipei", "Taichung", "Taichung", "Taichung"]
+})
+
+# 使用 plotly.express 建立長條圖
+fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+
+# 建立 dash layout
+# children 是第一個屬性, 一般此屬性可以省略.
+# html.H1(children='Hello Dash') 與 html.H1('Hello Dash') 相同.
+# children 可以是字串, 數字, list.
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div(children='''
+        Dash: A web application framework for your data (網頁應用框架)
+    '''),
+
+    dcc.Graph(
+        id='example-graph',
+        figure=fig
+    )
+])
+
+if __name__ == '__main__':
+    # app.run_server(debug=True)
+    app.run_server(debug=True, use_reloader=False)
+# 使用瀏覽器開啟 http://127.0.0.1:8050/
+# 如果設定本例中的 debug=True, 則當程式碼更新時, 瀏覽器會自動更新,執行"hot-reloading"功能.
+
+# 範例2 左右並排長條圖
+import dash_html_components as html
+import dash_core_components as dcc
+import dash
+import dash_core_components
+print(dash_core_components.__version__)
+
+# 加入 CSS
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+
+app.layout = html.Div(children=[
+    html.H1(children='Hello Dash'),
+
+    html.Div('Dash: A web application framework for Python. 2022.1.16'),
+
+    dcc.Graph(
+        id='example-graph',
+        figure={
+            'data': [
+                {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': '男'},
+                {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': '女'},
+            ],
+            'layout': {
+                'title': 'Dash 資料視覺化'
+            }
+        }
+    )
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=False)
+
+# 範例3 下拉式選單長條圖
+import dash
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
+import plotly.graph_objects as go
+
+app = dash.Dash(__name__)
+
+app.layout = html.Div([
+    html.P("2022.01.16-選取顏色 Color:"),
+    dcc.Dropdown(
+        id="dropdown",
+        options=[
+            {'label': x, 'value': x}
+            for x in ['Gold', 'MediumTurquoise', 'LightGreen']
+        ],
+        value='Gold',
+        clearable=False,
+    ),
+    dcc.Graph(id="graph"),
+])
+
+@app.callback(
+    Output("graph", "figure"), 
+    [Input("dropdown", "value")])
+def display_color(color):
+    fig = go.Figure(
+        data=go.Bar(y=[2, 3, 1], marker_color=color))
+    return fig
+
+app.run_server(debug=False)
 # end
