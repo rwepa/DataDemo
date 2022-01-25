@@ -2245,7 +2245,7 @@ import dash_bootstrap_components as dbc
 # Jupyter : http://127.0.0.1:8051/
 """
 
-# plotly 長條圖
+# 範例1 plotly 長條圖
 import plotly.graph_objects as go
 import plotly.io as pio
 #pio.renderers.default = 'svg'
@@ -2258,7 +2258,7 @@ fig.show()
 
 # Part 2.Dash Layout
 
-# 範例1 長條圖
+# 範例2 dash 長條圖
 
 # 載入套件
 import dash
@@ -2303,7 +2303,7 @@ if __name__ == '__main__':
 # 使用瀏覽器開啟 http://127.0.0.1:8050/
 # 如果設定本例中的 debug=True, 則當程式碼更新時, 瀏覽器會自動更新,執行"hot-reloading"功能.
 
-# 範例2 左右並排長條圖
+# 範例3 左右並排長條圖
 import dash_html_components as html
 import dash_core_components as dcc
 import dash
@@ -2337,7 +2337,7 @@ app.layout = html.Div(children=[
 if __name__ == '__main__':
     app.run_server(debug=False)
 
-# 範例3 下拉式選單長條圖
+# 範例4 下拉式選單長條圖
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
