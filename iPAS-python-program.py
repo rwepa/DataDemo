@@ -1256,6 +1256,7 @@ fig = plt.figure()
 # 圖1 , 圖2 , 圖3
 # 圖4 , 圖5 , 圖6
 
+# 08.繪圖中文字型
 # example 8 Windows 中文字型解決方案
 import os
 os.getcwd()
