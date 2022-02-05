@@ -463,20 +463,6 @@ expenses: 醫療費用
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
-### opendata109b141-嬰兒出生數.csv
-
-資料說明: 109年度嬰兒出生數按嬰兒性別及生父母年齡分（按發生）
-
-資料來源: https://data.gov.tw/dataset/146626
-
-資料筆數: 66240
-
-欄位個數: 8
-
-欄位名稱英文: statistic_yyy, according, district_code, site_id, sex, father_age, mother_age, birth_count
-
-欄位名稱中文: 統計年度, 按照別, 區域別代碼, 區域別, 嬰兒性別, 生父年齡, 生母年齡, 嬰兒出生數
-
 ### OnlineRetail.csv.zip
 
 資料來源: https://www.kaggle.com/vijayuv/onlineretail
@@ -495,7 +481,22 @@ expenses: 醫療費用
 
 說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
 
+### opendata109b141-嬰兒出生數.csv
+
+資料說明: 109年度嬰兒出生數按嬰兒性別及生父母年齡分（按發生）
+
+資料來源: https://data.gov.tw/dataset/146626
+
+資料筆數: 66240
+
+欄位個數: 8
+
+欄位名稱英文: statistic_yyy, according, district_code, site_id, sex, father_age, mother_age, birth_count
+
+欄位名稱中文: 統計年度, 按照別, 區域別代碼, 區域別, 嬰兒性別, 生父年齡, 生母年齡, 嬰兒出生數
+
 ### population.taiwan.csv
+
 資料筆數: 21
 
 欄位個數: 6
