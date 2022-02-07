@@ -1263,35 +1263,37 @@ os.getcwd()
 os.chdir("C:/pythondata")
 
 import matplotlib.pyplot as plt
-import scipy as sp
 import numpy as np
 
 ##############################
 # Windows 中文字型
 ##############################
 
+##############################
 # 方法1
+##############################
 
-(1).關閉Spyder
+# (1).關閉Spyder
 
-(2).將微軟正黑體 C:\Windows\fonts\msjh.ttc 複製到以下目錄
-【C:\Users\user\anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf】
+# (2).將微軟正黑體 C:\Windows\fonts\msjh.ttc 複製到以下目錄
+# 【C:\Users\user\anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf】
 
-(3).將現有 DejaVuSans.ttf 更名為 DejaVuSans-old.ttf
+# (3).將現有 DejaVuSans.ttf 更名為 DejaVuSans-old.ttf
 
-(4).將 msjh.ttc 更名為 DejaVuSans.ttf
+# (4).將 msjh.ttc 更名為 DejaVuSans.ttf
 
-(5).重新啟動Spyder即可使用中文字型
+# (5).重新啟動Spyder即可使用中文字型
 
-# 方法2
+##############################
+# 方法2 使用  matplotlib.font_manager.FontProperties 方法
+##############################
 
 from matplotlib.font_manager import FontProperties
+
 font = FontProperties(fname=r"c:\windows\fonts\mingliu.ttc", size=12)
 
 # 匯入資料
 # https://github.com/rwepa/DataDemo/blob/master/web_traffic.csv
-
-myData = sp.genfromtxt("web_traffic.csv", delimiter = '\t')
 myData = np.genfromtxt("web_traffic.csv", delimiter = '\t')
 
 print(myData[:6])
@@ -1302,12 +1304,12 @@ x = myData[:,0] # 743*1
 y = myData[:,1] # 743*1
 
 # 檢查是否有Na
-sp.sum(sp.isnan(y)) # 有8個值是nan
-print("Number of invalid entries:", sp.sum(sp.isnan(y)))
+np.sum(np.isnan(y)) # 有8個值是nan
+print("Number of invalid entries:", np.sum(np.isnan(y)))
 
 # 取出非Na
-x = x[~sp.isnan(y)] # 743-8=735
-y = y[~sp.isnan(y)]
+x = x[~np.isnan(y)] # 743-8=735
+y = y[~np.isnan(y)]
 
 # 繪圖
 plt.scatter(x, y, s=10)
@@ -1323,6 +1325,18 @@ plt.grid(True, linestyle='-', color='0.75')
 # 輸出 png
 plt.savefig(u"2017年10月每小時網路流量.png", dpi=300, format="png")
 plt.show()
+
+##############################
+# 方法3 使用 matplotlib.rcParams 方法
+##############################
+
+import matplotlib
+
+# 設定 matplotlib.rcParams 方法
+matplotlib.rcParams['font.sans-serif'] = ['Microsoft YaHei']
+
+# 設定負號錯誤顯示
+matplotlib.rcParams['axes.unicode_minus'] = False
 
 ##############################
 # Mac 中文字型
