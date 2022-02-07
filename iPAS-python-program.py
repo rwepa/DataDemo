@@ -670,6 +670,14 @@ df1.iloc[, 2] # ERROR
 df1.iloc[:, 2] # OK
 df1.iloc[:, 2:4] 
 
+# 取出一個儲存格 cell, 使用 at 或 iat
+
+# at 使用變數名稱
+df2.at[0,'A']
+
+# iat 使用指標 index
+df2.iat[1,4]
+
 # Boolean Indexing 邏輯值(條件式)資料選取
 df1[df1 > 0]
 df1[df1.A > 0]
