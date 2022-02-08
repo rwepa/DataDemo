@@ -631,6 +631,18 @@ yosemite
 
 欄位個數: 40
 
+### sonar.csv
+
+資料說明: 水雷與岩石視覺化分析
+
+資料來源: http://archive.ics.uci.edu/ml/datasets/connectionist+bench+(sonar,+mines+vs.+rocks)
+
+資料筆數: 208
+
+欄位個數: 61
+
+第61行: R: rock  岩石, M: mine 水雷
+
 ### sp500.RData
 
 資料說明: 採用 sp500 {gt}, 記錄 1950/1/3 - 2015/12/31, 原資料集依日期遞減排序, 已更新依日期遞增排序.
