@@ -633,7 +633,7 @@ yosemite
 
 ### sonar.csv
 
-資料說明: 水雷與岩石視覺化分析
+資料說明: 水雷與岩石分類問題
 
 資料來源: http://archive.ics.uci.edu/ml/datasets/connectionist+bench+(sonar,+mines+vs.+rocks)
 
