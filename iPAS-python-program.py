@@ -12,6 +12,7 @@ Updated : 2021.04.11 -新增 12.iPAS 科目二：資料處理與分析概論
 Updated : 2021.08.09 -新增 13.決策樹繪圖4種方法
 Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
 Updated : 2022.01.16 -新增 15.Dash視覺化簡介
+Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -2392,4 +2393,200 @@ def display_color(color):
     return fig
 
 app.run_server(debug=False)
+
+##############################
+# 16.Folium地理視覺化應用
+##############################
+
+# folium官網 https://python-visualization.github.io/folium/
+
+# folium 特性:
+# Folium 是 Python 地理視覺化模組
+# Folium 提供互動式的操作介面
+# Folium 採用 leaflet JavaScript 函式庫, 操作與R類似
+# Folium 地圖服務結合 OpenStreetMap, Mapbox, and Stamen 等客製化功能
+
+# 安裝 folium
+# conda install folium -c conda-forge
+
+# 使用 Spyder 可以配合 webbrwoser 開啟瀏覽器, Anaconda 已安裝 webbrwoser 模組
+# Jupyter-notebook 不用使用 webbrwoser 模組, 可以直接顯示.
+
+# webbrowser 可以直接開啟網頁
+webbrowser.open_new_tab('http://rwepa.blogspot.com/')
+
+##############################
+# folium - 範例1 台北101大樓地圖
+##############################
+
+import folium
+
+import webbrowser
+
+# [緯度 lat, 經度 long]
+# 街道圖, 此為預設值 tiles='OpenStreetMap' 
+m = folium.Map(location=[25.033493, 121.564101], zoom_start=18)
+
+m.save("mymap.html")
+
+webbrowser.open_new_tab("mymap.html")
+
+# stamenterrain 地形圖
+m = folium.Map(location=[25.033493, 121.564101], tiles='stamenterrain', zoom_start=13)
+m.save("mymap.html")
+webbrowser.open_new_tab("mymap.html")
+
+# tiles='stamentoner' 黑白線條圖
+m = folium.Map(location=[25.033493, 121.564101], tiles='stamentoner', zoom_start=13)
+m.save("mymap.html")
+webbrowser.open_new_tab("mymap.html")
+
+# tiles='stamenwatercolor' 水波圖
+m = folium.Map(location=[25.033493, 121.564101], tiles='stamenwatercolor', zoom_start=13)
+m.save("mymap.html")
+webbrowser.open_new_tab("mymap.html")
+
+# tiles='cartodbpositron'  
+m = folium.Map(location=[25.033493, 121.564101], tiles='cartodbpositron', zoom_start=13)
+m.save("mymap.html")
+webbrowser.open_new_tab("mymap.html")
+
+##############################
+# folium - 範例2 動態放置標記(marker)
+##############################
+m = folium.Map(location=[23.97555, 120.97361], tiles="Stamen Terrain", zoom_start=8)
+
+tooltip = "Click me!"
+
+folium.Marker(
+    location=[23.97555, 120.97361], 
+    popup="<i>臺灣地理中心碑</i>", 
+    tooltip=tooltip,
+    icon=folium.Icon(icon="cloud"),
+).add_to(m)
+
+folium.Marker(
+    location=[25.033493, 121.564101], 
+    popup="<b>台北101大樓</b>", 
+    tooltip=tooltip,
+    icon=folium.Icon(color="red", icon="info-sign")
+).add_to(m)
+
+# Jupyter-notebook 輸入 m 即可顯示地圖
+m.save("mymap.html")
+
+webbrowser.open_new_tab("mymap.html")
+
+##############################
+# folium - 範例3 加入圓形標記
+##############################
+
+m = folium.Map(location=[25.042276, 121.533394], zoom_start=14)
+
+folium.Circle(
+    radius=200,
+    location=[25.033493, 121.564101],
+    popup="台北101大樓",
+    color="crimson",
+    fill=False,
+).add_to(m)
+
+folium.CircleMarker(
+    radius=100,
+    location=[25.04777, 121.51722],    
+    popup="台北車站",
+    color="#3186cc",
+    fill=True,
+    fill_color="#3186cc",
+).add_to(m)
+
+m.save("mymap.html")
+
+webbrowser.open_new_tab("mymap.html")
+
+##############################
+# folium - 範例4 滑鼠點選加入標記
+##############################
+
+m = folium.Map(location=[25.033493, 121.564101], zoom_start=14)
+
+folium.Marker([25.04777, 121.51722], popup="台北車站").add_to(m)
+
+m.add_child(folium.ClickForMarker(popup="Waypoint"))
+
+m.save("mymap.html")
+
+webbrowser.open_new_tab("mymap.html")
+##############################
+# folium - 範例5 新北市公共自行車租賃系統(YouBike)應用
+##############################
+
+# 新北市公共自行車租賃系統(YouBike)
+# https://data.gov.tw/dataset/123026
+
+import folium
+import webbrowser
+import pandas as pd
+
+df = pd.read_csv('C:/Users/user/Downloads/新北市公共自行車租賃系統(YouBike).csv') # 664*14
+df
+df.columns
+# ['sno', 'sna', 'tot', 'sbi', 'sarea', 'mday', 'lat', 'lng', 'ar', 'sareaen', 'snaen', 'aren', 'bemp', 'act']
+# sno(站點代號)、sna(中文場站名稱)、tot(場站總停車格)、sbi(可借車位數)、sarea(中文場站區域)
+# mday(資料更新時間)、lat(緯度)、lng(經度)、ar(中文地址)、sareaen(英文場站區域)
+# snaen(英文場站名稱)、aren(英文地址)、bemp(可還空位數)、act(場站是否暫停營運)
+
+# 缺車: 可借車比例較小者,可借車比例=可借車位數 /場站總停車格 = sbi/tot
+# 缺車比例 = 1- (sbi/tot)
+# 缺車熱點: 可借車比例 < 自訂 或 可借車位數 < 自訂個數
+
+df['lackcar'] = 1 - df['sbi']/df['tot']
+df['lackcar'].describe()
+# count    664.000000
+# mean       0.366837
+# std        0.216291
+# min        0.000000
+# 25%        0.198611
+# 50%        0.367544
+# 75%        0.533333
+# max        0.937500
+
+# 取出缺車比例較大的前10筆資料
+df_lackcar = df.sort_values(by=['lackcar'], ascending=False)[0:10]
+
+m = folium.Map(location=[25.012839, 121.456308], tiles='cartodbpositron', zoom_start=13)
+
+for index, row in df.iterrows():
+    # 將資料點加到地圖上
+    folium.Circle(
+        radius=100,
+        location=[row["lat"], row["lng"]],
+        popup="{} \n {}".format(row["sna"], row["tot"]),
+        color="#555",
+        weight=1,
+        fill_color="#FFE082",
+        fill_opacity=1,
+
+    ).add_to(m)
+    
+    # 加入缺車標記
+    if row["lackcar"] == 1:
+        folium.Marker(
+            location=[row["lat"], row["lng"]],
+            tooltip=row['sna'],
+            icon=folium.Icon(color='lightred', icon='fa-regular fa-bicycle', prefix='fa')
+    ).add_to(m)
+# icon list: https://fontawesome.com/icons
+
+# 加入標題
+loc = '新北市Youbike系統-2022.2.11-@RWPEA'
+title_html = '''
+             <h3 align="center" style="font-size:16px"><b>{}</b></h3>
+             '''.format(loc)   
+
+m.get_root().html.add_child(folium.Element(title_html))
+
+m.save("mymap.html")
+
+webbrowser.open_new_tab("mymap.html")
 # end
