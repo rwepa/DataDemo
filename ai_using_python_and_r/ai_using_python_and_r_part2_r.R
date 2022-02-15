@@ -1399,6 +1399,8 @@ abline(fit.lm, col="red")
 
 # 安裝 R - keras套件
 # install.packages("keras")
+# reticulate::install_miniconda()
+# keras::install_keras()
 
 library(keras)
 
