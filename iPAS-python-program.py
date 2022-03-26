@@ -37,6 +37,7 @@ Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 # 13.決策樹繪圖4種方法
 # 14.深度學習CNN - MNIST範例
 # 15.Dash視覺化簡介
+# 16.Folium地理視覺化應用
 
 # anaconda
 # https://www.anaconda.com/
