@@ -48,7 +48,12 @@ axis(1, at=ind, labels=gfc.日亞 $orderdate[ind])
 axis(2)
 box()
 
-legend("topright", legend = c("日亞", "廣達", "科銳"), lty=1:3, col=c(1,2,4), cex=0.8)
+# legend(x設定值= "xxx")
+# topleft    top    topright
+# left       center right
+# bottomleft bottom bottomrigh
+
+legend(x="topright", legend = c("日亞", "廣達", "科銳"), lty=1:3, col=c(1,2,4), cex=0.8)
 abline(h=mean(gfc.日亞$amount))
 abline(h=mean(gfc.廣達$amount), col="red")
 # 圖中有找到樣式 patterns?
