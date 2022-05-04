@@ -11,6 +11,7 @@
 # Updated : 2021.08.27 新增 Chapter 8. 繪圖中文字型
 # Updated : 2021.12.17 新增 Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
 # Updated : 2021.12.25 新增 Chapter 10.安裝專案套件
+# Updated : 2022.05.04 新增 Chapter 11.匯入SAS檔案
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -21,6 +22,9 @@
 # Chapter 6. iPAS - 科目二：資料處理與分析概論
 # Chapter 7. ggplot2 套件
 # Chapter 8. 繪圖中文字型
+# Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
+# Chapter 10.安裝專案套件
+# Chapter 11.匯入SAS檔案
 
 # Chapter 1. Basic R -----
 
@@ -851,10 +855,10 @@ a
 # p.219
 # Quality Control Chart
 library(qcc)
-workpath = "c:/R.data"
+workpath = "c:/rdata"
 setwd(workpath)
 
-# 先將資料複製到 C:\R.data 目錄
+# 先將資料複製到 C:\rdata 目錄
 # 匯入資料
 
 # https://github.com/rwepa/DataDemo/blob/master/hw1.csv
@@ -1430,6 +1434,16 @@ verifyPackage <- function(needPackage) {
       install.packages(x)
   }
 }
-
 verifyPackage(needPackage)
+
+# Chapter 11.匯入SAS檔案 -----
+
+library(sas7bdat)
+
+# 模擬資料-全民健保處方及治療明細檔_西醫住院
+# https://github.com/rwepa/DataDemo/blob/master/h_nhi_ipdte103.sas7bdat
+
+filname <- "h_nhi_ipdte103.sas7bdat"
+system.time(dd2014 <- read.sas7bdat(filname))
+dd2014
 # end
