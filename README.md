@@ -735,15 +735,17 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
 
-### tx_1min_high_cluster.RData
+### tx_1min_2014.csv
 
-資料說明: 台指期1分鐘歷史資料的高峰資料集
+資料說明: 台指期2014年1分鐘Tick資料集
 
-資料筆數: 83506
+資料筆數: 74217
 
-欄位個數: 17
+欄位個數: 7
 
-資料範圍: 2013/12/10 ~ 2015/01/23
+欄位名稱: Date, Time, Open, High, Low, Close, TotalVolume
+
+資料範圍: 2014/1/2 08:46:00 - 2014/12/31 13:45:00
 
 ### web_traffic.csv
 
