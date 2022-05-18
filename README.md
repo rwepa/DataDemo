@@ -735,6 +735,16 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位名稱: Date, TWII.Open, TWII.High, TWII.Low, TWII.Close, TWII.Volume, TWII.Adjusted
 
+### tw_stock_list.xlsx
+
+資料說明: 台灣上市,上櫃股票代碼
+
+更新日期: 2022.5.18
+
+資料筆數: 1758
+
+欄位個數: 7
+
 ### tx_1min_2014.csv
 
 資料說明: 台指期2014年1分鐘Tick資料集
