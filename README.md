@@ -745,6 +745,8 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 欄位個數: 7
 
+資料來源: https://isin.twse.com.tw/isin/C_public.jsp?strMode=2
+
 ### tx_1min_2014.csv
 
 資料說明: 台指期2014年1分鐘Tick資料集
