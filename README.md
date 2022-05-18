@@ -739,7 +739,7 @@ customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, Phon
 
 資料說明: 台灣上市,上櫃股票代碼
 
-更新日期: 2022.5.18
+更新日期: 2022.4.20
 
 資料筆數: 1758
 
