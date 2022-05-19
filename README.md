@@ -623,6 +623,14 @@ yosemite
 
 欄位說明: class欄位包括以下三種情形 {normal, suspicious, unknown}
 
+### shinyStockVis.zip
+
+資料說明: shiny Taiwan Stock App
+
+https://rwepa.shinyapps.io/shinyStockVis/
+
+程式碼: https://github.com/rwepa/DataDemo/blob/master/shinyStockVis.zip
+
 ### snsdata.csv
 
 資料說明: FB社群找出青少年目標族群
