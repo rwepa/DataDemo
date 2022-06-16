@@ -5,8 +5,12 @@
 # RWEPA    : http://rwepa.blogspot.tw/
 # Encoding : UTF-8
 
-gfc <- read.table("gfc-ansi.csv", header=TRUE, sep=",")
-gfc
+# gfc <- read.table("gfc-ansi.csv", header=TRUE, sep=",")
+# gfc
+
+# 2022.6.16 R-4.2.0
+# 直接匯入 UTF-8編碼, 結果正確顯示, 沒有錯誤.
+gfc <- read.table("gfc.csv", header=TRUE, sep=",")
 
 # plot 繪圖
 plot(gfc$amount)
