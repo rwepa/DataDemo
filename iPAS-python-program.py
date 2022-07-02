@@ -13,6 +13,7 @@ Updated : 2021.08.09 -新增 13.決策樹繪圖4種方法
 Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
 Updated : 2022.01.16 -新增 15.Dash視覺化簡介
 Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
+Updated : 2022.07.02 -新增 17.Orange3簡介
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -38,6 +39,7 @@ Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 # 14.深度學習CNN - MNIST範例
 # 15.Dash視覺化簡介
 # 16.Folium地理視覺化應用
+# 17.Orange3簡介
 
 # anaconda
 # https://www.anaconda.com/
@@ -2590,4 +2592,68 @@ m.get_root().html.add_child(folium.Element(title_html))
 m.save("mymap.html")
 
 webbrowser.open_new_tab("mymap.html")
+
+# 17.Orange3簡介
+
+# (1).Orange 3 特性
+# 1.University of Ljubljana, Slovenia, 10 October 1996
+# 2.視覺化程式設計工具(Visual Programming Tools)
+# 3.執行更加快速(C++)與視覺化操作
+# 4.提供多種機器學習模組
+# 5.開放原始碼與跨平台
+# 6.適用於Python模組
+# 7.資料預處理
+# 8.模型訓練
+# 9.部署
+
+# (2).參考資源
+# 官網     : https://orangedatamining.com/
+# 元件     : https://orangedatamining.com/widget-catalog/
+# Tutorial : https://orange3.readthedocs.io/projects/orange-data-mining-library/en/latest/  
+
+# (3).Orange 3 安裝
+
+# 方法1 使用 Anaconda
+# 選取 程式集 \ Anaconda3 \ Anaconda Navigator (anaconda3)
+# 選取 Orange 3 並按下 [Install] 下載並安裝
+# 安裝完成後按下 [Launch] 啟動 Orange3
+# 或是在命令提示字元輸入以下字元: python -m Orange.canvas
+# 注意:本安裝方法須一些時間
+
+# 方法2 下載 windows 免安裝檔
+# https://orangedatamining.com/download/#windows 
+# Orange3-3.32.0.zip (550MB)
+# 下載並解壓縮zip
+# 開啟 Orange 執行檔
+
+# (4).Orange3 add-ons (外掛元件)
+# 1.Orange3-Associate          關聯規則
+# 2.Orange3-Bioinformatics     生物資訊
+# 3.Orange3-Educational        機器學習教育示範
+# 4.Orange3-Explain            重要特徵解釋
+# 5.Orange3-Geo                地理資料視覺化
+# 6.Orange3-ImageAnalytics     影像分析
+# 7.Orange3-Network            網路分析
+# 8.Orange3-Prototypes         原型
+# 9.Orange3-SingleCell         單細胞分析
+# 10.Orange-Spectroscopy       光譜分析
+# 11.Orange3-Text              文字探勘
+# 12.Orange3-Textable          文字探勘, 編碼
+# 13.Orange3-Timeseries        時間序列
+# 14.Orange3-Survival-Analysis 存活分析
+# 15.Orange3-WorldHappiness    世界社會經濟指標 (GDP...)
+
+# (5).安裝 Add-ons Associate
+# Options \ Add-ons
+# Associate 打勾 進行安裝
+# 按 OK 重新啟動 Orange
+
+# (6).Associate 二大元件:
+# Frequent Itemsets 頻繁項目集 
+# Association Rules 關聯規則
+# 輸入Associate的資料須具有 0-1 encoding或是類別型資料(yes/no)
+# milk egg sugar 
+# 1    0    1
+# 0    1    1
+# 0    0    0
 # end
