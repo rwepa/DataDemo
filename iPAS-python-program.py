@@ -2651,7 +2651,7 @@ webbrowser.open_new_tab("mymap.html")
 # (6).Associate 二大元件:
 # Frequent Itemsets 頻繁項目集 
 # Association Rules 關聯規則
-# 輸入Associate的資料須具有 0-1 encoding或是類別型資料(yes/no)
+# 輸入Associate的資料須為 0-1 encoding或是類別型資料(yes/no)
 # milk egg sugar 
 # 1    0    1
 # 0    1    1
