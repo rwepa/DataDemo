@@ -4,6 +4,7 @@ author  : Ming-Chang Lee
 email   : alan9956@gmail.com
 RWEPA   : http://rwepa.blogspot.tw/
 Date    : 2020.11.18
+
 Updated : 2022.01.01 -更新 08.繪圖中文字型
 Updated : 2021.01.28 -新增 09.MySQL常用語法
 Updated : 2021.01.28 -新增 10.Python連結MySQL
