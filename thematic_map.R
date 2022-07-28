@@ -52,7 +52,7 @@ class(twn) # SpatialPolygonsDataFrame
 str(twn@data) # 368*7
 
 # 篩選臺北市地理資料
-twn.taipei <- twn[which(twn@data$COUNTYNAME == "臺北市"), ]
+twn.taipei <- twn[twn@data$COUNTYNAME == "臺北市",]
 twn.taipei@data
 
 str(twn.taipei@polygons[1])
