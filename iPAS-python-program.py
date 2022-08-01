@@ -76,7 +76,23 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 ##############################
 
 # 建立虛擬環境
-# conda create --name mypython3 python=3
+# --name 也可以使用 -n
+# conda create --name myenv
+
+# 建立特定python版本的虛擬環境
+# conda create -n myenv python=3.9
+
+# 建立特定模組版本的虛擬環境
+# conda create -n myenv scipy=1.9.0
+
+# 建立特定python版本, 特定模組版本的虛擬環境
+# conda create -n myenv python=3.9 scipy=1.9.0 astroid babel
+
+# 檢視環境清單
+# conda env list
+
+# 檢視環境的模組資訊
+# conda list -n myenv scipy
 
 # 啟用虛擬環境
 # conda activate mypython3
