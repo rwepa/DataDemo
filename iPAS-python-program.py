@@ -95,10 +95,10 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # conda list -n myenv scipy
 
 # 啟用虛擬環境
-# conda activate mypython3
+# conda activate myenv
 
 # 安裝虛擬環境的模組
-# conda install -n mypython3 spyder
+# conda install -n myenv spyder
 
 # 關閉虛擬環境
 # conda deactivate
