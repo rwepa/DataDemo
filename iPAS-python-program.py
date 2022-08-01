@@ -24,6 +24,7 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # 大綱
 ##############################
 
+# 00.conda操作
 # 01.資料型態與基本運算
 # 02.字串處理
 # 03.Numpy資料結構
@@ -46,7 +47,7 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # https://www.anaconda.com/
 
 ##############################
-# conda 操作
+# 00.conda操作
 ##############################
 
 # conda 資訊
@@ -79,6 +80,9 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 
 # 啟用虛擬環境
 # conda activate mypython3
+
+# 安裝虛擬環境的模組
+# conda install -n mypython3 spyder
 
 # 關閉虛擬環境
 # conda deactivate
