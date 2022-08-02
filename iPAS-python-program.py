@@ -112,13 +112,13 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # 1.顯示環境清單
 conda env list
 
-# 2.登出環境
+# 2.如果有登入, 先執行登出環境
 conda deactivate
 
 # 3.複製環境
-# cloned_env: 新的環境
-# original_env: 原始被複製的環境
-conda create --name cloned_env --clone original_env
+# new_env      : 新的環境
+# original_env : 原始被複製的環境
+conda create --name new_env --clone original_env
 
 # 方法2.使用YML複製(clone)環境
 
@@ -127,17 +127,9 @@ conda activate original_env
 conda env export > environment.yml
 conda deactivate
 
-# 2.建立新環境並登入環境
-conda create --name cloned_env
-conda activate cloned_env
-
-# 3.使用YML並進行新環境的更新
-conda env update --name root --file environment.yml
-
-# 4.登出新環境
-conda deactivate cloned_env
-
-# reference: https://iq.opengenus.org/clone-conda-environment/
+# 2.使用YML並建立新環境
+conda create --name new_env --file environment.yml
+reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
 """
 
 ##############################
