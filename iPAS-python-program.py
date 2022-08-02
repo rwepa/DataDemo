@@ -127,8 +127,10 @@ conda activate original_env
 conda env export > environment.yml
 conda deactivate
 
-# 2.使用YML並建立新環境
-conda create --name new_env --file environment.yml
+# 2.將 environment.yml 第1行name: 改為 opencv
+
+# 3.使用YML並建立新環境
+conda env create -f environment.yml
 reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
 """
 
