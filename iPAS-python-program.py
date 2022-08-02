@@ -2692,7 +2692,7 @@ webbrowser.open_new_tab("mymap.html")
 # 或是在命令提示字元輸入以下字元: python -m Orange.canvas
 # 注意:本安裝方法須一些時間
 
-# 方法2 下載 windows 免安裝檔
+# 方法2 下載 windows 免安裝檔. 解壓縮後,即可使用, 不用進行安裝程序.
 # https://orangedatamining.com/download/#windows 
 # Orange3-3.32.0.zip (550MB)
 # 下載並解壓縮zip
