@@ -2273,7 +2273,7 @@ model.summary()   # 顯示模型摘要資訊
 # 編譯模型
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
-# 訓練模型
+# 訓練模型(需要一些時間...)
 history = model.fit(X_train, Y_train, validation_split=0.2, epochs=10, batch_size=128, verbose=2)
 
 # 評估模型
