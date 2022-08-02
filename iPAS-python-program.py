@@ -103,7 +103,46 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # 關閉虛擬環境
 # conda deactivate
 
+##############################
+# 複製(clone)虛擬環境
+##############################
+"""
+# 方法1.複製(clone)環境的三大步驟:
+
+# 1.顯示環境清單
+conda env list
+
+# 2.登出環境
+conda deactivate
+
+# 3.複製環境
+# cloned_env: 新的環境
+# original_env: 原始被複製的環境
+conda create --name cloned_env --clone original_env
+
+# 方法2.使用YML複製(clone)環境
+
+# 1.儲存原始環境YML
+conda activate original_env
+conda env export > environment.yml
+conda deactivate
+
+# 2.建立新環境並登入環境
+conda create --name cloned_env
+conda activate cloned_env
+
+# 3.使用YML並進行新環境的更新
+conda env update --name root --file environment.yml
+
+# 4.登出新環境
+conda deactivate cloned_env
+
+# reference: https://iq.opengenus.org/clone-conda-environment/
+"""
+
+##############################
 # 切換工作目錄
+##############################
 import os # 載入 os 套件
 os.getcwd() # 讀取工作目錄
 os.chdir("C:/pythondata") # 變更工作目錄
