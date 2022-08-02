@@ -139,9 +139,15 @@ conda env create -f environment.yml
 # 步驟4.登入opencv環境
 conda activate opencv
 
-# 步驟5.安裝模組
+# 步驟5.1 安裝opencv模組
 pip install opencv-python
 pip install opencv-contrib-python
+
+# 同理,安裝orange3模組
+pip install pip install orange3
+
+# 啟動 Orange3
+orange-canvas
 
 reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
 """
