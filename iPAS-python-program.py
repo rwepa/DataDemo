@@ -107,17 +107,17 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # 複製(clone)虛擬環境
 ##############################
 """
-# 方法1.複製(clone)環境的三大步驟:
+# 方法1.使用conda指令複製(clone)環境的三大步驟:
 # 此方法將新增程式集 Jupyter Notebook (newenv1), Reset Spyder Settings (newenv1), Spyder (newenv1)
 
-# 1.顯示環境清單
+# 步驟1.顯示環境清單
 conda env list
 
-# 2.如果有登入, 先執行登出環境
+# 步驟2.如果有登入, 先執行登出環境
 conda deactivate
 
-# 3.複製環境
-conda create --name new_env --clone original_env
+# 步驟3.複製環境
+# conda create --name new_env --clone original_env
 # new_env      : 新的環境, 以下使用 newenv1
 # original_env : 原始被複製的環境, 以下使用 base
 conda create --name newenv1 --clone base
@@ -125,21 +125,21 @@ conda create --name newenv1 --clone base
 # 方法2.使用YML複製(clone)新環境
 # 此方法將新增程式集 Anaconda Navigator (opencv), Anaconda Prompt (opencv), Anaconda Powershell Prompt (opencv)
 
-# 1.儲存原始環境YML
+# 步驟1.儲存原始環境YML
 conda activate base
 conda env export > environment.yml
 conda deactivate
 
-# 2.修改 environment.yml
+# 步驟2.修改 environment.yml
 # 將 environment.yml 第1行name: 更名為新環境名稱, 本例為 opencv
 
-# 3.使用YML並建立新環境(-f 與 --file 相同)
+# 步驟3.使用YML並建立新環境(-f 與 --file 相同)
 conda env create -f environment.yml
 
-# 4.登入opencv環境
+# 步驟4.登入opencv環境
 conda activate opencv
 
-# 5.安裝模組
+# 步驟5.安裝模組
 pip install opencv-python
 pip install opencv-contrib-python
 
