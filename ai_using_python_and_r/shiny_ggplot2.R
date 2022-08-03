@@ -7,6 +7,9 @@
 
 library(shiny)
 library(ggplot2)
+
+# 在RStudio-Console視窗,按紅色按鈕可以關閉shiny app
+# 設定 shiny.usecairo 可關閉錯誤 Fontconfig error: Cannot load default config file
 options(shiny.usecairo = TRUE)
 
 # Define UI for application that draws a histogram
