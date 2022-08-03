@@ -1,5 +1,5 @@
 # title   : myFirstShiny
-# date    : 2022.02.18
+# date    : 2022.08.03
 # author  : Ming-Chang Lee
 # email   : alan9956@gmail.com
 # RWEPA   : http://rwepa.blogspot.tw/
@@ -7,11 +7,15 @@
 
 library(shiny)
 
+# 在RStudio-Console視窗,按紅色按鈕可以關閉shiny app
+# 設定 shiny.usecairo 可關閉錯誤 Fontconfig error: Cannot load default config file
+options(shiny.usecairo = TRUE)
+
 # Define UI for dataset viewer app ----
 ui <- fluidPage(
     
     # App title ----
-    titlePanel("myFirstShiny-2022.2.18"),
+    titlePanel("myFirstShiny-2022.8.3"),
     
     # Sidebar layout with a input and output definitions ----
     sidebarLayout(
