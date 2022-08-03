@@ -2619,6 +2619,10 @@ webbrowser.open_new_tab("mymap.html")
 # 下載並解壓縮zip
 # 開啟 Orange 執行檔
 
+# 方法3 使用 orange3 虛擬環境
+cd C:\Users\user\anaconda3\envs\orange3
+python -m Orange.canvas
+
 # (4).Orange3 add-ons (外掛元件)
 # 1.Orange3-Associate          關聯規則
 # 2.Orange3-Bioinformatics     生物資訊
