@@ -1,9 +1,9 @@
-# title   : myFirstShiny
-# date    : 2022.08.03
-# author  : Ming-Chang Lee
-# email   : alan9956@gmail.com
-# RWEPA   : http://rwepa.blogspot.tw/
-# Encoding: UTF-8
+# File     : myFirstShiny.R
+# Author   : Ming-Chang Lee (2022)
+# Email    : alan9956@gmail.com
+# RWEPA    : http://rwepa.blogspot.tw/
+# GitHub   : https://github.com/rwepa
+# Encoding : UTF-8
 
 library(shiny)
 
