@@ -15,6 +15,7 @@ Updated : 2021.09.30 -新增 14.深度學習CNN - MNIST範例
 Updated : 2022.01.16 -新增 15.Dash視覺化簡介
 Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 Updated : 2022.07.02 -新增 17.Orange3簡介
+Updated : 2022.08.02 -新增 18.conda虛擬環境
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -42,6 +43,7 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 # 15.Dash視覺化簡介
 # 16.Folium地理視覺化應用
 # 17.Orange3簡介
+# 18.conda虛擬環境
 
 # anaconda
 # https://www.anaconda.com/
@@ -70,90 +72,6 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 
 # 範例: 更新 Spyder 模組
 # conda update spyder
-
-##############################
-# 虛擬環境
-##############################
-
-# 建立虛擬環境
-# --name 也可以使用 -n
-# conda create --name myenv
-
-# 建立特定python版本的虛擬環境
-# conda create -n myenv python=3.9
-
-# 建立特定模組版本的虛擬環境
-# conda create -n myenv scipy=1.9.0
-
-# 建立特定python版本, 特定模組版本的虛擬環境
-# conda create -n myenv python=3.9 scipy=1.9.0 astroid babel
-
-# 檢視環境清單
-# conda env list
-
-# 檢視環境的模組資訊
-# conda list -n myenv scipy
-
-# 啟用虛擬環境
-# conda activate myenv
-
-# 安裝虛擬環境的模組
-# conda install -n myenv spyder
-
-# 關閉虛擬環境
-# conda deactivate
-
-##############################
-# 複製(clone)虛擬環境
-##############################
-"""
-# 方法1.使用conda指令複製(clone)環境的三大步驟:
-# 此方法將新增程式集 Jupyter Notebook (newenv1), Reset Spyder Settings (newenv1), Spyder (newenv1)
-
-# 步驟1.顯示環境清單
-conda env list
-
-# 步驟2.如果有登入, 先執行登出環境
-conda deactivate
-
-# 步驟3.複製環境
-# conda create --name new_env --clone original_env
-# new_env      : 新的環境, 以下使用 newenv1
-# original_env : 原始被複製的環境, 以下使用 base
-conda create --name newenv1 --clone base
-
-# 方法2.使用YML複製(clone)新環境
-# 此方法將新增程式集 Anaconda Navigator (opencv), Anaconda Prompt (opencv), Anaconda Powershell Prompt (opencv)
-
-# 步驟1.儲存原始環境YML
-conda activate base
-conda env export > environment.yml
-conda deactivate
-
-# 步驟2.修改 environment.yml
-# 將 environment.yml 第1行name: 更名為新環境名稱, 本例為 opencv
-
-# 步驟3.使用YML並建立新環境(-f 與 --file 相同)
-conda env create -f environment.yml
-
-# 步驟4.登入opencv環境
-conda activate opencv
-
-# 步驟5.安裝opencv模組
-pip install opencv-python
-pip install opencv-contrib-python
-
-# 同理, 亦可以新建 orange3 環境並安裝 orange3 模組
-pip install orange3
-
-# 登入 orange3 環境
-conda activate orange3
-
-# 啟動 Orange3
-orange-canvas
-
-reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
-"""
 
 ##############################
 # 切換工作目錄
@@ -2731,4 +2649,88 @@ webbrowser.open_new_tab("mymap.html")
 # 1    0    1
 # 0    1    1
 # 0    0    0
+
+##############################
+# 18.conda虛擬環境
+##############################
+
+"""
+# 檢視所有虛擬環境清單
+conda env list
+
+# 啟用 myenv 虛擬環境
+conda activate myenv
+
+# 關閉虛擬環境
+# conda deactivate
+
+# 建立 myenv 虛擬環境
+# --name 也可以使用 -n
+# --file 也可以使用 -f
+conda create --name myenv
+
+# 建立特定 python 版本的虛擬環境
+conda create -n myenv python=3.9
+
+# 建立特定 scipy 模組版本的虛擬環境
+conda create -n myenv scipy=1.9.0
+
+# 建立特定 python 版本與特定 scipy 模組版本的虛擬環境
+conda create -n myenv python=3.9 scipy=1.9.0 astroid babel
+
+# 檢視 myenv 虛擬環境的模組資訊
+conda list -n myenv scipy
+
+# 安裝 myenv 虛擬環境的 spyder 模組
+conda install -n myenv spyder
+
+# 複製(clone)虛擬環境
+
+# 方法1.使用conda指令複製(clone)環境的三大步驟.
+# 此方法將新增程式集 Jupyter Notebook (newenv1), Reset Spyder Settings (newenv1), Spyder (newenv1)
+
+# 步驟1.顯示環境清單
+conda env list
+
+# 步驟2.如果有登入, 先執行登出環境
+conda deactivate
+
+# 步驟3.複製環境
+# conda create --name new_env --clone original_env
+# new_env      : 新的環境, 以下使用 newenv1
+# original_env : 原始被複製的環境, 以下使用 base
+conda create --name newenv1 --clone base
+
+# 方法2.使用YML複製(clone)新環境的二大步驟.
+# 此方法將新增程式集 Anaconda Navigator (opencv), Anaconda Prompt (opencv), Anaconda Powershell Prompt (opencv)
+
+# 步驟1.儲存原始環境YML
+conda activate base
+conda env export > environment.yml
+conda deactivate
+
+# 步驟2.修改 environment.yml
+# 將 environment.yml 第1行name: 更名為新環境名稱, 本例為 opencv
+
+# 步驟3.使用YML並建立新環境(-f 與 --file 相同)
+conda env create -f environment.yml
+
+# 步驟4.登入opencv環境
+conda activate opencv
+
+# 步驟5.安裝opencv模組
+pip install opencv-python
+pip install opencv-contrib-python
+
+# 同理, 亦可以新建 orange3 環境並安裝 orange3 模組
+pip install orange3
+
+# 登入 orange3 環境
+conda activate orange3
+
+# 啟動 Orange3
+orange-canvas
+
+reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
+"""
 # end
