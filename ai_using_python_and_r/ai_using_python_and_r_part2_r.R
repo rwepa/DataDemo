@@ -1559,6 +1559,12 @@ library(shiny)
 dir(paste0(.libPaths(), "/shiny/examples"))
 
 # shiny example - 01_hello
+
+# 【2022.8.3 注意!!!】
+# 在RStudio-Console視窗,按紅色按鈕可以關閉 shiny app
+# 設定 shiny.usecairo 可關閉錯誤 Fontconfig error: Cannot load default config file
+options(shiny.usecairo = TRUE)
+
 runExample("01_hello")
 
 runExample("02_text")
