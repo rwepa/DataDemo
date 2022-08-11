@@ -42,7 +42,7 @@ plot(gfc.日亞$amount, type="l", ylim=c(50,350),
         xlab="時間", 
         ylab="訂購量", 
         main="XX公司2009年訂購量統計圖",
-        axes=F,
+        axes=FALSE,
         cex=0.5)
 lines(gfc.廣達$amount, col="red", lty=2)
 lines(gfc.科銳$amount, col="blue", lty=3)
