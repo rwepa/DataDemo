@@ -12,6 +12,7 @@
 # Updated : 2021.12.17 新增 Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
 # Updated : 2021.12.25 新增 Chapter 10.安裝專案套件
 # Updated : 2022.05.04 新增 Chapter 11.匯入SAS檔案
+# Updated : 2022.09.12 新增 Chapter 12.dplyr 套件
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -25,6 +26,7 @@
 # Chapter 9. 長寬資料轉換(tidyr, reshape2套件)
 # Chapter 10.安裝專案套件
 # Chapter 11.匯入SAS檔案
+# Chapter 12.dplyr 套件
 
 # Chapter 1. Basic R -----
 
@@ -1446,4 +1448,116 @@ library(sas7bdat)
 filname <- "h_nhi_ipdte103.sas7bdat"
 system.time(dd2014 <- read.sas7bdat(filname))
 dd2014
+
+# Chapter 12.dplyr 套件 -----
+
+# r cran dplyr
+# https://cran.r-project.org/web/packages/dplyr/index.html
+# dplyr: A Grammar of Data Manipulation 資料操作文法
+# dplyr = data frame + plyr
+
+# plyr 發音 plier (鉗子), plyr 是 dplyr 的前個套件版本, 作者推薦使用 dplyr 套件
+# plyr: https://www.slideshare.net/hadley/plyr-one-data-analytic-strategy
+
+# filter                 : 條件式篩選資料
+# slice                  : 列的指標篩選資料
+# arrange                : 排序
+# select                 : 選取行/更改欄位名稱
+# rename                 : 選取所有行/更改欄位名稱
+# distinct               : 選取不重覆資料
+# mutate                 : 新增欄位,保留原資料
+# transmute              : 新增欄位,不保留原資料
+# summarise              : 群組計算
+
+library(dplyr)
+
+library(nycflights13) # 2013年NYC機場航班資料, 33萬筆資料 -----
+
+flights # 336776*19
+
+class(flights) # "tbl_df" "tbl" "data.frame"
+
+# 如何轉換為 tbl_df, 使用 as.tbl -----
+mytbl <- as.tbl(iris) # deprecated in dplyr 1.0.0.
+mytbl <- tibble::as_tibble(iris)
+class(mytbl)
+
+# 資料結構與摘要 -----
+str(flights)
+
+summary(flights) # 有NA
+
+head(flights)
+
+tail(flights) # 注意:資料不是依照月,日排序
+
+# filter 條件式篩選資料 -----
+filter(flights, month == 1, day == 1)
+
+flights[flights$month == 1 & flights$day == 1, ] # 基本指令, same as filter
+
+filter(flights, month == 1 | month == 2) # AND 條件篩選, 同理 OR 使用 | 
+
+# slice 列的指標篩選資料 -----
+slice(flights, 1)           # 第1筆
+
+slice(flights, n())         # 最後一筆
+
+slice(flights, 123456:n())  # 第123456筆至最後一筆
+
+# arrange 排序 -----
+arrange(flights, year, month, day) # 依照年,月,日遞增排序
+
+arrange(flights, desc(arr_delay)) # 依照延誤時間遞減排序
+
+# select 選取行  -----
+select(flights, year, month, day)
+
+# Select 選取行, 使用 : -----
+select(flights, year:dep_delay)
+
+# select 選取行, 使用 負號, 表示刪除 -----
+select(flights, -(year:day))
+
+# select 選取行並且更改欄位名稱 -----
+select(flights, tail_num = tailnum) # select 只選取 tailnum 1行資料
+
+# select 選取行, 使用 starts_with 等參數
+iris %>% select(starts_with("Sepal"))
+
+# starts_with(): Starts with a prefix.
+
+# ends_with(): Ends with a suffix.
+
+# contains(): Contains a literal string.
+
+# matches(): Matches a regular expression.
+
+# num_range(): Matches a numerical range like 1:100.
+
+# rename 選取所有行/更改欄位名稱 -----
+rename(flights, ActualDepatureTime = dep_time) # rename 選取所有資料行
+
+# distinct 選取不重覆資料 -----
+set.seed(168)
+
+df <- data.frame(
+  x = sample(10, 100, replace = TRUE), # rep = replace
+  y = sample(10, 100, rep = TRUE)
+) # 100*2
+
+head(df)
+
+distinct(df)
+
+nrow(distinct(df))
+
+nrow(distinct(df, x, y))
+
+distinct(df, x) # 與下列結果相同 unique(df$x)
+
+distinct(df, y) # 與下列結果相同 unique(df$y)
+
+# mutate 新增欄位,保留原資料 -----
+mutate(mtcars, displ_l = disp / 61.0237)
 # end
