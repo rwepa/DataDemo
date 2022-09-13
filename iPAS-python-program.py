@@ -25,7 +25,7 @@ Updated : 2022.08.02 -新增 18.conda虛擬環境
 # 大綱
 ##############################
 
-# 00.conda操作
+# 00.conda,pip操作
 # 01.資料型態與基本運算
 # 02.字串處理
 # 03.Numpy資料結構
@@ -49,29 +49,36 @@ Updated : 2022.08.02 -新增 18.conda虛擬環境
 # https://www.anaconda.com/
 
 ##############################
-# 00.conda操作
+# 00.conda,pip操作
 ##############################
 
 # conda 資訊
-# conda info
-
-# 已經安裝模組清單
-# conda list
+conda info
 
 # 顯示已安裝套件
-# conda list
+conda list
+pip list
+
+# 查詢模組資訊
+pip show 模組名稱
 
 # 安裝模組
-# conda install 模組名稱
+conda install 模組名稱
+pip install 模組名稱
 
 # 更新模組
-# conda update 模組名稱
+conda update 模組名稱
+pip install -U 模組名稱
 
 # 範例: 更新 anaconda 模組
-# conda update anaconda
+conda update anaconda
 
 # 範例: 更新 Spyder 模組
-# conda update spyder
+conda update spyder
+
+# 移除模組
+conda remove 模組名稱
+pip uninstall 模組名稱
 
 ##############################
 # 切換工作目錄
