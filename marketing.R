@@ -41,7 +41,7 @@ pairs(marketing, pch=16, cex=0.5)
 # 建立線性模型
 marketing_lm <- lm(sales ~ ., data=marketing)
 
-# newspaper: p值沒有小於0.5,考慮刪除此變數
+# newspaper: p值沒有小於0.05,考慮刪除此變數
 summary(marketing_lm)
 
 # 建立修正後線性模型
