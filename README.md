@@ -41,7 +41,7 @@ capital-loss     資本損失
 
 hours-per-week   每週工時
 
-native-country   國籍
+native-country   國籍(有?)
 
 income           收入(2個, <=50K, >50K)
 
