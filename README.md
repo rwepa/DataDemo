@@ -495,6 +495,42 @@ expenses: 醫療費用
 
 欄位名稱中文: 統計年度, 按照別, 區域別代碼, 區域別, 嬰兒性別, 生父年齡, 生母年齡, 嬰兒出生數
 
+### pokemon.csv
+
+資料筆數: 894
+
+欄位個數: 12
+
+欄位名稱: 
+
+Number      寶可夢編號, 會有重複值
+
+Name        名字
+
+Type1       第1屬性
+
+Type2       第2屬性
+
+HP          血量
+
+Attack      攻擊力
+
+Defense     防禦力
+
+SpecialAtk  特殊攻擊力
+
+SpecialDef  特殊防禦力
+
+Speed       速度
+
+Generation  世代(1~7)
+
+Legendary   是否為神獸(TRUE, FALSE)
+
+Source: https://www.kaggle.com/datasets/rounakbanik/pokemon
+
+參考: 林英志, TQC Python 3.x 機器學習基礎與應用特訓教材, 全華, 2021.  
+
 ### population.taiwan.csv
 
 資料筆數: 21
