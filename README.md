@@ -5,6 +5,46 @@
 
 # Part 1 資料 Data (依英文字母排序)
 
+### adult.csv
+
+資料來源: https://www.kaggle.com/datasets/wenruliu/adult-income-dataset
+
+資料筆數: 48842
+
+欄位個數: 15
+
+欄位名稱:
+
+age              年齡
+
+workclass        工作類型(8個, 包括?)
+
+fnlwgt           權重 (數值資料)
+
+education        教育程度(16個)
+
+educational-num  教育程度的數值型態(1~16)
+
+marital-status   婚姻狀態(7個)
+
+occupation       產業別(14個, 包括?)
+
+relationship     家庭成員(6個)
+
+race             種族(5個)
+
+gender           性別(2個)
+
+capital-gain     資本收益
+
+capital-loss     資本損失
+
+hours-per-week   每週工時
+
+native-country   國籍
+
+income           收入(2個, <=50K, >50K)
+
 ### airline_int_cols.md
 
 資料說明: 單一大型航班資料
