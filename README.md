@@ -757,6 +757,46 @@ https://rwepa.shinyapps.io/shinyStockVis/
 
 資料說明: 國立臺北科技大學資訊與財金管理系(所) - Tableau金融商品案例分析
 
+### T-Bike-tainan-station.csv
+
+資料說明: T-Bike 臺南市公共自行車租賃站資訊
+
+資料來源: https://data.gov.tw/dataset/53909
+
+資料筆數: 75
+
+欄位個數: 9
+
+欄位名稱:
+
+Id                    編號
+
+Station Name          站名
+
+Address               地址
+
+Capacity              格位數 (格位數=可借車輛數+可停空位數)
+
+Avaliable Bike Count  可借車輛數
+
+Avaliable Space Count 可停空位數
+
+Update Time           更新時間
+
+Latitude              緯度
+
+Longitude             經度
+
+### T-Bike-tainan-station-district.csv
+
+資料說明: T-Bike 臺南市公共自行車租賃站-區域對照表
+
+資料筆數: 77
+
+欄位個數: 2
+
+欄位名稱: 站點區域, 站點名稱
+
 ### TelcoChurn.csv
 
 資料說明: 電信公司客戶流失資料集
