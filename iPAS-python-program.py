@@ -16,6 +16,7 @@ Updated : 2022.01.16 -新增 15.Dash視覺化簡介
 Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 Updated : 2022.07.02 -新增 17.Orange3簡介
 Updated : 2022.08.02 -新增 18.conda虛擬環境
+Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -44,6 +45,7 @@ Updated : 2022.08.02 -新增 18.conda虛擬環境
 # 16.Folium地理視覺化應用
 # 17.Orange3簡介
 # 18.conda虛擬環境
+# 19.ipynb轉換為pdf檔案
 
 # anaconda
 # https://www.anaconda.com/
@@ -2746,4 +2748,17 @@ orange-canvas
 
 reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage-environments.html#managing-environments
 """
+
+##############################
+# 19.ipynb轉換為pdf檔案
+##############################
+
+# 使用 Jupyter-notebook, 如果須將檔案轉換為 PDF, 即 File \ Download as \ PDF via HTML (.html)
+# 顯示以下錯誤
+# nbconvert failed: Pyppeteer is not installed to support Web PDF conversion. Please install `nbconvert[webpdf]` to enable
+
+# 執行以下3個指令後, 即可轉換為PDF檔案
+pip install nbconvert
+pip install pyppeteer
+pyppeteer-install
 # end
