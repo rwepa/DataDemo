@@ -2698,6 +2698,8 @@ conda list -n myenv scipy
 conda install -n myenv spyder
 
 # 安裝 myenv 虛擬環境的 rdkit 模組
+# rdkit: Open source toolkit for cheminformatics
+# https://www.rdkit.org/docs/index.html
 conda install -c conda-forge -n myenv rdkit
 
 ####################
