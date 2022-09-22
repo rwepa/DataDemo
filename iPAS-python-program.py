@@ -2697,6 +2697,9 @@ conda list -n myenv scipy
 # 安裝 myenv 虛擬環境的 spyder 模組
 conda install -n myenv spyder
 
+# 安裝 myenv 虛擬環境的 rdkit 模組
+conda install -c conda-forge -n myenv rdkit
+
 ####################
 # 複製(clone)虛擬環境
 ####################
