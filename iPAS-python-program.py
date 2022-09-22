@@ -2412,7 +2412,7 @@ app.run_server(debug=False)
 # Folium 地圖服務結合 OpenStreetMap, Mapbox, and Stamen 等客製化功能
 
 # 安裝 folium
-# conda install folium -c conda-forge
+# conda install -c conda-forge folium 
 
 # 使用 Spyder 可以配合 webbrwoser 開啟瀏覽器, Anaconda 已安裝 webbrwoser 模組
 # Jupyter-notebook 不用使用 webbrwoser 模組, 可以直接顯示.
