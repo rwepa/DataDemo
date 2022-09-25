@@ -759,9 +759,9 @@ https://rwepa.shinyapps.io/shinyStockVis/
 
 ### T-Bike-tainan-station(CSV).xlsx
 
-資料說明: 整合2個CSV為1個 Excel 檔案: (1).T-Bike-tainan-station.csv (2).T-Bike-tainan-station-district.csv
+資料說明: 整合2個CSV為1個 Excel 檔案
 
-### T-Bike-tainan-station.csv
+(1).T-Bike 臺南市公共自行車租賃站資訊(CSV) 工作表
 
 資料說明: T-Bike 臺南市公共自行車租賃站資訊
 
@@ -791,9 +791,11 @@ Latitude              緯度
 
 Longitude             經度
 
-### T-Bike-tainan-station-district.csv
+(2).T-Bike-tainan-station-district 工作表
 
 資料說明: T-Bike 臺南市公共自行車租賃站-區域對照表
+
+資料來源:筆者整理
 
 資料筆數: 77
 
