@@ -39,7 +39,10 @@ test.model <- lm(y ~ x)
 test.model
 plot(x,y)
 library(help="graphics")
-# end
+
+# Understanding Diagnostic Plots for Linear Regression Analysis
+# https://data.library.virginia.edu/diagnostic-plots/
+# updated: 2022.9.27
 
 # On-line help
 ?rnorm
