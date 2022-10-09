@@ -461,6 +461,22 @@ region: 美國四大區 {northeast, southeast, southwest, or northwest}
 
 expenses: 醫療費用
 
+### letterdata.csv
+
+資料說明: 英文字母OCR分類問題
+
+資料來源: https://archive.ics.uci.edu/ml/datasets/letter+recognition
+
+資料筆數: 20000
+
+欄位個數: 17
+
+欄位名稱: 
+
+應變數 (dependent variable): letter (A~Z)
+
+自變數 (independent variable) 16個: xbox,ybox,width,height,onpix,xbar,ybar,x2bar,y2bar,xybar,x2ybar,xy2bar,xedge,xedgey,yedge,yedgex
+
 ### marketing.csv
 
 資料說明: 行銷廣告資料
