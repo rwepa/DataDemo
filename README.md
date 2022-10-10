@@ -241,11 +241,11 @@ write.csv(Cars93, file = "Cars93.csv", row.names=FALSE)
 
 ### concrete.csv
 
-# 混凝土強度估計
+混凝土強度估計資料集
 
-# 資料來源: https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength
+資料來源: https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength
 
-# I.-C. Yeha, Modeling of strength of high-performance concrete using artificial neural networks, Cement and Concrete Research, Volume 28, Issue 12, 1797-1808, 1998.
+參考: I.-C. Yeha, Modeling of strength of high-performance concrete using artificial neural networks, Cement and Concrete Research, Volume 28, Issue 12, 1797-1808, 1998.
 
 資料筆數: 1030
 
