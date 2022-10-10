@@ -177,7 +177,7 @@ ZN        : proportion of residential land zoned for lots over 25,000 sq.ft. 超
 
 INDUS     : proportion of non-retail business acres per town 商業用地的比例
 
-CHAS      : Charles River dummy variable (= 1 if tract bounds river; 0 otherwise) 1:靠近查爾斯河岸
+CHAS      : Charles River dummy variable (= 1 if tract bounds river; 0 otherwise) 1:靠近查爾斯河岸, 0:沒有
 
 NOX       : nitric oxides concentration (parts per 10 million) 一氧化氮濃度
 
@@ -185,11 +185,11 @@ RM        : average number of rooms per dwelling 每戶平均房間數
 
 AGE       : proportion of owner-occupied units built prior to 1940 在1940前屋主自建比例
 
-DIS       : weighted distances to five Boston employment centres 到波士頓5個就業中心的加權距離
+DIS       : weighted distances to five Boston employment centres  距離波士頓5個就業中心的加權距離
 
-RAD       : index of accessibility to radial highways 使用高速公路便利指標
+RAD       : index of accessibility to radial highways 高速公路便利指標
 
-TAX       : full-value property-tax rate per $10,000 總價與房屋稅的比例
+TAX       : full-value property-tax rate per $10,000 每$10000元總價與房屋稅的比例
 
 PTRATIO   : pupil-teacher ratio by town  生師比
 
