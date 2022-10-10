@@ -239,6 +239,38 @@ write.csv(Cars93, file = "Cars93.csv", row.names=FALSE)
 
 欄位個數: 15
 
+### concrete.csv
+
+# 混凝土強度估計
+
+# 資料來源: https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength
+
+# I.-C. Yeha, Modeling of strength of high-performance concrete using artificial neural networks, Cement and Concrete Research, Volume 28, Issue 12, 1797-1808, 1998.
+
+資料筆數: 1030
+
+欄位個數: 9
+
+欄位名稱:
+
+cement : 水泥
+
+slag : 礦渣
+
+ash : 飛灰
+
+water : 水
+
+superplastic : 強塑劑
+
+coarseagg : 粗骨材
+
+fineagg : 細骨料
+
+age     : 齡期
+
+strength : 強度 --> 反應變數
+
 ### credit.arff
 
 資料說明: Statlog (German Credit Data) Data Set
