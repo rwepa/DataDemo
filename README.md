@@ -9,8 +9,6 @@ X: 自變數, 獨立變數 independent variable, 預測變量 predictor variable
 
 Y: 反應變數 response variable, 因變數, 依變數, 應變數, 被解釋變數 dependent variable, 結果變數 outcome variable.
 
----
-
 # Part 1 資料 Data (依英文字母排序)
 
 ### adult.csv
@@ -173,39 +171,33 @@ subscribe : {yes 有購買定期存款商品, no 沒有購買定期存款商品}
 
 欄位名稱:
 
-CRIM      per capita crime rate by town 人均犯罪率
+CRIM      : per capita crime rate by town 人均犯罪率
 
-ZN        proportion of residential land zoned for lots over 25,000 sq.ft. 超過2萬5仟平方呎住宅用比例
+ZN        : proportion of residential land zoned for lots over 25,000 sq.ft. 超過2萬5仟平方呎住宅用比例
 
-INDUS     proportion of non-retail business acres per town 商業用地的比例
+INDUS     : proportion of non-retail business acres per town 商業用地的比例
 
-CHAS      Charles River dummy variable (= 1 if tract bounds river; 0 otherwise) 1:靠近查爾斯河岸
+CHAS      : Charles River dummy variable (= 1 if tract bounds river; 0 otherwise) 1:靠近查爾斯河岸
 
-NOX       nitric oxides concentration (parts per 10 million) 一氧化氮濃度
+NOX       : nitric oxides concentration (parts per 10 million) 一氧化氮濃度
 
-RM        average number of rooms per dwelling 每戶平均房間數
+RM        : average number of rooms per dwelling 每戶平均房間數
 
-AGE       proportion of owner-occupied units built prior to 1940 在1940前屋主自建比例
+AGE       : proportion of owner-occupied units built prior to 1940 在1940前屋主自建比例
 
-DIS       weighted distances to five Boston employment centres 到波士頓5個就業中心的加權距離
+DIS       : weighted distances to five Boston employment centres 到波士頓5個就業中心的加權距離
 
-RAD       index of accessibility to radial highways 使用高速公路便利指標
+RAD       : index of accessibility to radial highways 使用高速公路便利指標
 
-TAX       full-value property-tax rate per $10,000 總價與房屋稅的比例
+TAX       : full-value property-tax rate per $10,000 總價與房屋稅的比例
 
-PTRATIO   pupil-teacher ratio by town  生師比
+PTRATIO   : pupil-teacher ratio by town  生師比
 
-B         1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town 非裔指標
+B         : 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town 非裔指標
 
-LSTAT     % lower status of the population 低收人口比例
+LSTAT     : % lower status of the population 低收人口比例
 
-MEDV      Median value of owner-occupied homes in $1000's 自用住宅的房價中位數
-
-資料來源: R語言 - Cars93 {MASS}
-
-資料筆數: 93
-
-欄位個數: 27
+MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房價中位數 --> 反應變數
 
 ### Cars93.csv
 
