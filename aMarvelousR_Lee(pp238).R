@@ -932,7 +932,7 @@ setwd("C:/rdata")
 
 # 1-1資料組織與清理 -----
 
-# KNN demo -----
+# KNN (K近鄰法) demo -----
 library(animation)
 
 # 設定動畫參數
@@ -948,6 +948,10 @@ testdata <- df[ind == 2, 3:4]
 
 # KNN示範
 knn.ani(train = traindata, test = testdata, cl = df$Species[ind == 1], k = 20)
+
+# Kmeans (集群法) demo -----
+library(animation)
+kmeans.ani()
 
 # 資料標準化 -----
 data(Cars93, package = "MASS")
