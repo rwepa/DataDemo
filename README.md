@@ -1290,3 +1290,12 @@ data 目錄 - 包括書籍資料檔案
 ### windows_intall_R.pdf
 
 資料說明: Windows 環境安裝R的完整步驟
+
+### Windows 11 取消工作列合併 
+
+參考: https://github.com/valinet/ExplorerPatcher
+
+下載安裝程式: https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
+
+設定方式: Windows 11 \ 最底下工作列 \ 右鍵 \ 內容: <ins>Taskbar</ins> \ Combine taskbar icons on primary taskbar: Never combine(default) 預設為不合併.
+
