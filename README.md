@@ -1297,5 +1297,6 @@ data 目錄 - 包括書籍資料檔案
 
 下載安裝程式: https://github.com/valinet/ExplorerPatcher/releases/latest/download/ep_setup.exe
 
-設定方式: Windows 11 \ 最底下工作列 \ 右鍵 \ 內容: <ins>Taskbar</ins> \ Combine taskbar icons on primary taskbar: Never combine(default) 預設為不合併.
+執行安裝程式: ep_setup.exe, 按左鍵二下即安裝完成.
 
+設定方式: Windows 11 \ 最底下工作列 \ 右鍵 \ 內容: <ins>Taskbar</ins> \ Combine taskbar icons on primary taskbar: Never combine(default) 預設為不合併.
