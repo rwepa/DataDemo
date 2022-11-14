@@ -17,6 +17,7 @@ Updated : 2022.02.12 -新增 16.Folium地理視覺化應用
 Updated : 2022.07.02 -新增 17.Orange3簡介
 Updated : 2022.08.02 -新增 18.conda虛擬環境
 Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
+Updated : 2022.11.14 -新增 20.皮馬印第安人糖尿病預測分析
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -46,8 +47,9 @@ Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
 # 17.Orange3簡介
 # 18.conda虛擬環境
 # 19.ipynb轉換為pdf檔案
+# 20.皮馬印第安人糖尿病預測分析
 
-# anaconda
+# Anaconda 下載
 # https://www.anaconda.com/
 
 ##############################
@@ -2767,4 +2769,288 @@ reference: https://docs.conda.io/projects/conda/en/4.6.0/user-guide/tasks/manage
 pip install nbconvert
 pip install pyppeteer
 pyppeteer-install
+
+##############################
+# 20.皮馬印第安人糖尿病預測分析
+##############################
+
+# Pima Indian Diabetes (糖尿病)資料集
+
+# 資料來源: https://www.kaggle.com/uciml/pima-indians-diabetes-database
+
+# 資料筆數: 768
+# 欄位個數: 9
+# 欄位名稱:
+# Pregnancies 	懷孕次數
+# Glucose 		血漿葡萄糖濃度
+# BloodPressure 舒張壓
+# SkinThickness 三頭肌皮脂厚度
+# Insulin 		胰島素濃度
+# BMI 		    身體質量指數
+# DiabetesPedigreeFunction 糖尿病函數,依家族糖尿病史而計算個人患有糖尿病的風險值
+# Age 		    年齡
+# Outcome {1:有糖尿病, 0:無糖尿病} --> 反應變數
+
+# 載入模組-資料處理
+import numpy as np
+import pandas as pd
+
+# 載入模組-資料視覺化
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 載入模組-深度學習模型
+from sklearn.model_selection import StratifiedShuffleSplit
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier, VotingClassifier, GradientBoostingClassifier
+from sklearn.linear_model import SGDClassifier
+from sklearn.model_selection import cross_val_predict, RandomizedSearchCV, train_test_split
+from sklearn.metrics import classification_report, PrecisionRecallDisplay, RocCurveDisplay, accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+
+# 載入資料pima集
+urls = "https://raw.githubusercontent.com/rwepa/DataDemo/master/diabetes.csv"
+df = pd.read_csv(urls)
+df
+
+# 資料訊息,全部為 int64或float64
+df.info()
+
+# 資料摘要
+df.describe()
+# 注意: Glucose, BloodPressure, SkinThickness, Insulin, BMI 最小值為 0.
+# 在實務上因為這些值不能為 0. 考慮先刪除 0 值資料列, 或者使用該行的平均值(或中位數)取代.
+
+# 判斷是否有 nan值
+def count_na(df, col):
+    print(f"Null values in {col}: ", df[col].isna().sum())
+
+# 資料沒有 nan值
+for feat in df.columns:
+    count_na(df, feat)    
+
+# 單變量分析 (Univariate Analysis)
+
+# 變數: Pregnancies 懷孕次數
+
+# 直方圖,盒鬚圖(有3個 outliers)
+fig1, ax1 = plt.subplots(1, 2, figsize=(20, 7))
+sns.histplot(data=df, x="Pregnancies", kde=True, ax=ax1[0])
+sns.boxplot(data=df, x="Pregnancies", ax=ax1[1])
+
+# 小提琴圖
+fig2, ax2 = plt.subplots(figsize=(20, 7))
+sns.violinplot(data=df, x="Pregnancies", ax=ax2)
+
+# 中位數,最大值
+print("Median of Pregnancies: ", df["Pregnancies"].median()) # 3
+print("Maximum of Pregnancies: ", df["Pregnancies"].max()) # 17
+
+# 次數分配表
+df["Pregnancies"].value_counts()
+
+# 變數: Outcome 是否有糖尿病{1: Yes, 0: No}
+
+# 長條圖,圓形圖
+fig, ax = plt.subplots(1, 2, figsize=(20, 7))
+sns.countplot(data=df, x="Outcome", ax=ax[0])
+df["Outcome"].value_counts().plot.pie(explode=[0.1, 0], autopct="%1.1f%%", labels=["No", "Yes"], shadow=True, ax=ax[1])
+
+# 多變量分析 (Multivariate Analysis)
+
+# 變數: Glucose (血漿葡萄糖濃度)
+
+# 直方圖
+sns.histplot(data=df, x='Glucose', kde=True).set(title='Histrogram of Glucose')
+
+# 繪製Glucose (血漿葡萄糖濃度)直方圖-依 Outcome 變數為群組
+fig, ax = plt.subplots()
+sns.histplot(data=df, x="Glucose", hue="Outcome", shrink=0.8, multiple="fill", kde=True, ax=ax).set(title='Histrogram of Glucose grouped by Outcome')
+
+# 結論: 隨著 Glucose 值的增加，患有糖尿病的患者數量增加，即 Outcome 的值為 1 增加。
+# 在葡萄糖值為 125 之後，結果為 1 的患者數量穩步增加。
+# 當葡萄糖值為 0 時，表示異常值，考慮使用平均值或中位數填補。
+
+# 相關係數
+corr_matrix = df.corr()
+
+# 相關性熱繪圖1
+fig, ax = plt.subplots()
+dataplot = sns.heatmap(data=corr_matrix, annot=True, ax=ax)
+
+# 相關性熱繪圖2
+plt.figure(figsize=(16, 12))
+sns.set(font_scale = 2)
+heatmap = sns.heatmap(df.corr(), vmin=-1, vmax=1, annot=True, cmap="YlGnBu")
+heatmap.set_title('Correlation Heatmap', fontdict={'fontsize':16})
+
+# 依照 Glucose 轉換為類別變數, 合計5個範圍(5 bins)
+# 分層抽樣區分為訓練集,測試集
+newdf = df
+
+newdf["Glucose_cat"] = pd.cut(newdf["Glucose"],
+                              bins=[-1, 40, 80, 120, 160, np.inf],
+                              labels=[1, 2, 3, 4, 5])
+
+newdf["Glucose_cat"].value_counts()
+
+# Scikit-Learn's Stratified Shuffle Split
+# https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html
+
+split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=123)
+for train_index, test_index in split.split(newdf, newdf["Glucose_cat"]):
+    strat_train_set = newdf.loc[train_index]
+    strat_test_set = newdf.loc[test_index]
+
+strat_train_set # 614*10
+strat_test_set  # 154*10
+
+# 比較抽樣後 Glucose_cat 比例, 結果與整體資料集保持一致性.
+def get_glucose_proportions(ndf):
+    print(ndf["Glucose_cat"].value_counts() / len(ndf))
+
+print("Entire Dataset: ")
+get_glucose_proportions(newdf)
+print("\n")
+print("-"*30)
+print("\nTesting set: ")
+get_glucose_proportions(strat_test_set)
+
+# 刪除不再使用 Glucose_cat
+for set_ in (strat_train_set, strat_test_set):
+    set_.drop(columns=["Glucose_cat"], inplace=True)
+
+# 使用中位數填滿數值為0
+meds = []
+feats = ["Glucose", "BloodPressure", "SkinThickness", "Insulin", "BMI"]
+
+for feat in feats:
+    meds.append(strat_train_set[feat].median())
+    
+print("Medians are: ", meds)
+
+# 將數值為0, 以中位數取代.
+def replace_with_median(ndf, feat, value):
+    ndf[feat] = ndf[feat].replace(0, value)
+    
+for i, feat in enumerate(feats):
+    replace_with_median(strat_train_set, feat, meds[i])
+    replace_with_median(strat_test_set, feat, meds[i])
+
+# 將 Outcome 變數取出, 區分為 X, y
+X_train = strat_train_set.drop(columns="Outcome")
+y_train = strat_train_set["Outcome"]
+
+X_test = strat_test_set.drop(columns="Outcome")
+y_test = strat_test_set["Outcome"]
+
+# 標準化
+stdscaler = StandardScaler()
+stdscaler.fit(X_train)
+
+X_train_ = stdscaler.transform(X_train)
+X_test_ = stdscaler.transform(X_test)
+
+# 顯示自變數結果
+print("Scaled training set: ", X_train_)
+print("Scaled testing set: ", X_test_)
+
+# 分類指標:
+# Classification Report
+# Confusion Matrix
+# Precision Recall Curve
+# Reciever Operating Characteristic Curve
+
+# 定義預測模型
+def comp_esti(esti):
+    esti.fit(X_train_, y_train)
+    esti_test_preds = esti.predict(X_test_)
+    
+    print(f"{esti} Accuracy score: ", accuracy_score(y_test, esti_test_preds))
+    print(f"\n{esti} Classification report:\n", classification_report(y_test, esti_test_preds, digits=6))
+    
+    # 繪製混淆矩陣
+    cf_mat = confusion_matrix(y_test, esti_test_preds)
+    fig, ax = plt.subplots(figsize=(10, 8))
+    sns.heatmap(data=cf_mat, annot=True, ax=ax)
+
+# 定義監督式學習演算法,合計7種方法.
+estimators = [
+    RandomForestClassifier(random_state=123),
+    SVC(),
+    AdaBoostClassifier(),
+    GradientBoostingClassifier(),
+    LogisticRegression(),
+    DecisionTreeClassifier(),
+    KNeighborsClassifier()
+]
+
+# 建立模型
+for esti in estimators:
+    comp_esti(esti)
+
+
+# 投票分類結果 (Voting classifier)
+es1 = RandomForestClassifier(random_state=3301)
+es2 = SVC(probability=True)
+es3 = GradientBoostingClassifier()
+esfinal = VotingClassifier(estimators=[("rfc", es1), ("svc", es2), ("grb", es3)], voting="soft")
+comp_esti(esfinal)
+
+# 優化模型 (Fine-tuning our Model)
+# 使用 Randomized Search CV
+# 使用 Random Forest Classifier 與搜尋最佳化參數
+n_estimators = np.linspace(50, 300, int((300 - 50) / 20), dtype=int)
+max_depth = [1, 5, 10, 50, 100, 200, 300]
+min_samples_split = [2, 4, 6]
+max_features = ["sqrt", "log2"]
+bootstrap = [True, False]
+
+distributions = {
+    "n_estimators": n_estimators,
+    "max_depth": max_depth,
+    "min_samples_split": min_samples_split,
+    "max_features": max_features,
+    "bootstrap": bootstrap
+}
+
+# Randomised search cv
+rfc = RandomForestClassifier(random_state=123)
+random_search_cv = RandomizedSearchCV(
+    rfc,
+    param_distributions=distributions,
+    n_iter=30,
+    cv=5,
+    n_jobs=4
+)
+
+# 需一些時間
+search = random_search_cv.fit(X_train_, y_train)
+cvres = search.cv_results_
+
+# 建立參數清單
+for score, params, rank in zip(cvres["mean_test_score"], cvres["params"], cvres["rank_test_score"]):
+    print(score, params, rank)
+
+# 找出最佳化參數
+rfc_finetuned = search.best_estimator_
+
+# 使用最佳化參數並建立模型
+rfc_finetuned.fit(X_train_, y_train)
+
+# 使用測試集評估模型
+best_preds = rfc_finetuned.predict(X_test_)
+
+# 繪圖 Recall and ROC Cruve
+fig, ax = plt.subplots(1, 2, figsize=(20, 10))
+PrecisionRecallDisplay.from_predictions(y_test, best_preds, ax=ax[0])
+RocCurveDisplay.from_predictions(y_test, best_preds, ax=ax[1])
+
+# 顯示測試集之模型評估結果, accuracy 由 70% 提升至 72%.
+print(classification_report(y_test, best_preds, digits=5))
+
+# 參考資料: https://www.kaggle.com/code/maharshipandya/diabetes-eda-and-classification
 # end
