@@ -295,7 +295,7 @@ strength : 強度 --> 反應變數
 
 ### diabetes.csv
 
-資料說明: Pima Indian Diabets (糖尿病) Dataset
+資料說明: Pima Indian Diabetes (糖尿病) Dataset
 
 資料來源: https://www.kaggle.com/uciml/pima-indians-diabetes-database
 
