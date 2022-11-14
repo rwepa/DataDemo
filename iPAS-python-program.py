@@ -2149,10 +2149,9 @@ graph
 ##############################
 # 14.深度學習CNN - MNIST範例
 ##############################
-# 參考資料: 陳允傑, TensorFlow 與 Keras - Python 深度學習應用實務, 旗標.
 
-# 安裝 conda install tensorflow
-# 安裝 conda install keras
+# 安裝 conda install tensorflow (或是 pip install tensorflow)
+# 安裝 conda install keras (或是 pip install keras)
 
 # 載入模組
 import numpy as np
@@ -2242,6 +2241,8 @@ plt.xlabel("Epochs")
 plt.ylabel("Accuracy")
 plt.legend()
 plt.show()
+
+# 參考資料: 陳允傑, TensorFlow 與 Keras - Python 深度學習應用實務, 旗標.
 
 ##############################
 # 15.Dash視覺化簡介
