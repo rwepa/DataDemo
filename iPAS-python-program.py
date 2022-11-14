@@ -2147,7 +2147,7 @@ graph = graphviz.Source(dot_data)
 graph
 
 ##############################
-# 14.深度學習 CNN - MNIST範例
+# 14.深度學習CNN - MNIST範例
 ##############################
 # 參考資料: 陳允傑, TensorFlow 與 Keras - Python 深度學習應用實務, 旗標.
 
