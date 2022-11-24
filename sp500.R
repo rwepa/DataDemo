@@ -1,5 +1,6 @@
 # title    : sp500.R
 # date     : 2020.7.25
+# updated  : 2022.11.24
 # author   : Ming-Chang Lee
 # email    : alan9956@gmail.com
 # RWEPA    : http://rwepa.blogspot.tw/
@@ -24,7 +25,7 @@ tail(sp500)
 # 方法1: 使用 ggplot2 視覺化
 sp500 %>%
   ggplot(aes(x = date, y = close)) +
-  geom_line(size = 1) +
+  geom_line(linewidth = 1) +
   labs(title = "sp500收盤價",
        x = "Date", y = "Close")
 
