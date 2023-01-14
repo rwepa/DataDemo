@@ -1301,6 +1301,8 @@ data 目錄 - 包括書籍資料檔案
 
 設定方式: Windows 11 \ 最底下工作列 \ 右鍵 \ 內容: <ins>Taskbar</ins> \ Combine taskbar icons on primary taskbar: Never combine(default) 預設為不合併.
 
-### pyTranscriber 免費程式, 提供圖形化介面將影音檔 (MP3, MP4, WAV, M4A, WMA) 自動擷取並產生中文(或其他語言)字幕 srt 檔案, 可作為 YouTube 字幕檔.
+### pyTranscriber
+
+免費程式並提供圖形化操作介面, 將影音檔 (MP3, MP4, WAV, M4A, WMA) 自動擷取並產生中文(或其他語言)字幕srt檔案, 可作為 YouTube 字幕檔.
 
 下載: https://github.com/raryelcostasouza/pyTranscriber/releases/download/v1.9/pyTranscriber-v1.9-win-installer.exe
