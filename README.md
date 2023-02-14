@@ -1306,4 +1306,5 @@ data 目錄 - 包括書籍資料檔案
 免費程式並提供圖形化操作介面, 將影音檔 (MP3, MP4, WAV, M4A, WMA) 自動擷取並產生中文(或其他語言)字幕srt檔案, 可作為 YouTube 字幕檔.
 
 網站更新: https://github.com/raryelcostasouza/pyTranscriber/releases
+
 下載連結: https://github.com/raryelcostasouza/pyTranscriber/releases/download/v1.9/pyTranscriber-1.9-win-installer.exe
