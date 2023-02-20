@@ -1,9 +1,12 @@
 """
-title   : iPAS-python-program
-author  : Ming-Chang Lee
-email   : alan9956@gmail.com
-RWEPA   : http://rwepa.blogspot.tw/
-Date    : 2020.11.18
+# File     : iPAS-python-program.py
+# Title    : iPAS python program
+# Author   : Ming-Chang Lee
+# Date     : 2020.11.18
+# YouTube  : https://www.youtube.com/@alan9956
+# RWEPA    : http://rwepa.blogspot.tw/
+# GitHub   : https://github.com/rwepa
+# Email    : alan9956@gmail.com
 
 Updated : 2022.01.01 -更新 08.繪圖中文字型
 Updated : 2021.01.28 -新增 09.MySQL常用語法
