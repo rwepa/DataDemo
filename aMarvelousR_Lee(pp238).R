@@ -1,11 +1,15 @@
-# program : A Marvelous R -  Foundation
-# author  : Ming-Chang Lee
-# email   : alan9956@gmail.com
-# RWEPA   : http://rwepa.blogspot.tw/
-# GitHub  : https://github.com/rwepa
+# File     : aMarvelousR_Lee(pp238).R
+# Title    : A Marvelous R -  Foundation
+# Author   : Ming-Chang Lee
+# Date     : 2011.07.04
+# YouTube  : https://www.youtube.com/@alan9956
+# RWEPA    : http://rwepa.blogspot.tw/
+# GitHub   : https://github.com/rwepa
+# Email    : alan9956@gmail.com
+
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
-# Date    : 2011.07.04
-# Updated : 2020.06.03
+
+# Updated : 2020.06.03 更新程式碼
 # Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 # Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
 # Updated : 2021.08.27 新增 Chapter 8. 繪圖中文字型
