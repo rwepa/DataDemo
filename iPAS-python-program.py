@@ -589,18 +589,107 @@ import pandas as pd # Python Data Analysis Library
 import numpy as np # Python Scientific Computing Library 
 
 # 序列(Series)物件
+
 # 使用串列(List)建立序列物件
 # 序列包括指標(Index) 與值(Value), 指標採用預設整數型態指標
 s = pd.Series([1,3,5,np.nan,6,8])
 s
 type(s)
 
-# 使用陣列建立資料框(DataFrame)
+# 使用陣列(array)建立資料框(DataFrame)
 dates = pd.date_range('20200801', periods=6) # 日期指標
 dates
 type(dates)
 
-# 資料框(DataFrame)物件
+# 方法1 使用串列 (list) 建立 pandas DataFrame
+
+# 建立 list
+data = ['Alan', 'Lee', 'RWEPA']
+  
+# 建立 pandas DataFrame
+df = pd.DataFrame(data, columns=['Name'])
+  
+# 列印 dataframe
+df
+# Out: 
+#     Name
+# 0   Alan
+# 1    Lee
+# 2  RWEPA
+
+# 方法2 使用串列的串列 (lists of lists) 建立 pandas DataFrame
+
+# 建立 list
+data = [['Alan', 2000], ['Lee', 2020], ['RWEPA', 2013]]
+  
+# 建立 pandas DataFrame
+df = pd.DataFrame(data, columns=['Name', 'Year'])
+  
+# 列印 dataframe
+df
+# Out: 
+#     Name  Year
+# 0   Alan  2000
+# 1    Lee  2020
+# 2  RWEPA  2013
+
+# 方法3 使用narray(串列)的字典 (dict of narray/lists) 建立 pandas DataFrame
+
+# 建立 dict of list
+data = {'Name': ['Alan', 'Lee', 'RWEPA', 'Python'], 'Age': [2000, 2020, 2013, 1991]}
+  
+# 建立 pandas DataFrame
+df = pd.DataFrame(data)
+  
+# 列印 dataframe
+df
+# Out: 
+#      Name   Age
+# 0    Alan  2000
+# 1     Lee  2020
+# 2   RWEPA  2013
+# 3  Python  1991
+
+# 方法4 使用 字典的串列 (list of dicts) 建立 pandas DataFrame
+
+# 建立 dict of list
+data = [{'Name': 'Alan', 'Age': 2000},
+        {'Name': 'Lee', 'Age': 2020},
+        {'Name': 'RWEPA', 'Age': 2013},
+        {'Name': 'Python', 'Age': 1991}]
+  
+# 建立 pandas DataFrame
+df = pd.DataFrame(data)
+  
+# 列印 dataframe
+df
+# Out: 
+#      Name   Age
+# 0    Alan  2000
+# 1     Lee  2020
+# 2   RWEPA  2013
+# 3  Python  1991
+
+# 方法5 使用明確索引指標並建立 pandas DataFrame
+
+# 建立 dict of list
+data = {'Name': ['Alan', 'Lee', 'RWEPA', 'Python'], 
+        'Age': [2000, 2020, 2013, 1980]}
+  
+# 建立 pandas DataFrame
+df = pd.DataFrame(data,
+                  index=['id1', 'id2', 'id3', 'id4'])
+  
+# 列印 dataframe
+df
+# Out: 
+#        Name   Age
+# id1    Alan  2000
+# id2     Lee  2020
+# id3   RWEPA  2013
+# id4  Python  1980
+
+# 範例: 資料框(DataFrame)物件
 # 欄位名稱: A, B, C, D
 df1 = pd.DataFrame(np.random.randn(6,4), index=dates, columns=list('ABCD'))
 df1
