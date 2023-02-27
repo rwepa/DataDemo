@@ -824,16 +824,58 @@ pieces
 pd.concat(pieces)
 
 # Grouping 群組計算
+import numpy as np
+
+np.random.seed(168)
+
 df = pd.DataFrame({
-    'A' : ['foo', 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'foo'],
+    'A' : [np.nan, 'bar', 'foo', 'bar', 'foo', 'bar', 'foo', 'foo'],
     'B' : ['one', 'one', 'two', 'three', 'two', 'two', 'one', 'three'],
     'C' : np.random.randn(8),
     'D' : np.random.randn(8)})
 df
+# Out: 
+#      A      B         C         D
+# 0  NaN    one  0.528954  1.460272
+# 1  bar    one  2.481557 -0.569446
+# 2  foo    two -0.770050 -1.532260
+# 3  bar  three -1.199675  2.365692
+# 4  foo    two  0.423453 -0.275542
+# 5  bar    two  0.968783  1.387176
+# 6  foo    one  0.087928 -0.608194
+# 7  foo  three  1.741998 -1.231810
+
+df['A'].value_counts() # 預設為刪除 NaN 次數, 類似 R: table函數
+# Out: 
+# foo    4
+# bar    3
+# Name: A, dtype: int64
+
+df['A'].value_counts(dropna=False) # 加上 NaN 次數
+# Out: 
+# foo    4
+# bar    3
+# NaN    1
+# Name: A, dtype: int64
 
 df.groupby('A').sum() # 類似 R- aggregate
+# Out: 
+#             C         D
+# A                      
+# bar  2.250665  3.183422
+# foo  1.483329 -3.647806
 
 df.groupby(['A','B']).sum()
+# Out: 
+#                   C         D
+# A   B                        
+# bar one    2.481557 -0.569446
+#     three -1.199675  2.365692
+#     two    0.968783  1.387176
+# foo one    0.087928 -0.608194
+#     three  1.741998 -1.231810
+#     two   -0.346598 -1.807802
+
 
 # 繪圖
 ts = pd.Series(np.random.randn(1000), 
