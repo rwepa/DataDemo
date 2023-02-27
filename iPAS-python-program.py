@@ -21,6 +21,7 @@ Updated : 2022.07.02 -新增 17.Orange3簡介
 Updated : 2022.08.02 -新增 18.conda虛擬環境
 Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
 Updated : 2022.11.14 -新增 20.皮馬印第安人糖尿病預測分析
+Updated : 2023.02.27 -新增 21.pandas繪圖
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -51,6 +52,7 @@ Updated : 2022.11.14 -新增 20.皮馬印第安人糖尿病預測分析
 # 18.conda虛擬環境
 # 19.ipynb轉換為pdf檔案
 # 20.皮馬印第安人糖尿病預測分析
+# 21.pandas繪圖
 
 # Anaconda 下載
 # https://www.anaconda.com/
@@ -3145,4 +3147,76 @@ RocCurveDisplay.from_predictions(y_test, best_preds, ax=ax[1])
 print(classification_report(y_test, best_preds, digits=5))
 
 # 參考資料: https://www.kaggle.com/code/maharshipandya/diabetes-eda-and-classification
+
+##############################
+# 21.pandas繪圖
+##############################
+
+import pandas as pd
+
+urls = "https://raw.githubusercontent.com/rwepa/DataDemo/master/iris.csv"
+
+df = pd.read_csv(urls)
+
+df
+
+# pd.plot()
+# kindstr
+# The kind of plot to produce:
+
+# 'line' : line plot (default)
+
+# 'bar' : vertical bar plot
+
+# 'barh' : horizontal bar plot
+
+# 'hist' : histogram
+
+# 'box' : boxplot
+
+# 'kde' : Kernel Density Estimation plot
+
+# 'density' : same as 'kde'
+
+# 'area' : area plot
+
+# 'pie' : pie plot
+
+# 'scatter' : scatter plot (DataFrame only)
+
+# 'hexbin' : hexbin plot (DataFrame only)
+
+# 散佈圖 scatter plot
+df.plot(kind = 'scatter', x = 'Petal.Length', y = 'Petal.Width')
+
+# 直方圖 hist plot
+df["Petal.Width"].plot(kind = 'hist')
+
+# 區域圖 area plot
+df.plot.area()
+
+# 長條圖 bar chart; 群組長條圖 stacked bar chart
+speed = [0.1, 17.5, 40, 48, 52, 69, 88]
+lifespan = [2, 8, 70, 1.5, 25, 12, 28]
+index = ['snail', 'pig', 'elephant', 'rabbit', 'giraffe', 'coyote', 'horse']
+df = pd.DataFrame({'speed': speed, 'lifespan': lifespan}, index=index)
+df
+# Out: 
+#           speed  lifespan
+# snail       0.1       2.0
+# pig        17.5       8.0
+# elephant   40.0      70.0
+# rabbit     48.0       1.5
+# giraffe    52.0      25.0
+# coyote     69.0      12.0
+# horse      88.0      28.0
+
+# 長條圖 
+df["speed"].plot.bar()
+
+# 群組長條圖
+df.plot.bar(rot=0)
+
+# 堆疊群組長條圖
+df.plot.bar(stacked=True, rot=0)
 # end
