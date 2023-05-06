@@ -7,11 +7,13 @@ library(arules)
 
 ## step 2. Import and transform data
 
-workpath <- "C:/temp"
-setwd(workpath)     # Set working directory. Make c:\temp directory and copy csv file to the directory
+workpath <- "C:/rdata"
+setwd(workpath)     # Set working directory. Make C:\rdata directory and copy csv file to the directory
 getwd()             # Get working directory
 
 # import raw data (csv file)
+# https://github.com/rwepa/DataDemo/blob/master/northwind_trans.csv
+
 nw_data <- read.table(file="northwind_trans.csv", header = TRUE, sep = "," )
 class(nw_data)      # "data.frame"
 mode(nw_data)       # "list"
