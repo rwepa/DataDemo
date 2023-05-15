@@ -613,12 +613,6 @@ expenses: 醫療費用
 
 說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
 
-### PowerBI_consumption.zip
-
-資料說明: 台北市, 桃園市, 新北市的食衣住行消費資料, 合計3個資料夾, 12個CSV檔案
-
-資料來源: https://www.nccc.com.tw/wps/wcm/connect/zh/home
-
 ### opendata109b141_birth.csv
 
 資料說明: 109年度嬰兒出生數按嬰兒性別及生父母年齡分（按發生）
@@ -632,6 +626,18 @@ expenses: 醫療費用
 欄位名稱英文: statistic_yyy, according, district_code, site_id, sex, father_age, mother_age, birth_count
 
 欄位名稱中文: 統計年度, 按照別, 區域別代碼, 區域別, 嬰兒性別, 生父年齡, 生母年齡, 嬰兒出生數
+
+### PowerBI_consumption.zip
+
+資料說明: 台北市, 桃園市, 新北市的食衣住行消費資料, 合計3個資料夾, 12個CSV檔案
+
+資料來源: https://www.nccc.com.tw/wps/wcm/connect/zh/home
+
+### PowerBI_creditcard.xlsx
+
+資料說明: 信用卡刷卡模擬資料集, 10個工作表
+
+資料來源: 謝邦昌等,Power BI 金融大數據分析應用 -- 貼近產業實務，掌握決策效率, 碁峰資訊, 2021.
 
 ### pokemon.csv
 
