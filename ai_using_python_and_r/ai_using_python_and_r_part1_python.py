@@ -1787,7 +1787,7 @@ myresult.group(2) # 取得電話號碼 '8101-8800'
 import re
 mystr = '現在的日期時間是：2021-08-01 14:02:48'
 
-datetime = re.search('\d+-\d+-\d+ \d+:\d+:\d+', text1).group(0)
+datetime = re.search('\d+-\d+-\d+ \d+:\d+:\d+', mystr).group(0)
 print(datetime)
 
 # re範例-保留中間字串
