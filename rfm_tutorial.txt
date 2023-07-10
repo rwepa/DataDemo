@@ -1,0 +1,195 @@
+# File     : rfm_tutorial.txt
+# Title    : RFM Analysis
+# Author   : Ming-Chang Lee
+# YouTube  : https://www.youtube.com/@alan9956
+# RWEPA    : http://rwepa.blogspot.tw/
+# GitHub   : https://github.com/rwepa
+# Email    : alan9956@gmail.com
+
+# 大綱
+1.RFM定義
+2.Power BI演練
+步驟1 下載並安裝免費Power BI 軟體
+步驟2 下載二個資料檔案
+步驟3 匯入二個資料檔案至Power BI
+步驟4 Power Query 資料處理
+步驟5 建立關聯
+步驟6 建立圖表
+3.結論
+4.參考資料
+
+##############################
+# 1.RFM定義
+##############################
+R: 最近一次消費（Recency）。顧客上次消費時間愈近，用戶價值愈大。
+F: 消費頻率（Frequency）。顧客在一段時間中，總購買次數，購買頻率愈高，用戶價值愈大。
+M: 消費金額（Monetary）。顧客總消費金額，消費金額愈高，用戶價值愈大。
+
+##############################
+# 2.Power BI演練
+##############################
+
+##############################
+# 步驟1 下載並安裝免費 Power BI 軟體
+##############################
+
+# Power BI 下載
+https://powerbi.microsoft.com/zh-tw/desktop/
+
+# Power BI Desktop
+https://www.microsoft.com/zh-TW/download/details.aspx?id=58494
+
+##############################
+# 步驟2 下載二個資料檔案
+##############################
+
+# 下載1: OnlineRetail.xlsx
+https://github.com/rwepa/DataDemo/blob/master/OnlineRetail.xlsx
+
+# 下載2: rfm_segment.csv 
+https://github.com/rwepa/DataDemo/blob/master/rfm_segment.csv
+
+##############################
+# 步驟3 匯入二個資料檔案至 Power BI
+##############################
+
+# 匯入 OnlineRetail.xlsx 至 Power BI \ 資料表命名為 OnlineRetail
+# 匯入 rfm_segment.csv 至 Power BI \ 資料表命名為 rfm_segment
+
+# Power BI 視窗簡介
+1. 標題暨檔案名稱
+2. 功能表
+3. 工具列
+4. 報表檢視(Report view)
+5. 資料檢視(Data view)
+6. 模型檢視(Model view)
+7. 設計區
+8. 視覺效果（左側為篩選視窗）
+9. 資料
+
+##############################
+# 步驟4 Power Query 資料處理
+##############################
+
+# Quantity, UnitPrice 有負值, CustomerID 有空白須進行資料處理
+常用\轉換資料\轉換資料:
+Quantity \ ▼ \ 數值篩選 \ 大於 0
+UnitPrice \ ▼ \ 數值篩選 \ 大於 0
+CustomerID \ ▼ \ 移除空白
+關閉並套用
+
+# 新增量值 last_transaction_date, 計算每個 CustomerID 的最大(最近)交易日期
+
+last_transaction_date = MAXX(FILTER('OnlineRetail','OnlineRetail'[CustomerID]='OnlineRetail'[CustomerID]),'OnlineRetail'[InvoiceDate])
+
+# 新增量值 r_value
+
+r_value = DATEDIFF('OnlineRetail'[last_transaction_date], TODAY(), DAY)
+
+# 新增量值 f_value
+
+f_value = DISTINCTCOUNT('OnlineRetail'[InvoiceNo])
+
+# 新增量值 m_value
+
+m_value = CALCULATE(SUM('OnlineRetail'[Quantity])) * SUM('OnlineRetail'[UnitPrice])
+
+# 新增資料表 rfm_table
+
+rfm_table = SUMMARIZE(
+   'OnlineRetail',
+   'OnlineRetail'[CustomerID],
+   "R_Value", [r_value],
+   "F_Value", [f_value],
+   "M_Value", [m_value])
+   
+# 選取 rfm_table, 新增資料行 R_Score
+R_Score = 
+SWITCH(
+  TRUE(),
+   [R_Value] <= PERCENTILE.INC('rfm_table'[R_Value], 0.20), "5",
+   [R_Value] <= PERCENTILE.INC('rfm_table'[R_Value], 0.40), "4",
+   [R_Value] <= PERCENTILE.INC('rfm_table'[R_Value], 0.60), "3",
+   [R_Value] <= PERCENTILE.INC('rfm_table'[R_Value], 0.80), "2",
+   "1")
+
+# 新增資料行 F_Score
+F_Score =
+SWITCH(
+  TRUE(),
+   [F_Value] <= PERCENTILE.INC('rfm_table'[F_Value], 0.20 ), "1", 
+   [F_Value] <= PERCENTILE.INC('rfm_table'[F_Value], 0.40 ), "2",
+   [F_Value] <= PERCENTILE.INC('rfm_table'[F_Value], 0.60 ), "3",
+   [F_Value] <= PERCENTILE.INC('rfm_table'[F_Value], 0.80 ), "4",
+   "5")
+
+# 新增資料行 M_Score
+M_Score =
+SWITCH(
+  TRUE(),
+   [M_Value] <= PERCENTILE.INC('rfm_table'[M_Value], 0.20 ), "1",
+   [M_Value] <= PERCENTILE.INC('rfm_table'[M_Value], 0.40 ), "2",
+   [M_Value] <= PERCENTILE.INC('rfm_table'[M_Value], 0.60 ), "3",
+   [M_Value] <= PERCENTILE.INC('rfm_table'[M_Value], 0.80 ), "4",
+   "5")
+
+# 新增資料行 RFM 並修改為整數
+RFM = 'rfm_table'[R_Score]& 'rfm_table'[F_Score]&'rfm_table'[M_Score]
+
+選取RFM 資料行\ 資料行工具\ 資料類型整數 \ 變更資料類型\ 是。
+
+##############################
+# 步驟5 建立關聯
+##############################
+
+# RFM segment 資料表將客⼾區分為 Champions ... Lost 合計11個區隔。
+# 建立 rfm_segment[RFM_Score] --> rfm_table[RFM] 1對多之關聯。
+# 另可建立 rfm_table[CustomerID] --> OnlineRetail'[CustomerID] 1對多之關聯。
+
+# 在 rfm_table 資料表中, 新增資料行 CustomerSegment
+segment = RELATED(rfm_segment[Segment])
+
+##############################
+# 步驟6 建立圖表
+##############################
+
+1. RFM視覺化分析: 3個群組直條圖,1個散佈圖
+2. Receny       : 樹狀圖,散佈圖
+3. Frequency    : 樹狀圖,散佈圖
+4. Monetary     : 樹狀圖,散佈圖
+
+##############################
+# 3.結論
+##############################
+
+• 理解RFM定義
+• 下載並安裝免費Power BI 軟體
+• 匯入二個資料檔案至Power BI
+• Power Query 資料處理，使用DAX方法：
+  • 資料篩選
+  • 建立量值
+  • 建立資料行
+  • 建立資料表
+  • 建立二個資料表之關聯模型
+  • 建立⻑條圖、樹狀圖、散佈圖視覺化
+
+##############################
+# 4.參考資料
+##############################
+
+# 完成檔案（ rfm_tutorial.pbix ）下載
+https://github.com/rwepa/DataDemo/blob/master/rfm_tutorial.pbix
+
+# RFM (market research) in Wikipedia,
+https://en.wikipedia.org/wiki/RFM_(market_research), 2023.
+
+# RFM Analysis for Customer Segmentation with Power BI,
+https://ploiitubsamon.medium.com/rfm-analysis-for-customersegmentation-with-power-bi-5d2f5bd62038, 2023.
+
+# RFM Segmentation,
+https://documentation.bloomreach.com/engagement/docs/rfmsegmentation, 2023.
+
+# Q & A
+https://www.youtube.com/@alan9956
+http://rwepa.blogspot.tw/
+# end
