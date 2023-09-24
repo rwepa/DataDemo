@@ -779,6 +779,34 @@ turkey.price.ts
 
 yosemite
 
+### sample-superstore2023.xlsx
+
+資料說明: Tableau 內建超級市場範例檔案, Excel包括3個工作表
+
+第1個工作表名稱: Orders (訂單)
+
+資料筆數: 10194
+
+欄位個數: 21
+
+欄位名稱: Row ID, Order ID, Order Date, Ship Date, Ship Mode, Customer ID, Customer Name, Segment, Country/Region, City, State/Province, Postal Code, Region, Product ID, Category, Sub-Category, Product Name, Sales, Quantity, Discount, Profit
+
+第2個工作表名稱: People (人員)
+
+資料筆數: 4
+
+欄位個數: 2
+
+欄位名稱: Regional Manager, Region
+
+第3個工作表名稱: Returns (退貨)
+
+資料筆數: 800
+
+欄位個數: 2
+
+欄位名稱: Returned, Order ID 
+
 ### school.sav
 
 資料說明: SPSS 軟體 SAV 檔案
