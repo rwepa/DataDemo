@@ -1,6 +1,8 @@
 # 2023.10.15 Anaconda3-2023.09-0-Windows-x86_64.exe
 # packages in environment at C:Users\User\anaconda3:
 # 已經安裝 489 packages, 包括: boken, dask, flask, matplotlib, numpy, openpyxl, pandas, plotly, requests, seaborn, sqlalchemy, sqlite等.
+# conda list > conda_packages_list.txt
+
 # Name                    Version                   Build  Channel
 _anaconda_depends         2023.09             py311_mkl_1  
 abseil-cpp                20211102.0           hd77b12b_0  
