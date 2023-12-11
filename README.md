@@ -3,7 +3,7 @@
 
 ---
 
-# 常用變數名稱:
+# Variables
 
 X: 自變數, 獨立變數 independent variable, 預測變量 predictor variable, 解釋變量 explanatory variable, 共變量 covariate.
 
