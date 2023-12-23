@@ -47,6 +47,12 @@ Windows 11 專業版 + Anaconda3-2023.09版本 + Spyder IDE 5.4.3
 
 # 安裝模組
 
+## missingno: 遺漏值視覺化
+## yfinance: Yahoo 財金網站下載資料
+## tensorflow: Tensorflow 深度學習
+
 + pip install missingno
+
++ pip install yfinance
 
 + pip install tensorflow
