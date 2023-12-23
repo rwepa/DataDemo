@@ -17,5 +17,6 @@ Windows 11 專業版 + Anaconda3-2023.09版本 + Spyder IDE 5.4.3
 
 # 安裝模組
 
-pip install missingno
-pip install tensorflow
++ pip install missingno
+
++ pip install tensorflow
