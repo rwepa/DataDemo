@@ -10,3 +10,7 @@
 3. AI與黃金價格深度學習預測應用(LSTM) 【ai_03_gold_price.py】
 
 4. 結論
+
+# 建置環境
+
+Windows 11 專業版 + Anaconda3-2023.09版本 + Spyder IDE 5.4.3
