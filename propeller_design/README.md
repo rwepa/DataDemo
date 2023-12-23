@@ -3,7 +3,7 @@
 
 # 大綱
 
-1. 資料分析暨視覺化的心法【ai_01_apc_method.py】
+## 1. 資料分析暨視覺化的心法【ai_01_apc_method.py】
 
 1.1 RWEPA 簡介
 
@@ -13,7 +13,7 @@
 
 1.4 資料分析與視覺化應用
 
-2.AI與螺旋槳性能最佳化應用【ai_02_aeronautical_engineering.py】
+## 2.AI與螺旋槳性能最佳化應用【ai_02_aeronautical_engineering.py】
 
 2.1 螺旋槳資料集簡介
 
@@ -31,7 +31,7 @@
 
 2.8 Solidity 遺漏值, 使用 KNN 填補法
 
-3. AI與黃金價格深度學習預測應用(LSTM) 【ai_03_gold_price.py】
+## 3. AI與黃金價格深度學習預測應用(LSTM) 【ai_03_gold_price.py】
 
 3.1 CRISP-DM 六大步驟
 
