@@ -1,5 +1,13 @@
 <img src="imgs/propeller.jpg">
 
++ 投影片: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_aeronautical_engineering.pdf
+
++ ai_01_apc_method.py: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_01_apc_method.py
+
++ https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_02_aeronautical_engineering.py
+
++ https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_03_gold_price.py
+
 # 主題: AI與飛機工程應用
 # 日期: 2023.12.28
 
