@@ -1,3 +1,5 @@
+<img src="imgs/propeller.jpg">
+
 # 主題: AI與飛機工程應用
 # 日期: 2023.12.28
 
