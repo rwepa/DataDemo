@@ -2,11 +2,14 @@
 
 + 投影片: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_aeronautical_engineering.pdf
 
-+ ai_01_apc_method.py 程式碼: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_01_apc_method.py
++ ai_01_apc_method.py 程式碼: 
+https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_01_apc_method.py
 
-+ ai_02_aeronautical_engineering.py 程式碼: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_02_aeronautical_engineering.py
++ ai_02_aeronautical_engineering.py 程式碼: 
+https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_02_aeronautical_engineering.py
 
-+ ai_03_gold_price.py 程式碼: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_03_gold_price.py
++ ai_03_gold_price.py 程式碼: 
+https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_03_gold_price.py
 
 # 主題: AI與飛機工程應用
 # 日期: 2023.12.28
