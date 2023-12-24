@@ -99,4 +99,20 @@ type(尋找答案)
 
 # R商業預測應用(8小時53分鐘)
 # https://mastertalks.tw/products/r-2?ref=MCLEE
+
+# 參考資料:
+# RWEPA
+# http://rwepa.blogspot.com/
+
+# Python 程式設計-李明昌 <免費電子書>
+# http://rwepa.blogspot.com/2020/02/pythonprogramminglee.html 
+
+# iPAS Python programming <免費教材>
+# https://github.com/rwepa/ipas_bda/blob/main/ipas-python-program.py  
+
+# RWEPA | 登山路線視覺化分析平台 (Python + Streamlit) 【中文字幕】
+# YouTube: https://youtu.be/-_zghs2qrIg 
+# Link: https://rwepa.blogspot.com/2023/08/visualization-climbing-routes-with.html 
+
+# 投影片: https://github.com/rwepa/DataDemo/tree/master/propeller_design 
 # end
