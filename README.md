@@ -569,6 +569,16 @@ expenses: 醫療費用
 
 ![image](https://github.com/rwepa/DataDemo/blob/master/imgs/marketing.png)
 
+### mysqlsampledatabase.zip
+
+資料說明: classicmodels 範例資料庫-MySQL
+
+資料表個數: 8
+
+資料表名稱: customers, employees, offices, orderdetails, orders, payments, productlines, products
+
+資料來源: https://www.mysqltutorial.org/wp-content/uploads/2018/03/mysqlsampledatabase.zip
+
 ### nwind.csv
 
 資料說明: 北風訂單資料
