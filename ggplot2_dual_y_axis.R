@@ -10,7 +10,7 @@
 
 # 2024.5.27 - 更新ggplot2 - dual y axis標題等語法
 
-# 載入狩件
+# 載入套件
 library(XML)
 library(ggplot2)
 
