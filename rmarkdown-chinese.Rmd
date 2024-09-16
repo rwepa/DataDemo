@@ -1,0 +1,41 @@
+---
+title: "R大數據分析"
+author: "李明昌"
+date: "2024-09-15"
+header-includes:
+  - \usepackage{ctex}
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 第1章 R Markdown簡介
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+這是一個 R Markdown 文件。 Markdown 是一種用於創作 HTML、PDF 和 MS Word 文件的簡單格式語法。有關使用 R Markdown 的更多詳細信息，請參閱 <http://rmarkdown.rstudio.com>。
+
+## 第2章 Rmarkdwon使用
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## 第3章 繪圖
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
