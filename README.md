@@ -556,17 +556,29 @@ URL: https://www.oreilly.com/library/view/machine-learning-and/9781492073048/
 欄位名稱:
 
 ID      : 編號
+
 AGE     : 年齡, 6個類別, 1:35歲以下(不含), 2:35~45, 3:45~55, 4:55~65, 5:65~75, 6:75歲以上(含)
+
 EDUC    : 教育程度, 1:高中以下, 4:大學
+
 MARRIED : 是否已婚, 1:已婚, 2:未婚
+
 KIDS    : 子女數
+
 LIFECL  : 生命週期, 6個類別, 1:35歲以下,未婚,無子女; 6:55歲以上,無工作
+
 OCCAT   : 職業(occupation category), 1:管理職, 4:失業
+
 RISK    : 願意承受風險的程度, 1:願意承受風險的程度最高, 4:願意承受風險的程度最低
+
 HHOUSES : 自有房屋, 1:有, 0:沒有
+
 WSAVED  : 支出與收入類別, 3個類別, 1:支出>收入, 2:支出=收入, 3:支出<收入
+
 SPENDMOR: 支出偏好, 5個類別, 5:最高支出偏好
+
 NWCAT   : 淨值類別(net worth category), 5個類別, 1:淨值低於25百分位數, 5:淨值高於90百分位數
+
 INCCL   : 收入類別(income category), 5個類別, 1:收入低於1萬元, 5:收入超過10萬元
 
 ### letterdata.csv
