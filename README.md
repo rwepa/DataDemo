@@ -537,7 +537,7 @@ region: 美國四大區 {northeast, southeast, southwest, or northwest}
 
 expenses: 醫療費用
 
-### investor_risk_tolerance.csv
+### investor_portfolio.csv
 
 資料說明: 投資人風險承受能力資料集
 
