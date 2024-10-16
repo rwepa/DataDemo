@@ -1,0 +1,56 @@
+﻿No,dataset,description,中文說明
+1,aml (cancer)             ,Acute Myelogenous Leukemia survival data,急性骨髓性白血病存活數據
+2,bladder (cancer)         ,Bladder Cancer Recurrences,膀胱癌復發
+3,bladder1 (cancer)        ,Bladder Cancer Recurrences,膀胱癌復發
+4,bladder2 (cancer)        ,Bladder Cancer Recurrences,膀胱癌復發
+5,cancer                   ,NCCTG Lung Cancer Data,NCCTG 肺癌數據
+6,capacitor (reliability)  ,Reliability data sets,可靠性資料集
+7,cgd                      ,Chronic Granulotamous Disease data,慢性肉芽腫病數據
+8,cgd0 (cgd)               ,Chronic Granulotomous Disease data,慢性肉芽腫病數據
+9,colon (cancer)           ,Chemotherapy for Stage B/C colon cancer,B/C 期結腸癌的化療
+10,cracks (reliability)     ,Reliability data sets,可靠性資料集
+11,diabetic                 ,Ddiabetic retinopathy,糖尿病視網膜病變
+12,flchain                  ,Assay of serum free light chain for 7874 subjects.,7874 名受試者的血清遊離輕鏈測定。
+13,gbsg (cancer)            ,Breast cancer data sets used in Royston and Altman (2013),Royston 和 Altman (2013) 所使用的乳癌資料集
+14,genfan (reliability)     ,Reliability data sets,可靠性資料集
+15,heart                    ,Stanford Heart Transplant data,史丹佛心臟移植數據
+16,hoel (cancer)            ,Mouse cancer data,小鼠癌症數據
+17,ifluid (reliability)     ,Reliability data sets,可靠性資料集
+18,imotor (reliability)     ,Reliability data sets,可靠性資料集
+19,jasa (heart)             ,Stanford Heart Transplant data,史丹佛心臟移植數據
+20,jasa1 (heart)            ,Stanford Heart Transplant data,史丹佛心臟移植數據
+21,kidney (cancer)          ,Kidney catheter data,腎導管數據
+22,leukemia (cancer)        ,Acute Myelogenous Leukemia survival data,急性骨髓性白血病存活數據
+23,logan                    ,Data from the 1972-78 GSS data used by Logan,數據來自 Logan 使用的 1972-78 GSS 數據
+24,lung (cancer)            ,NCCTG Lung Cancer Data,NCCTG 肺癌數據
+25,mgus (cancer)            ,Monoclonal gammopathy data,單株丙種球蛋白病數據
+26,mgus1 (cancer)           ,Monoclonal gammopathy data,單株丙種球蛋白病數據
+27,mgus2 (cancer)           ,Monoclonal gammopathy data,單株丙種球蛋白病數據
+28,myeloid (cancer)         ,Acute myeloid leukemia,急性骨髓性白血病
+29,myeloma (cancer)         ,Survival times of patients with multiple myeloma,多發性骨髓瘤患者的存活時間
+30,nafld1 (nafld)           ,Non-alcoholic fatty liver disease,非酒精性脂肪肝
+31,nafld2 (nafld)           ,Non-alcoholic fatty liver disease,非酒精性脂肪肝
+32,nafld3 (nafld)           ,Non-alcoholic fatty liver disease,非酒精性脂肪肝
+33,nwtco                    ,Data from the National Wilm's Tumor Study,來自國家腎母細胞瘤研究的數據
+34,ovarian (cancer)         ,Ovarian Cancer Survival Data,卵巢癌存活數據
+35,pbc                      ,Mayo Clinic Primary Biliary Cholangitis Data,梅奧診所原發性膽汁性膽管炎數據
+36,pbcseq (pbc)             ,"Mayo Clinic Primary Biliary Cirrhosis, sequential data",梅奧診所原發性膽汁性肝硬化，序貫數據
+37,rats (cancer)            ,Rat treatment data from Mantel et al,Mantel 等人的大鼠治療數據
+38,rats2 (cancer)           ,Rat data from Gail et al.,大鼠數據來自 Gail 等人。
+39,retinopathy              ,Diabetic Retinopathy,糖尿病性視網膜病變
+40,rhDNase                  ,rhDNASE data set,rhDNA酶資料集
+41,rotterdam (cancer)       ,Breast cancer data set used in Royston and Altman (2013),Royston 和 Altman (2013) 所使用的乳癌資料集
+42,solder                   ,Data from a soldering experiment,焊接實驗數據
+43,stanford2 (heart)        ,More Stanford Heart Transplant data,更多史丹佛心臟移植數據
+44,survexp.mn (survexp)     ,Census Data Sets for the Expected Survival and Person Years Functions,預期生存和人年函數的人口普查資料集
+45,survexp.us (survexp)     ,Census Data Sets for the Expected Survival and Person Years Functions,預期生存和人年函數的人口普查資料集
+46,survexp.usr (survexp)    ,Census Data Sets for the Expected Survival and Person Years Functions,預期生存和人年函數的人口普查資料集
+47,tobin                    ,Tobin's Tobit data,托賓的托比特數據
+48,transplant               ,Liver transplant waiting list,肝臟移植候補名單
+49,turbine (reliability)    ,Reliability data sets,可靠性資料集
+50,udca                     ,Data from a trial of usrodeoxycholic acid,烏索脫氧膽酸試驗數據
+51,udca1 (udca)             ,Data from a trial of usrodeoxycholic acid,烏索脫氧膽酸試驗數據
+52,udca2 (udca)             ,Data from a trial of usrodeoxycholic acid,烏索脫氧膽酸試驗數據
+53,uspop2 (survexp)         ,Projected US Population,美國人口
+54,valveSeat (reliability)  ,Reliability data sets,可靠性資料集
+55,veteran (cancer)         ,Veterans' Administration Lung Cancer study,退伍軍人管理局肺癌研究
