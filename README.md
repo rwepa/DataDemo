@@ -11,6 +11,182 @@ Y: 反應變數 response variable, 因變數, 依變數, 應變數, 被解釋變
 
 # Part 1 資料 Data (依英文字母排序)
 
+### Cars93.csv
+
+資料來源: R語言 - Cars93 {MASS}
+
+資料筆數: 93
+
+欄位個數: 27
+
+data(Cars93, package = "MASS")
+
+write.csv(Cars93, file = "Cars93.csv", row.names=FALSE)
+
+### ChemicalManufacturingProcess.csv
+
+資料說明: 醫藥產品製程分析資料集
+
+資料來源: R語言 - ChemicalManufacturingProcess {AppliedPredictiveModeling}
+
+資料筆數: 176
+
+欄位個數: 58
+
+欄位說明: 全部資料型態皆為數值, Yield 為反應變數
+
+### IOT-temp.csv
+
+資料說明: 物聯網溫度資料
+
+資料來源: https://www.kaggle.com/atulanandjha/temperature-readings-iot-devices
+
+資料筆數: 97606
+
+欄位個數: 5
+
+欄位說明: id, room_id/id, noted_date, temp, out/in
+
+id : 編號 unique IDs for each reading, 如果有重複值, 須進行資料處理
+
+room_id/id : 房間代碼 room id in which device was installed (inside and/or outside) -> currently 'admin room' only for example purpose.
+
+noted_date : 日期 date and time of reading
+
+temp : 溫度 temperature readings
+
+out/in : 房間內/外 whether reading was taken from device installed inside or outside of room?
+
+任務:
+
+1. 最高和最低溫度是多少？
+
+2. 室外溫度與室內溫度有何關係？
+
+3. 室內和室外室溫的溫度變化如何？
+
+4. 資料趨勢如何？
+
+5. 您可以使用時間序列法來預測未來情況嗎？
+
+6. 哪個月最熱/最冷？
+
+7. 有找到來自氣候災難的警告信號(離群值)?
+
+### OnlineRetail.csv.zip
+
+資料來源: https://www.kaggle.com/vijayuv/onlineretail
+
+說明: 本資料與 OnlineRetail.xlsx 相同, 解壓縮後格式為 csv
+
+### OnlineRetail.xlsx
+
+資料來源: http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
+
+資料筆數: 541909
+
+欄位個數: 8
+
+欄位名稱: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
+
+說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
+
+### PowerBI_consumption.zip
+
+資料說明: 台北市, 桃園市, 新北市的食衣住行消費資料, 合計3個資料夾, 12個CSV檔案
+
+資料來源: https://www.nccc.com.tw/wps/wcm/connect/zh/home
+
+### PowerBI_creditcard.xlsx
+
+資料說明: 信用卡刷卡模擬資料集, 9個工作表
+
+資料來源: 謝邦昌等,Power BI 金融大數據分析應用 -- 貼近產業實務，掌握決策效率, 碁峰資訊, 2021.
+
+### PowerBI_powerview.pbix
+
+資料說明: 信用卡刷卡模擬資料集的16個頁面
+
+資料來源: 謝邦昌等,Power BI 金融大數據分析應用 -- 貼近產業實務，掌握決策效率, 碁峰資訊, 2021.
+
+### R03_Orders.txt
+
+資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
+
+資料筆數: 10萬
+
+欄位個數: 5
+
+欄位名稱: OrderID, OrderDate, BookID, Quantity, Price
+
+### Tableau_Financial_Products_Case_Study.pdf
+
+### Tableau_Financial_Products_Case_Study.twbx
+
+資料說明: 國立臺北科技大學資訊與財金管理系(所) - Tableau金融商品案例分析
+
+### T-Bike-tainan-station(CSV).xlsx
+
+資料說明: 整合2個CSV為1個 Excel 檔案
+
+(1).T-Bike 臺南市公共自行車租賃站資訊(CSV) 工作表
+
+資料說明: T-Bike 臺南市公共自行車租賃站資訊
+
+資料來源: https://data.gov.tw/dataset/53909
+
+資料筆數: 75
+
+欄位個數: 9
+
+欄位名稱:
+
+Id                    編號
+
+Station Name          站名
+
+Address               地址
+
+Capacity              格位數 (格位數=可借車輛數+可停空位數)
+
+Avaliable Bike Count  可借車輛數
+
+Avaliable Space Count 可停空位數
+
+Update Time           更新時間
+
+Latitude              緯度
+
+Longitude             經度
+
+(2).T-Bike-tainan-station-district 工作表
+
+資料說明: T-Bike 臺南市公共自行車租賃站-區域對照表
+
+資料來源:筆者整理
+
+資料筆數: 77
+
+欄位個數: 2
+
+欄位名稱: 站點區域, 站點名稱
+
+### TelcoChurn.csv
+
+資料說明: 電信公司客戶流失資料集
+
+資料來源: https://www.kaggle.com/blastchar/telco-customer-churn
+
+資料筆數: 7043
+
+欄位個數: 21
+
+自變數:
+
+customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges 等20個
+
+依變數: Churn {Yes, No}
+
 ### adult.csv
 
 資料來源: https://www.kaggle.com/datasets/wenruliu/adult-income-dataset
@@ -198,30 +374,6 @@ B         : 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town 非�
 LSTAT     : % lower status of the population 低收人口比例
 
 MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房價中位數 --> 反應變數
-
-### Cars93.csv
-
-資料來源: R語言 - Cars93 {MASS}
-
-資料筆數: 93
-
-欄位個數: 27
-
-data(Cars93, package = "MASS")
-
-write.csv(Cars93, file = "Cars93.csv", row.names=FALSE)
-
-### ChemicalManufacturingProcess.csv
-
-資料說明: 醫藥產品製程分析資料集
-
-資料來源: R語言 - ChemicalManufacturingProcess {AppliedPredictiveModeling}
-
-資料筆數: 176
-
-欄位個數: 58
-
-欄位說明: 全部資料型態皆為數值, Yield 為反應變數
 
 ### chorddiag.zip
 
@@ -473,44 +625,6 @@ salary                : 薪資別: high, median, low
 
 欄位名稱: No, x1, x2, x3
 
-### IOT-temp.csv
-
-資料說明: 物聯網溫度資料
-
-資料來源: https://www.kaggle.com/atulanandjha/temperature-readings-iot-devices
-
-資料筆數: 97606
-
-欄位個數: 5
-
-欄位說明: id, room_id/id, noted_date, temp, out/in
-
-id : 編號 unique IDs for each reading, 如果有重複值, 須進行資料處理
-
-room_id/id : 房間代碼 room id in which device was installed (inside and/or outside) -> currently 'admin room' only for example purpose.
-
-noted_date : 日期 date and time of reading
-
-temp : 溫度 temperature readings
-
-out/in : 房間內/外 whether reading was taken from device installed inside or outside of room?
-
-任務:
-
-1. 最高和最低溫度是多少？
-
-2. 室外溫度與室內溫度有何關係？
-
-3. 室內和室外室溫的溫度變化如何？
-
-4. 資料趨勢如何？
-
-5. 您可以使用時間序列法來預測未來情況嗎？
-
-6. 哪個月最熱/最冷？
-
-7. 有找到來自氣候災難的警告信號(離群值)?
-
 ### insurance.csv
 
 資料說明: 醫療費用預測資料集
@@ -651,24 +765,6 @@ SPENDMOR: 支出偏好, 5個類別, 5:最高支出偏好【行為屬性】
 
 欄位名稱: OrderID, ProductName, Price, Quantity, Discount
 
-### OnlineRetail.csv.zip
-
-資料來源: https://www.kaggle.com/vijayuv/onlineretail
-
-說明: 本資料與 OnlineRetail.xlsx 相同, 解壓縮後格式為 csv
-
-### OnlineRetail.xlsx
-
-資料來源: http://archive.ics.uci.edu/ml/machine-learning-databases/00352/Online%20Retail.xlsx
-
-資料筆數: 541909
-
-欄位個數: 8
-
-欄位名稱: InvoiceNo, StockCode, Description, Quantity, InvoiceDate, UnitPrice, CustomerID, Country
-
-說明: 原下載檔名為 Online Retail.xlsx, 中間有個空白, 建議另存新檔時,刪除空白為 OnlineRetail.xlsx
-
 ### opendata109b141_birth.csv
 
 資料說明: 109年度嬰兒出生數按嬰兒性別及生父母年齡分（按發生）
@@ -683,23 +779,31 @@ SPENDMOR: 支出偏好, 5個類別, 5:最高支出偏好【行為屬性】
 
 欄位名稱中文: 統計年度, 按照別, 區域別代碼, 區域別, 嬰兒性別, 生父年齡, 生母年齡, 嬰兒出生數
 
-### PowerBI_consumption.zip
+### penguins.csv
 
-資料說明: 台北市, 桃園市, 新北市的食衣住行消費資料, 合計3個資料夾, 12個CSV檔案
+資料來源: penguins {palmerpenguins}
 
-資料來源: https://www.nccc.com.tw/wps/wcm/connect/zh/home
+資料筆數: 344
 
-### PowerBI_creditcard.xlsx
+欄位個數: 8
 
-資料說明: 信用卡刷卡模擬資料集, 9個工作表
+欄位名稱: 
 
-資料來源: 謝邦昌等,Power BI 金融大數據分析應用 -- 貼近產業實務，掌握決策效率, 碁峰資訊, 2021.
+species           : 企鵝的種類 {Adelie, Chinstrap, Gentoo}
 
-### PowerBI_powerview.pbix
+island            : 企鵝棲息的島嶼 {Biscoe, Dream, Torgersen}
 
-資料說明: 信用卡刷卡模擬資料集的16個頁面
+bill_length_mm    : 喙的長度 (毫米)
 
-資料來源: 謝邦昌等,Power BI 金融大數據分析應用 -- 貼近產業實務，掌握決策效率, 碁峰資訊, 2021.
+bill_depth_mm     : 喙的高度 (毫米)
+
+flipper_length_mm : 鰭的長度 (毫米)
+
+body_mass_g       : 重量 (公克)
+
+sex               : 性別 {female, male}
+
+year              : 觀測年份 {2007, 2008, 2009}
 
 ### pokemon.csv
 
@@ -764,16 +868,6 @@ Source: https://www.kaggle.com/datasets/rounakbanik/pokemon
 資料筆數: 97
 
 欄位個數: 6
-
-### R03_Orders.txt
-
-資料說明: 配合R基礎篇2011年操作資料集 http://rwepa.blogspot.com/2013/01/r-201174.html
-
-資料筆數: 10萬
-
-欄位個數: 5
-
-欄位名稱: OrderID, OrderDate, BookID, Quantity, Price
 
 ### r_in_nutshell_data_bb.zip
 
@@ -944,74 +1038,6 @@ https://rwepa.shinyapps.io/shinyStockVis/
 欄位名稱: sseindex, date, DayWeek, open, high, low, close, return
 
 使用方法: load(url("https://github.com/rwepa/DataDemo/blob/master/sse.RData?raw=true"), verbose = TRUE)
-
-### Tableau_Financial_Products_Case_Study.pdf
-
-### Tableau_Financial_Products_Case_Study.twbx
-
-資料說明: 國立臺北科技大學資訊與財金管理系(所) - Tableau金融商品案例分析
-
-### T-Bike-tainan-station(CSV).xlsx
-
-資料說明: 整合2個CSV為1個 Excel 檔案
-
-(1).T-Bike 臺南市公共自行車租賃站資訊(CSV) 工作表
-
-資料說明: T-Bike 臺南市公共自行車租賃站資訊
-
-資料來源: https://data.gov.tw/dataset/53909
-
-資料筆數: 75
-
-欄位個數: 9
-
-欄位名稱:
-
-Id                    編號
-
-Station Name          站名
-
-Address               地址
-
-Capacity              格位數 (格位數=可借車輛數+可停空位數)
-
-Avaliable Bike Count  可借車輛數
-
-Avaliable Space Count 可停空位數
-
-Update Time           更新時間
-
-Latitude              緯度
-
-Longitude             經度
-
-(2).T-Bike-tainan-station-district 工作表
-
-資料說明: T-Bike 臺南市公共自行車租賃站-區域對照表
-
-資料來源:筆者整理
-
-資料筆數: 77
-
-欄位個數: 2
-
-欄位名稱: 站點區域, 站點名稱
-
-### TelcoChurn.csv
-
-資料說明: 電信公司客戶流失資料集
-
-資料來源: https://www.kaggle.com/blastchar/telco-customer-churn
-
-資料筆數: 7043
-
-欄位個數: 21
-
-自變數:
-
-customerID, customerID, gender, SeniorCitizen, Partner, Dependents, tenure, PhoneService, MultipleLines, InternetService, OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies, Contract, PaperlessBilling, PaymentMethod, MonthlyCharges, TotalCharges 等20個
-
-依變數: Churn {Yes, No}
 
 ### termDocMatrix.RData
 
