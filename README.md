@@ -793,13 +793,13 @@ species           : 企鵝的種類 {Adelie, Chinstrap, Gentoo}
 
 island            : 企鵝棲息的島嶼 {Biscoe, Dream, Torgersen}
 
-bill_length_mm    : 喙的長度 (毫米)
+bill_length       : 喙的長度 (毫米, mm)
 
-bill_depth_mm     : 喙的高度 (毫米)
+bill_depth        : 喙的高度 (毫米, mm)
 
-flipper_length_mm : 鰭的長度 (毫米)
+flipper_length    : 鰭的長度 (毫米, mm)
 
-body_mass_g       : 重量 (公克)
+body_mass         : 重量 (公克, g)
 
 sex               : 性別 {female, male}
 
