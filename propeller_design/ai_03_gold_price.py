@@ -133,8 +133,6 @@ gold = yf.Ticker("GC=F") # Gold Futures on Yahoo Finance
 gold.history_metadata # dict
 print(gold.history_metadata['currency'])  # USD
 
-# 步驟3: 資料處理
-
 # 資料檢視
 # 2013-01-02 ~ 2023-12-14, 2756列*6行
 df
