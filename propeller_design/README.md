@@ -8,8 +8,11 @@
 
 + ai_03_gold_price.py 程式碼: https://github.com/rwepa/DataDemo/blob/master/propeller_design/ai_03_gold_price.py
 
+# 主題: 數據科學應用實務
+日期: 2024.11.20
+
 # 主題: AI與飛機工程應用
-# 日期: 2023.12.28
+日期: 2023.12.28
 
 # 大綱
 
