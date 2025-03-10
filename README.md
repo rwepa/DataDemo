@@ -625,32 +625,6 @@ salary                : 薪資別: high, median, low
 
 欄位名稱: No, x1, x2, x3
 
-### medical_insurance.csv.csv
-
-資料說明: 醫療保險費用預測資料集
-
-資料來源: Machine Learning with R, Second Edition, 2015.
-
-資料筆數: 1338
-
-欄位個數: 7
-
-欄位名稱:
-
-年齡 age
-
-性別 sex
-
-BMI (理想 BMI 18.5 to 24.9)
-
-子女數 children 保險計劃所涵蓋的子女/家屬人數
-
-是否吸煙 smoker
-
-區域 region: 美國四大區 {northeast, southeast, southwest, or northwest}
-
-醫療費用 expenses
-
 ### investor_portfolio.csv
 
 資料說明: 投資人風險承受能力資料集
@@ -728,6 +702,32 @@ SPENDMOR: 支出偏好, 5個類別, 5:最高支出偏好【行為屬性】
 資料預覽:
 
 ![image](https://github.com/rwepa/DataDemo/blob/master/imgs/marketing.png)
+
+### medical_insurance.csv.csv
+
+資料說明: 醫療保險費用預測資料集
+
+資料來源: Machine Learning with R, Second Edition, 2015.
+
+資料筆數: 1338
+
+欄位個數: 7
+
+欄位名稱:
+
+年齡 age
+
+性別 sex
+
+BMI (理想 BMI 18.5 to 24.9)
+
+子女數 children 保險計劃所涵蓋的子女/家屬人數
+
+是否吸煙 smoker
+
+區域 region: 美國四大區 {northeast, southeast, southwest, or northwest}
+
+醫療費用 expenses
 
 ### mysqlsampledatabase.zip
 
