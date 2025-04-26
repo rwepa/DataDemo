@@ -44,12 +44,14 @@ rm(mydf)
 
 names(ncovConfirmed)[-c(1:4)] <- myname
 
-head(ncovConfirmed)
+ncovConfirmed <- na.omit(ncovConfirmed)
+
+# head(ncovConfirmed)
 
 # 使用 aggregate 計算各國家 2020-3-16 的合計, 須使用 ‵  ‵ 字元
-ncovConfirmedAgg <- aggregate(`2020-3-16` ~ Country.Region, 
-                              data=ncovConfirmed, 
-                              sum)
+# ncovConfirmedAgg <- aggregate(`2020-3-16` ~ Country.Region, 
+#                               data=ncovConfirmed, 
+#                               sum)
 
 # 使用 aggregate 計算各國家最近日期的合計
 # names(ncovConfirmed)[ncol(ncovConfirmed)] 取出最後一個欄位名稱,其結果為字串
@@ -100,7 +102,7 @@ ncovDeathAgg <- ncovDeathAgg[order(ncovDeathAgg$Death, decreasing=TRUE),]
 
 # 建立leaflet互動式地圖
 
-title <- tags$h2(paste0("2020新型冠狀病毒感染人數全球分佈圖, ", date()))
+title <- tags$h2(paste0("2020新型冠狀病毒感染人數全球分佈圖, Printing Date: ", Sys.Date()))
 
 datasource <- tags$div(
   HTML("Data: https://github.com/CSSEGISandData/2019-nCoV")
