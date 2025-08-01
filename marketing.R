@@ -10,6 +10,7 @@
 # 安裝 rgl, car 套件
 library(rgl)
 library(car)
+library(GGally)
 
 # 匯入 marketing 資料
 urls <- "https://github.com/rwepa/DataDemo/blob/master/marketing.csv" # ERROR
@@ -35,8 +36,11 @@ marketing$facebook[is.na(marketing$facebook)] <- marketingFacebookMedian
 # 資料摘要, facebook沒有NA值
 summary(marketing)
 
-# 散佈圖矩陣!有發現什麼樣式(patterns)嗎?
+# 散佈圖矩陣!有發現什麼樣式(patterns)?
 pairs(marketing, pch=16, cex=0.5)
+
+# 使用ggpairs函數
+ggpairs(marketing)
 
 # 建立線性模型
 marketing_lm <- lm(sales ~ ., data=marketing)
