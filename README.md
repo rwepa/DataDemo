@@ -375,6 +375,53 @@ LSTAT     : % lower status of the population 低收人口比例
 
 MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房價中位數 --> 反應變數
 
+### california_housing_prices.csv
+
+資料來源: https://www.kaggle.com/datasets/camnugent/california-housing-prices/data
+
+資料筆數: 20640
+
+欄位個數: 10
+
+欄位名稱:
+
+longitude	: 經度
+
+latitude	: 緯度
+
+housing_median_age	: 房屋年齡中位數
+
+total_rooms	: 房間總數(某一個地理區塊 block 內所有住宅的房間總數)
+
+total_bedrooms	: 臥室總數(某一個地理區塊 block 內所有住宅的臥室總數)
+
+population	: 人口
+
+households	: 家庭戶數
+
+median_income	: 收入中位數(單位:美金1萬元)
+
+median_house_value	: 房價中位數(單位:美金元)
+
+ocean_proximity	: 離海距離 (類別型變數), 包括5種結果:
+
+1.NEAR BAY
+靠近舊金山灣 (San Francisco Bay)
+通常指灣區周邊, 房價通常偏高 (地理位置優勢)
+
+2.NEAR OCEAN
+靠近太平洋海
+臨海區域，但不是灣區, 通常有景觀或氣候優勢
+
+3.ISLAND
+位於島嶼上, 數量非常少
+
+4.INLAND
+內陸地區, 通常房價相對較低
+
+5.<1H OCEAN
+距離海洋開車 1 小時內可到達
+
 ### chorddiag.zip
 
 資料說明: chorddiag Windows 版本套件壓縮檔
@@ -383,7 +430,7 @@ MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房�
 
 資料來源: https://github.com/mattflor/chorddiag
 
-### claim.cls
+### claim.csv
 
 資料說明: 保險理賠(簡體版本)
 
