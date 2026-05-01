@@ -407,9 +407,9 @@ median_house_value	: 房價中位數(單位:美金元) -->反應變數
 
 ocean_proximity	: 離海距離 (類別型變數), 包括5種結果:
 
-NEAR BAY：
-靠近舊金山灣 (San Francisco Bay)
-通常指灣區周邊, 房價通常偏高 (地理位置優勢)
+    NEAR BAY：
+    靠近舊金山灣 (San Francisco Bay)
+    通常指灣區周邊, 房價通常偏高 (地理位置優勢)
 
 NEAR OCEAN：
 靠近太平洋海
