@@ -405,8 +405,10 @@ median_income	: 收入中位數(單位:美金1萬元)
 
 median_house_value	: 房價中位數(單位:美金元) -->反應變數
 
-ocean_proximity	: 離海距離 (類別型變數), 包括5種結果:
+ocean_proximity	: 離海距離 (類別型變數)
 
+    ocean_proximity	5 種結果:
+    
     NEAR BAY：
     靠近舊金山灣 (San Francisco Bay)
     通常指灣區周邊, 房價通常偏高 (地理位置優勢)
@@ -422,7 +424,7 @@ ocean_proximity	: 離海距離 (類別型變數), 包括5種結果:
     內陸地區, 通常房價相對較低
 
     <1H OCEAN：
-    距離海洋開車 1 小時內可到達
+    距離海洋開車1小時內可以到達
 
 ### chorddiag.zip
 
