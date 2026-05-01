@@ -381,7 +381,7 @@ MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房�
 
 資料筆數: 20640
 
-欄位個數: 10
+欄位個數: 10 (自變數: 9個, 反應變數: 1個)
 
 欄位名稱:
 
@@ -401,25 +401,25 @@ households	: 家庭戶數
 
 median_income	: 收入中位數(單位:美金1萬元)
 
-median_house_value	: 房價中位數(單位:美金元)
+median_house_value	: 房價中位數(單位:美金元) -->反應變數
 
 ocean_proximity	: 離海距離 (類別型變數), 包括5種結果:
 
-1.NEAR BAY
+NEAR BAY：
 靠近舊金山灣 (San Francisco Bay)
 通常指灣區周邊, 房價通常偏高 (地理位置優勢)
 
-2.NEAR OCEAN
+NEAR OCEAN：
 靠近太平洋海
 臨海區域，但不是灣區, 通常有景觀或氣候優勢
 
-3.ISLAND
+ISLAND：
 位於島嶼上, 數量非常少
 
-4.INLAND
+INLAND：
 內陸地區, 通常房價相對較低
 
-5.<1H OCEAN
+<1H OCEAN：
 距離海洋開車 1 小時內可到達
 
 ### chorddiag.zip
