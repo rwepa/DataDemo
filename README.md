@@ -379,7 +379,7 @@ MEDV      : Median value of owner-occupied homes in $1000's 自用住宅的房�
 
 資料來源: https://www.kaggle.com/datasets/camnugent/california-housing-prices/data
 
-資料說明: 加州房屋價格資料集
+資料說明: 美國加州房屋價格資料集
 
 資料筆數: 20640
 
@@ -391,7 +391,7 @@ longitude	: 經度
 
 latitude	: 緯度
 
-housing_median_age	: 房屋年齡中位數
+housing_median_age	: 屋齡中位數
 
 total_rooms	: 房間總數(某一個地理區塊 block 內所有住宅的房間總數)
 
