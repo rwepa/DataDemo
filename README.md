@@ -634,6 +634,34 @@ system.time(ozone <- read_csv("hourly_44201_2018.csv", col_types = "cccnnnnccDtD
 
 參考網站: http://rwepa.blogspot.com/2019/11/r-makenames-base.html  
 
+### health_data.xlsx
+
+資料說明: 健康與運動資料
+
+資料筆數: 10000
+
+欄位個數: 9
+
+欄位名稱:
+
+ID	            : 編號 {1~10000}
+
+Age	            : 年齡
+
+ExerciseHours	: 每週運動時數
+
+Steps	        : 每日步數
+
+BMI	            : 身體質量指數
+
+SleepHours	    : 睡眠時數
+
+DietScore	    : 飲食分數 {0~100}
+
+StressLevel	    : 壓力指數 {0~100}
+
+HealthLevel	    : 健康等級, 表示目標變數  {不健康, 普通, 健康}
+
 ### human_resource.csv
 
 資料說明: 人力資源資料
