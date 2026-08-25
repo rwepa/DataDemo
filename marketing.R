@@ -53,6 +53,11 @@ marketing_lm_revised <- lm(sales ~ youtube + facebook, data=marketing)
 
 summary(marketing_lm_revised)
 
+# Ubuntu + RStudio 使用步驟:
+# 1. 加上 options(rgl.printRglwidget = TRUE)
+# 2. 使用 scatter3d( ) 繪圖
+# 3. 加上 htmltools::html_print(rglwidget())
+
 # 繪製3d圖
 scatter3d(sales ~ youtube + facebook, data=marketing, surface=FALSE)
 
