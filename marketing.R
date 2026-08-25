@@ -63,7 +63,8 @@ scatter3d(sales ~ youtube + facebook, data=marketing)
 scatter3d(sales ~ youtube + facebook, data=marketing, fit="quadratic") 
 
 # 加上平滑預測
-scatter3d(sales ~ youtube + facebook, data=marketing, fit="smooth") 
+scatter3d(sales ~ youtube + facebook, data=marketing, fit="smooth")
+title3d(main = "Marketing dataset 3D Plot - alan9956@gmail.com")
 
 # 顯示3筆 outliers
 scatter3d(sales ~ youtube + facebook, data=marketing, id=list(n=3))
