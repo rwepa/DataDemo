@@ -8,6 +8,11 @@
 # Encoding : UTF-8
 
 # 安裝 rgl, car 套件
+
+# Package rgl in R not loading in Mac OS
+# https://stackoverflow.com/questions/66011929/package-rgl-in-r-not-loading-in-mac-os
+# 安裝 XQuartz: https://www.xquartz.org/
+
 library(rgl)
 library(car)
 library(GGally)
